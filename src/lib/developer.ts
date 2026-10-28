@@ -19,7 +19,7 @@ export function ownershipLabel(options: {
   matribhumiOwned?: boolean;
   developer?: PublicDeveloper | null;
 }) {
-  if (options.matribhumiOwned) return "MatriBhumi-owned";
+  if (options.matribhumiOwned) return "RAZZ-owned";
   return publicDeveloperName(options.developer);
 }
 

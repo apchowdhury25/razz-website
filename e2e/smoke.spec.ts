@@ -1,25 +1,24 @@
 import { test, expect } from "@playwright/test";
 
-test("homepage renders MatriBhumi", async ({ page }) => {
+test("homepage renders RAZZ Construction and Properties", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1, name: /Find the right property/i })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Homes developed and sold by RAZZ/i })).toBeVisible();
 });
 
 test("country landings and how it works", async ({ page }) => {
   await page.goto("/locations/bangladesh");
-  await expect(page.getByRole("heading", { level: 1, name: /Bangladesh property advisory/i })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Bangladesh homes by RAZZ/i })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Dhaka" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Chattogram" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Bashundhara", exact: true })).toHaveCount(0);
   await page.goto("/how-it-works");
   await expect(page.getByText("Share your requirements.").first()).toBeVisible();
-  await expect(page.getByText("MatriBhumi is not the seller.").first()).toBeVisible();
+  await expect(page.getByText("You purchase from RAZZ Construction and Properties Ltd.").first()).toBeVisible();
   await page.goto("/advise");
-  await expect(page.getByRole("heading", { level: 1, name: /Talk to a property advisor/i })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Talk to sales/i })).toBeVisible();
   await page.goto("/for-developers");
-  await expect(page.getByRole("heading", { level: 1, name: /Are you a property developer/i })).toBeVisible();
-  await expect(page.getByText(/Reach qualified buyers looking at selected Bangladesh developments/i).first()).toBeVisible();
-  await expect(page.getByText(/guaranteed sales/i).first()).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Develop with RAZZ/i })).toBeVisible();
+  await expect(page.getByText(/joint venture/i).first()).toBeVisible();
 });
 
 test("former UAE and Malaysia URLs redirect to locations", async ({ page }) => {
@@ -33,7 +32,7 @@ test("legal disclosure pages", async ({ page }) => {
   await page.goto("/disclaimer/buyer-fee");
   await expect(page.getByRole("heading", { level: 1, name: "Buyer Fee Disclosure" })).toBeVisible();
   await expect(
-    page.getByText(/MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service/i).first(),
+    page.getByText(/The purchase price of a home is agreed in the sale contract with RAZZ Construction and Properties Ltd/i).first(),
   ).toBeVisible();
   await page.goto("/legal/bangladesh");
   await expect(page.getByRole("heading", { level: 1, name: "Bangladesh legal information" })).toBeVisible();
@@ -52,7 +51,7 @@ test("property detail and inquiry", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Heights Residences" })).toBeVisible();
   await expect(page.getByText("Demonstration listing").first()).toBeVisible();
   await expect(page.getByText("Unpublished partner")).toHaveCount(0);
-  await expect(page.getByText("MatriBhumi Developments")).toHaveCount(0);
+  await expect(page.getByText("RAZZ Construction and Properties Developments")).toHaveCount(0);
   await page.locator("#inquire input[name=name]").fill("Asha Rahman");
   await page.locator("#inquire input[name=email]").fill("asha@example.com");
   await page.locator("#inquire input[name=phone]").fill("+88017000000");

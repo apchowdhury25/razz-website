@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const job = await getJob(slug);
-  if (!job) return createMetadata({ title: "Role", description: "MatriBhumi careers", path: `/careers/${slug}`, noIndex: true });
+  if (!job) return createMetadata({ title: "Role", description: "RAZZ Construction and Properties careers", path: `/careers/${slug}`, noIndex: true });
   return createMetadata({
     title: job.title,
     description: job.description.slice(0, 160),

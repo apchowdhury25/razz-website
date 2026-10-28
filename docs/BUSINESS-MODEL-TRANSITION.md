@@ -1,25 +1,27 @@
 # Business-model transition
 
+The steps below are a historical record. The public website is a real-estate development company again: RAZZ Construction and Properties Ltd. develops and sells its own homes, sales handles buyer enquiries, and landowners can propose a joint venture. Do not treat the advisory wording in this file as current public copy.
+
 ## Step 8 — Bangladesh legal, trust, and disclosure framework
 
 Public presentation is Bangladesh-only. `/locations/uae` and `/locations/malaysia` permanently redirect to `/locations`.
 
 - Central copy in `src/config/legal.ts` and `src/config/businessModel.ts`. The public buyer-fee sentence is configurable and used consistently. Developer compensation terminology stays configurable (`developerFeeTerm`) and unpublished.
-- How we work: MatriBhumi helps buyers discover and compare selected properties from participating developers and coordinates introductions, viewings and transaction-related communication. The property purchase agreement is between the buyer and the relevant developer/seller.
-- Transaction distinction: Buyer → property purchase → developer/seller, separate from Developer → commercial agreement → MatriBhumi. MatriBhumi does not receive or hold the buyer’s purchase funds.
+- How we work: RAZZ Construction and Properties helps buyers discover and compare selected properties from participating developers and coordinates introductions, viewings and transaction-related communication. The property purchase agreement is between the buyer and the relevant developer/seller.
+- Transaction distinction: Buyer → property purchase → developer/seller, separate from Developer → commercial agreement → RAZZ Construction and Properties. RAZZ Construction and Properties does not receive or hold the buyer’s purchase funds.
 - Legal pages (operational copy, pending Bangladesh counsel review, not legal advice): Terms, Privacy, Cookies, Property Disclaimer, Buyer Fee Disclosure, Developer Partner Disclosure, General Disclaimer, plus `/legal/bangladesh` placeholders.
 - Property information may change and is not a guarantee. No investment promises. Independent legal, tax, financial, and financing advice is recommended.
 - Public APIs keep using `publicDeveloperSelect` and `stripConfidential`. `/api/upload` requires a staff session. Compensation remains ADMIN-only.
 
 ## Step 7 — premium advisory presentation (later limited to Bangladesh)
 
-Redesign the public visual presentation so MatriBhumi reads as a premium property advisory — not a property developer or a construction company. Step 8 restored Bangladesh-only public coordination; former `/locations/uae` and `/locations/malaysia` URLs permanently redirect to `/locations`.
+Redesign the public visual presentation so RAZZ Construction and Properties reads as a premium property advisory — not a property developer or a construction company. Step 8 restored Bangladesh-only public coordination; former `/locations/uae` and `/locations/malaysia` URLs permanently redirect to `/locations`.
 
 - Hero: “Find the right property. We coordinate the rest.” Supporting copy covers Bangladesh. Primary CTA “Talk to an Advisor”; secondary “Explore Properties”; country selector for Bangladesh locations.
-- Property cards lead with project name, city/country, developer (when `publicDeveloperName` returns a value), starting price, “View Property”, and “Talk to Advisor”. No “MatriBhumi Property” or “Listed through MatriBhumi” label.
-- Trust section “Why buyers choose MatriBhumi”: independent guidance, curated developer network, support from abroad, one point of coordination, transparent buyer-fee policy, property comparison, viewing coordination, developer introductions.
-- Buyer-fee marketing headline and copy live in `buyerFeeHeadline` / `buyerFeeMarketing`. Legal disclosure stays in How MatriBhumi is paid / `buyerFeeNote`.
-- Developer B2B: “Are you a property developer?” / “Reach qualified buyers looking at selected Bangladesh developments.” CTA “Partner with MatriBhumi”.
+- Property cards lead with project name, city/country, developer (when `publicDeveloperName` returns a value), starting price, “View Property”, and “Talk to Advisor”. No “RAZZ Construction and Properties Property” or “Listed through RAZZ Construction and Properties” label.
+- Trust section “Why buyers choose RAZZ Construction and Properties”: independent guidance, curated developer network, support from abroad, one point of coordination, transparent buyer-fee policy, property comparison, viewing coordination, developer introductions.
+- Buyer-fee marketing headline and copy live in `buyerFeeHeadline` / `buyerFeeMarketing`. Legal disclosure stays in How RAZZ Construction and Properties is paid / `buyerFeeNote`.
+- Developer B2B: “Are you a property developer?” / “Reach qualified buyers looking at selected Bangladesh developments.” CTA “Partner with RAZZ Construction and Properties”.
 - Public catalogue listings remain Bangladesh-only until real partnerships exist. No invented developers or listings.
 - Mobile WhatsApp + advisor bar sits above the safe area and does not cover compare controls. Existing URLs are unchanged.
 
@@ -40,10 +42,10 @@ Turn the existing staff console into a practical buyer-advisory and developer-re
 
 ## Step 5 — buyer journey
 
-Build the complete buyer journey around MatriBhumi as a property advisor and transaction coordinator. MatriBhumi is not the seller.
+Build the complete buyer journey around RAZZ Construction and Properties as a property advisor and transaction coordinator. RAZZ Construction and Properties is not the seller.
 
 - Primary CTA: “Talk to a Property Advisor”. Secondary: “Find My Property”, “Request Property Details”, “Arrange a Viewing”. Configurable in `src/config/ctas.ts`.
-- Public fee message (configurable in `src/config/businessModel.ts`): “MatriBhumi does not charge buyers a property brokerage or consultation fee. Where applicable, MatriBhumi is compensated by participating developers under separate agreements.”
+- Public fee message (configurable in `src/config/businessModel.ts`): “RAZZ Construction and Properties does not charge buyers a property brokerage or consultation fee. Where applicable, RAZZ Construction and Properties is compensated by participating developers under separate agreements.”
 - `/advise` collects a requirements brief (name, email, WhatsApp/phone, residence, preferred country/city, type, budget, currency, bedrooms, purpose, timeline, contact method, message; optional developer, project, financing). No passport or bank documents.
 - Submission creates a `Lead` with `source = ADVISORY` and an open `Deal`, then emails the buyer and sales inbox when SMTP is configured.
 - Staff matching scores published Bangladesh listings on location, developer, development, type, price, bedrooms, and status. The score is a screening aid, not an AI valuation or legal opinion.
@@ -60,11 +62,11 @@ Build the complete buyer journey around MatriBhumi as a property advisor and tra
 Evolve the existing Prisma schema for a multi-developer advisory and transaction-coordination platform. Do not rebuild the database. Keep Developer → Development → Property → Unit.
 
 - `Developer` now holds company profile, public vs internal copy, Bangladesh-default country, cities, contacts, status, verified/featured flags, and timestamps.
-- `DeveloperPartnership` records the MatriBhumi relationship (status, dates, markets, agreement reference, public visibility). Commercial agreement details stay off public pages.
+- `DeveloperPartnership` records the RAZZ Construction and Properties relationship (status, dates, markets, agreement reference, public visibility). Commercial agreement details stay off public pages.
 - `DeveloperCompensation` and `DealCompensation` store compensation type, percentage or amount, currency, payment status, and transaction references. ADMIN-only via `canViewCompensation`. Public APIs use `publicDeveloperSelect` and `stripConfidential`.
 - Central buyer-fee config in `src/config/businessModel.ts`: `buyerPaysMatriBhumi = false`, `buyerFee = 0`, `developerCompensation = true`.
 - `Lead` records optional buyer geography, budget range, purpose, timeline, financing, source, assigned staff, developer/development referral, qualification, and follow-up. Sensitive fields stay optional.
-- `Deal` tracks BuyerLead → Qualification → DeveloperIntroduction → Viewing → PropertySelected → Reservation → Contract → Completion → Closed. Estimated transaction value is the buyer purchase with the developer/seller. MatriBhumi compensation is a separate record.
+- `Deal` tracks BuyerLead → Qualification → DeveloperIntroduction → Viewing → PropertySelected → Reservation → Contract → Completion → Closed. Estimated transaction value is the buyer purchase with the developer/seller. RAZZ Construction and Properties compensation is a separate record.
 - `ViewingRequest` adds viewing type, location, lead/developer/advisor/deal links, and developer confirmation.
 - Migrations: `20261008000000_init` (baseline of the pre-Step-4 schema), `20261008010000_advisory_platform` (additive tables/columns), and `20261008010001_backfill_developer_partnerships` (prospect partnership for existing developers, Bangladesh market, not public, no compensation terms). Existing developer rows keep their names and listings; `publicDescription` is copied from `description`. No invented partners or commission percentages.
 
@@ -85,8 +87,8 @@ Public navigation, homepage, and discovery now match the advisory / brokerage / 
 - Primary nav: Home, Properties, Developers, Locations, How It Works, For Developers, About, Insights, Contact.
 - Secondary nav: Bangladesh cities — Bangladesh, Dhaka, Chattogram, Bashundhara. Public listings are Bangladesh-only.
 - Properties is the central discovery surface (country, city, location, developer, type, price, bedrooms, completion status, development status, featured).
-- Property cards say “Listed through MatriBhumi”, show a public developer name only when published, and use Request details / Arrange a viewing / Speak with an advisor.
-- Homepage follows the 13-section advisory structure, including “How MatriBhumi is paid”.
+- Property cards say “Listed through RAZZ Construction and Properties”, show a public developer name only when published, and use Request details / Arrange a viewing / Speak with an advisor.
+- Homepage follows the 13-section advisory structure, including “How RAZZ Construction and Properties is paid”.
 - `/how-it-works` is a six-step buyer journey. `/for-developers` is the developer proposition without guaranteed-sales claims.
 - `/developers` lists published partners only. The seed partner stays unpublished, so the index is an empty state until a real partner is stored.
 - Copy uses “selected developers”. “Verified developer” appears only when `Developer.verified` is true.
@@ -98,13 +100,13 @@ Internal report for the change from a developer/owner site to an independent adv
 
 ## Existing developer-model assumptions (removed in step 1)
 
-- Brand copy presented MatriBhumi as a boutique architectural design and development firm (`src/config/site.ts`).
-- Legal name in JSON-LD was “MatriBhumi Developments”.
-- FAQ claimed MatriBhumi’s legal team completed registration and that every MatriBhumi development ran building management.
-- Legal block treated RAJUK, structural certificates, and developer registration as MatriBhumi’s filings.
-- Terms said Bashundhara listings were private projects of MatriBhumi.
-- Seed stored a single `Developer` named MatriBhumi and pointed every listing at it.
-- Property detail always printed `Developer: {name}`, which showed MatriBhumi.
+- Brand copy presented RAZZ Construction and Properties as a boutique architectural design and development firm (`src/config/site.ts`).
+- Legal name in JSON-LD was “RAZZ Construction and Properties Developments”.
+- FAQ claimed RAZZ Construction and Properties’ legal team completed registration and that every RAZZ Construction and Properties development ran building management.
+- Legal block treated RAJUK, structural certificates, and developer registration as RAZZ Construction and Properties’ filings.
+- Terms said Bashundhara listings were private projects of RAZZ Construction and Properties.
+- Seed stored a single `Developer` named RAZZ Construction and Properties and pointed every listing at it.
+- Property detail always printed `Developer: {name}`, which showed RAZZ Construction and Properties.
 
 ## Pages modified
 
@@ -116,20 +118,20 @@ Home, about, projects, project detail, properties, property detail, locations, s
 | --- | --- | --- |
 | `Developer` | `published` (default false) | Public name is shown only when true |
 | `Developer` | `website` | Optional partner site |
-| `Development` | `matribhumiOwned` (default false) | Explicit MatriBhumi ownership |
-| `Property` | `matribhumiOwned` (default false) | Explicit MatriBhumi ownership |
+| `Development` | `matribhumiOwned` (default false) | Explicit RAZZ Construction and Properties ownership |
+| `Property` | `matribhumiOwned` (default false) | Explicit RAZZ Construction and Properties ownership |
 
 Existing `Developer`, `Development`, `Property`, `Location`, `Unit`, `Lead`, and `ViewingRequest` models are retained.
 
 ## Public developer-name rule
 
-`src/lib/developer.ts` returns a name only for a published, named partner. Placeholder names (“Unpublished partner”) stay hidden even if `published` is flipped by mistake. `matribhumiOwned` prints “MatriBhumi-owned”.
+`src/lib/developer.ts` returns a name only for a published, named partner. Placeholder names (“Unpublished partner”) stay hidden even if `published` is flipped by mistake. `matribhumiOwned` prints “RAZZ-owned”.
 
 Seed uses one unpublished placeholder (`slug: unpublished-partner`) so foreign keys remain valid. No invented partner companies.
 
 ## Terminology
 
-Owner language (“we build”, “our developments”, “development firm”) is rewritten as advisor language (selected / partner / participating developer projects). Buyer fee copy states: no brokerage, consultation, or property-search fee to the buyer; the developer compensates MatriBhumi under a separate agreement; no percentage is published.
+Owner language (“we build”, “our developments”, “development firm”) is rewritten as advisor language (selected / partner / participating developer projects). Buyer fee copy states: no brokerage, consultation, or property-search fee to the buyer; the developer compensates RAZZ Construction and Properties under a separate agreement; no percentage is published.
 
 ## Legal / compliance claims reviewed
 

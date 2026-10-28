@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 
-test("advisory form collects requirements and confirms advisor follow-up", async ({ page }) => {
+test("sales form collects requirements and confirms sales follow-up", async ({ page }) => {
   await page.goto("/advise");
-  await expect(page.getByRole("heading", { level: 1, name: /Talk to a property advisor/i })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Talk to sales/i })).toBeVisible();
   await expect(
     page.getByText(
-      "MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service. Where applicable, MatriBhumi may receive compensation from participating developers under separate commercial agreements.",
+      "The purchase price of a home is agreed in the sale contract with RAZZ Construction and Properties Ltd. This website does not charge a separate buyer brokerage or consultation fee.",
     ).first(),
   ).toBeVisible();
 
@@ -18,10 +18,10 @@ test("advisory form collects requirements and confirms advisor follow-up", async
   await page.locator("input[name=bedrooms]").fill("3");
   await page.locator("textarea[name=message]").fill("Looking for a family apartment near schools in Dhaka.");
   await page.locator("input[name=consent]").check();
-  await page.getByRole("button", { name: /Talk to an Advisor/i }).click();
+  await page.getByRole("button", { name: /Talk to Sales/i }).click();
 
   await expect(page.getByRole("heading", { name: "Thank you." })).toBeVisible();
   await expect(
-    page.getByText("Your MatriBhumi property advisor will review your requirements and contact you."),
+    page.getByText("A member of the RAZZ sales team will review your enquiry and contact you."),
   ).toBeVisible();
 });

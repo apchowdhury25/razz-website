@@ -7,7 +7,7 @@ export function DiasporaFaq() {
       <SectionHeader
         eyebrow="For the diaspora"
         title="For buyers living in two places: frequently asked questions"
-        description="Fees, who the seller is, ownership, payments, and the months the house is quiet — answered before you fly."
+        description="The purchase, ownership, payments, and the months the house is quiet — answered before you fly."
       />
       <div className="mt-12 border-t border-charcoal/10">
         {diasporaFaq.map((item) => (

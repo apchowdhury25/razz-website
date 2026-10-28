@@ -11,7 +11,7 @@ import { siteConfig, whatWeDo } from "@/config/site";
 export const metadata = createMetadata({
   title: "About",
   description:
-    "MatriBhumi is independent property advisory and transaction coordination in Bangladesh.",
+    "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh.",
   path: "/about",
   image: "/media/about-lobby.jpg",
 });
@@ -21,40 +21,38 @@ export default function AboutPage() {
     <PublicShell transparentHeader>
       <PageHero
         image="/media/about-lobby.jpg"
-        eyebrow="About MatriBhumi"
-        title="Independent property advisory and transaction coordination."
-        description={`${siteConfig.positioning} MatriBhumi connects buyers with participating developers and helps coordinate the journey — with no buyer fee.`}
+        eyebrow="About RAZZ Construction and Properties"
+        title="A real-estate development company."
+        description={`${siteConfig.positioning} We develop residential projects in Bangladesh and sell them through our sales team.`}
       />
       <section className="grid gap-12 px-4 py-14 sm:px-6 md:px-12 md:py-20 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-4xl">Story</h2>
           <p className="mt-4 leading-8 text-muted">
-            MatriBhumi means mother-land. We are an independent property advisor and transaction-coordination company —
-            not a developer that builds homes for sale under this brand, except where a listing is explicitly marked
-            MatriBhumi-owned. Families at home and abroad use us to compare selected developer properties in
-            Bangladesh, then stay with us through introductions, viewings, and follow-up.
+            RAZZ Construction and Properties Ltd. is a registered real-estate company based at House 05, Road 04,
+            Nikunja-1, Dhaka 1229. The company develops residential projects in Bangladesh and sells those homes
+            through its sales team. Families at home and abroad can compare RAZZ projects, visit them, and purchase
+            directly from the company. Landowners and other developers can also write about a joint venture.
           </p>
         </div>
         <div className="grid gap-8">
           <div>
             <h3 className="font-display text-3xl">Vision</h3>
             <p className="mt-3 text-muted">
-              Help buyers find a suitable address, then coordinate a clean
-              introduction to the developer who is selling it.
+              Develop homes people are glad to live in, and sell them with a clear conversation from the first enquiry to handover.
             </p>
           </div>
           <div>
             <h3 className="font-display text-3xl">Mission</h3>
             <p className="mt-3 text-muted">
-              Understand requirements, shortlist selected developer properties, introduce qualified buyers, and
-              coordinate viewings and the transaction path — without charging the buyer a fee, and without promising
-              financial returns.
+              Build residential projects in Bangladesh, help buyers choose a home, and complete the sale with them.
+              We do not promise financial returns.
             </p>
           </div>
         </div>
       </section>
       <section className="bg-mist px-4 py-14 sm:px-6 md:px-12 md:py-20">
-        <SectionHeader title="How we work" eyebrow="Selected participating developers" />
+        <SectionHeader title="How we work" eyebrow="Develop, sell, and partner" />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {whatWeDo.map((item) => (
             <article key={item.title} className="bg-ivory p-6">
@@ -70,10 +68,10 @@ export default function AboutPage() {
         <LegalCompliance />
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <Button href="/how-it-works" variant="outline" className="w-full sm:w-auto">
-            How it works
+            Buying
           </Button>
           <Button href="/advise" className="w-full sm:w-auto">
-            Talk to an Advisor
+            Talk to Sales
           </Button>
         </div>
       </section>

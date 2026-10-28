@@ -50,7 +50,7 @@ describe("waitlistSchema", () => {
       countryId: "GB",
       phone: "7700900123",
       interest: "Retirement",
-      project: "MatriBhumi Heights",
+      project: "RAZZ Construction and Properties Heights",
       consent: true,
     });
     expect(parsed.success).toBe(true);
@@ -71,9 +71,9 @@ describe("brochureSchema", () => {
 describe("brochureEmail", () => {
   it("addresses the reader by first name and includes the download link", () => {
     const letter = brochureEmail("Asha Rahman");
-    expect(letter.subject).toBe("Your MatriBhumi property brochure");
+    expect(letter.subject).toBe("Your RAZZ Construction and Properties property brochure");
     expect(letter.text.startsWith("Dear Asha,")).toBe(true);
-    expect(letter.text).toContain("https://matribhumi.me/media/brochures/matribhumi-preview.pdf");
+    expect(letter.text).toContain("https://razzcnpl.me/media/brochures/matribhumi-preview.pdf");
     expect(letter.text).toContain("House 05, Road 04, Nikunja-1, Khilkhet, Dhaka 1229, Bangladesh");
     expect(letter.text).toContain("Welcome back to the idea of home.");
     expect(letter.html).toContain("Download brochure");

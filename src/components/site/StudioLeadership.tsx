@@ -6,17 +6,28 @@ export function StudioLeadership() {
     <section className="bg-mist px-4 py-16 sm:px-6 md:px-12 md:py-24">
       <SectionHeader
         eyebrow="Team & leadership"
-        title="Independent advice, then a coordinated introduction."
-        description={`${siteConfig.positioning} Leadership for the Bangladesh practice, with remaining portraits to follow as the team book is completed.`}
+        title="The people who develop and sell the homes."
+        description={`${siteConfig.positioning} Leadership in Dhaka, with remaining portraits to follow as the team book is completed.`}
       />
       <div className="mt-12 grid gap-10 md:grid-cols-3">
         {leadership.map((person) => (
           <article key={person.name}>
-            <img
-              src={person.image}
-              alt={`${person.name}, ${person.role}`}
-              className="aspect-[3/4] w-full bg-stone object-cover object-top"
-            />
+            {person.image ? (
+              <img
+                src={person.image}
+                alt={`${person.name}, ${person.role}`}
+                className="aspect-[3/4] w-full bg-stone object-cover object-top"
+              />
+            ) : (
+              <div className="grid aspect-[3/4] w-full place-items-center bg-stone text-moss">
+                <span className="font-display text-6xl">
+                  {person.name
+                    .split(" ")
+                    .map((part) => part[0])
+                    .join("")}
+                </span>
+              </div>
+            )}
             <p className="mt-5 text-[11px] uppercase tracking-[0.2em] text-earth">{person.role}</p>
             <h3 className="font-display mt-2 text-3xl">{person.name}</h3>
             <p className="mt-3 text-sm leading-7 text-muted">{person.bio}</p>

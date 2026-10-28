@@ -162,7 +162,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
       <section>
         <h2 className="font-display text-3xl">Matching</h2>
         <p className="mt-2 max-w-2xl text-sm text-muted">
-          Advisor screening score against published Bangladesh listings. This is not an AI recommendation, valuation, or legal opinion.
+          Sales screening score against published Bangladesh homes. This is not an AI recommendation, valuation, or legal opinion.
         </p>
         <ul className="mt-6 divide-y divide-charcoal/10">
           {ranked.map(({ property: matchProperty, match }) => {
@@ -180,7 +180,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
                 <form action={addShortlistItem} className="grid gap-2">
                   <input type="hidden" name="leadId" value={lead.id} />
                   <input type="hidden" name="propertyId" value={listing.id} />
-                  <input name="advisorRecommendation" placeholder="Advisor note" className="h-10 border border-charcoal/15 px-3 text-sm" />
+                  <input name="advisorRecommendation" placeholder="Sales note" className="h-10 border border-charcoal/15 px-3 text-sm" />
                   <button className="h-10 bg-charcoal px-3 text-[11px] uppercase tracking-[0.16em] text-ivory">Add to shortlist</button>
                 </form>
               </li>
@@ -210,7 +210,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
                   <input name="locationNote" defaultValue={item.locationNote ?? ""} placeholder="Location" className="h-10 border border-charcoal/15 px-3 text-sm" />
                   <input name="keyFeatures" defaultValue={item.keyFeatures ?? ""} placeholder="Key features" className="h-10 border border-charcoal/15 px-3 text-sm" />
                   <textarea name="notes" defaultValue={item.notes ?? ""} placeholder="Notes" className="border border-charcoal/15 p-3 text-sm" />
-                  <textarea name="advisorRecommendation" defaultValue={item.advisorRecommendation ?? ""} placeholder="Advisor recommendation" className="border border-charcoal/15 p-3 text-sm" />
+                  <textarea name="advisorRecommendation" defaultValue={item.advisorRecommendation ?? ""} placeholder="Sales note" className="border border-charcoal/15 p-3 text-sm" />
                   <button className="h-10 bg-charcoal text-[11px] uppercase tracking-[0.16em] text-ivory">Save shortlist item</button>
                 </form>
                 <form action={removeShortlistItem} className="mt-2">
@@ -227,7 +227,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
 
       <section>
         <h2 className="font-display text-3xl">Developer introduction</h2>
-        <p className="mt-2 text-sm text-muted">Record when the buyer is introduced to the developer of record. MatriBhumi is not the seller.</p>
+        <p className="mt-2 text-sm text-muted">Record the project conversation. The buyer purchases from RAZZ Construction and Properties Ltd.</p>
         <ul className="mt-4 space-y-2 text-sm">
           {lead.introductions.map((item) => (
             <li key={item.id}>
@@ -318,7 +318,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
           <input name="dueAt" type="date" required className="h-11 border border-charcoal/15 px-3 text-sm" />
           <input name="task" required placeholder="Task" className="h-11 border border-charcoal/15 px-3 text-sm" />
           <select name="assignedAdvisorId" defaultValue={lead.assignedStaffId ?? ""} className="h-11 border border-charcoal/15 px-3 text-sm">
-            <option value="">Advisor</option>
+            <option value="">Sales</option>
             {staff.map((person) => (
               <option key={person.id} value={person.id}>{person.name}</option>
             ))}

@@ -13,7 +13,7 @@ export function ViewingForm({ propertyId }: { propertyId: string }) {
   if (state.ok) {
     return (
       <div className="border border-moss/20 bg-mist p-6 text-sm leading-7">
-        <p>Your viewing request has entered the MatriBhumi pipeline. An advisor will coordinate with the developer to confirm availability. Preferred times are requests, not confirmed appointments.</p>
+        <p>Your viewing request is with RAZZ sales. The team will confirm availability at the project. Preferred times are requests, not confirmed appointments.</p>
         <BuyerFeeNotice className="mt-3" />
       </div>
     );

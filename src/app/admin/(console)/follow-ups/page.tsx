@@ -51,7 +51,7 @@ export default async function FollowUpsPage() {
           ))}
         </select>
         <select name="assignedAdvisorId" className="h-11 border border-charcoal/15 px-3 text-sm">
-          <option value="">Advisor</option>
+          <option value="">Sales</option>
           {staff.map((person) => (
             <option key={person.id} value={person.id}>{person.name}</option>
           ))}

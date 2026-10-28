@@ -39,7 +39,7 @@ export default async function AdminViewingsPage() {
                 ))}
               </select>
               <select name="assignedAdvisorId" defaultValue={item.assignedAdvisorId ?? ""} className="h-11 border border-charcoal/15 px-3 text-sm">
-                <option value="">Advisor</option>
+                <option value="">Sales</option>
                 {staff.map((person) => (
                   <option key={person.id} value={person.id}>{person.name}</option>
                 ))}

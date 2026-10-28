@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
   title: "Developments",
   description:
-    "Selected developer projects listed through MatriBhumi in Bangladesh.",
+    "Selected developer projects listed through RAZZ Construction and Properties in Bangladesh.",
   path: "/projects",
   image: "/media/hero-plaza.jpg",
 });
@@ -31,7 +31,7 @@ export default async function ProjectsPage({
         image="/media/hero-plaza.jpg"
         eyebrow="Developments"
         title="Neighbourhoods you can return to — or live in every day."
-        description="Selected projects from participating developers for vacation weeks, retirement, and full-time living. Join the waitlist to compare and request an introduction."
+        description="Residential projects by RAZZ Construction and Properties Ltd. for everyday living, longer stays, and retirement. Join the waitlist or speak with sales."
       />
       <section className="px-4 py-12 sm:px-6 md:px-12 md:py-16">
         <div className="flex flex-wrap gap-3 text-[11px] uppercase tracking-[0.18em]">

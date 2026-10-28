@@ -42,7 +42,7 @@ export default async function AdminDevelopmentsPage() {
         </select>
         <label className="text-sm"><input type="checkbox" name="published" defaultChecked /> Published</label>
         <label className="text-sm"><input type="checkbox" name="demo" /> Demo/test development</label>
-        <label className="text-sm"><input type="checkbox" name="matribhumiOwned" /> MatriBhumi-owned</label>
+        <label className="text-sm"><input type="checkbox" name="matribhumiOwned" /> RAZZ-owned</label>
         <button className="h-11 bg-charcoal text-[11px] uppercase tracking-[0.18em] text-ivory">Create</button>
       </form>
     </div>

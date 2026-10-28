@@ -100,7 +100,7 @@ export function AdvisoryForm({
       </label>
       {developers.length ? (
         <label className="grid gap-2 text-[11px] uppercase tracking-[0.18em] text-earth">
-          Preferred developer (optional)
+          Developer (optional)
           <select name="developerId" className="h-12 w-full border border-charcoal/15 bg-paper px-3 text-base text-charcoal">
             <option value="">No preference</option>
             {developers.map((developer) => (
@@ -135,7 +135,7 @@ export function AdvisoryForm({
       </label>
       <label className="flex items-start gap-3 text-sm normal-case tracking-normal text-muted">
         <input type="checkbox" name="consent" value="true" required className="mt-1" />
-        I agree to MatriBhumi storing these requirements so an advisor can contact me. I do not need to provide nationality, passport, or financial documents at this stage.
+        I agree to RAZZ Construction and Properties storing these requirements so sales can contact me. I do not need to provide nationality, passport, or financial documents at this stage.
       </label>
       {state.error ? <p className="text-sm text-red-800">{state.error}</p> : null}
       <BuyerFeeNotice />

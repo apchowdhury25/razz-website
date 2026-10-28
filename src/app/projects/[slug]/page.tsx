@@ -41,16 +41,16 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Developments", path: "/projects" }, { name: project.name, path: `/projects/${project.slug}` }])} />
       <section className="relative min-h-[80vh]">
         <img src={project.heroImage} alt={project.name} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
-        <div className="relative flex min-h-[80vh] items-end px-6 pb-16 md:px-12">
-          <div className="max-w-3xl text-ivory">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-sand">
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/90 to-ivory/30" />
+        <div className="relative flex min-h-[80vh] items-end px-6 pb-16 pt-36 md:px-12 md:pt-40">
+          <div className="max-w-3xl text-charcoal">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-earth">
               {project.location.city}, {project.location.country}
               {sellerLabel ? ` · ${sellerLabel}` : ""}
             </p>
             <h1 className="font-display mt-4 text-[2.1rem] leading-[1.05] sm:text-5xl md:text-7xl">{project.name}</h1>
-            <p className="mt-4 text-lg text-ivory/80">{project.tagline}</p>
-            <DualCta projectName={project.name} tone="dark" className="mt-8" />
+            <p className="mt-4 text-lg text-muted">{project.tagline}</p>
+            <DualCta projectName={project.name} className="mt-8" />
           </div>
         </div>
       </section>

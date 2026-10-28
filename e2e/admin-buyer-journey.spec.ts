@@ -80,5 +80,5 @@ test("admin lead matching, shortlist, and deal pipeline", async ({ page }) => {
   await expect(page.getByText(/Viewing → Property Selected → Reservation → Contract → Completion/i)).toBeVisible();
   await expect(page.getByRole("heading", { name: "Developer introductions" })).toBeVisible();
   await expect(page.getByRole("button", { name: /mark property selected/i })).toBeVisible();
-  await expect(page.getByText("MatriBhumi is not the seller.")).toBeVisible();
+  await expect(page.getByText("The buyer purchases from RAZZ Construction and Properties Ltd.")).toBeVisible();
 });

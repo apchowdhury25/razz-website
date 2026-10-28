@@ -6,7 +6,7 @@ import { countryFilterValues, getMarket, getMarketByCountry } from "@/lib/market
 
 describe("slugify", () => {
   it("creates url-safe slugs", () => {
-    expect(slugify("MatriBhumi Heights")).toBe("matribhumi-heights");
+    expect(slugify("RAZZ Construction and Properties Heights")).toBe("razz-construction-and-properties-heights");
   });
 });
 
@@ -17,9 +17,9 @@ describe("publicDeveloperName", () => {
     expect(publicDeveloperName({ name: "Horizon Homes", published: true })).toBe("Horizon Homes");
   });
 
-  it("labels MatriBhumi-owned listings without a partner brand", () => {
+  it("labels RAZZ-owned listings without a partner brand", () => {
     expect(ownershipLabel({ matribhumiOwned: true, developer: { name: "Unpublished partner", published: false } })).toBe(
-      "MatriBhumi-owned",
+      "RAZZ-owned",
     );
     expect(ownershipLabel({ matribhumiOwned: false, developer: { name: "Unpublished partner", published: false } })).toBeNull();
   });
@@ -32,7 +32,7 @@ describe("publicDeveloperName", () => {
 });
 
 describe("markets", () => {
-  it("publishes Bangladesh as the only public advisory market", () => {
+  it("publishes Bangladesh as the only public market", () => {
     expect(getMarket("bangladesh")?.country).toBe("Bangladesh");
     expect(getMarketByCountry("Bangladesh")?.slug).toBe("bangladesh");
     expect(countryFilterValues("bangladesh")).toEqual(["Bangladesh"]);

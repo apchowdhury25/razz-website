@@ -33,18 +33,17 @@ export async function CountryMarketPage({ slug }: { slug: string }) {
       />
       <PageHero
         image={market.heroImage}
-        eyebrow={`${market.shortName} property advisor`}
-        title={`${market.name} property advisory.`}
+        eyebrow={`${market.shortName} developments`}
+        title={`${market.name} homes by RAZZ.`}
         description={market.description}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href="/advise" variant="invert">
+          <Button href="/advise">
             {buyerCtas.talkToAdvisor}
           </Button>
           <Button
             href={marketHasPublicListings(market.slug) ? `/properties?country=${market.slug}` : "/properties"}
             variant="outline"
-            className="border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal"
           >
             {buyerCtas.findMyProperty}
           </Button>
@@ -54,7 +53,7 @@ export async function CountryMarketPage({ slug }: { slug: string }) {
       <section className="px-4 py-16 sm:px-6 md:px-12 md:py-20">
         <SectionHeader
           eyebrow="What we do here"
-          title={`Independent ${market.shortName} property consultant.`}
+          title={`${market.shortName} projects by RAZZ.`}
           description={market.intro}
         />
       </section>
@@ -76,7 +75,7 @@ export async function CountryMarketPage({ slug }: { slug: string }) {
         <SectionHeader
           eyebrow="Properties"
           title={`Selected ${market.shortName} listings.`}
-          description="Listings are published as developer partnerships are confirmed. MatriBhumi does not own these properties unless a listing is marked MatriBhumi-owned."
+          description="Homes are published as RAZZ Construction and Properties releases them. The company develops and sells the projects on this website."
         />
         {propertyData.items.length ? (
           <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -86,7 +85,7 @@ export async function CountryMarketPage({ slug }: { slug: string }) {
           </div>
         ) : (
           <p className="mt-10 max-w-2xl text-muted">
-            No published properties for {market.name} yet. Talk to an advisor if you would like us to watch this
+            No published properties for {market.name} yet. Talk to sales if you would like us to watch this
             market for you.
           </p>
         )}

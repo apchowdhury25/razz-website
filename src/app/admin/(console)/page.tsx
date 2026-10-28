@@ -73,7 +73,7 @@ export default async function AdminHome() {
     <div>
       <h1 className="font-display text-4xl">Dashboard</h1>
       <p className="mt-3 max-w-2xl text-sm text-muted">
-        Advisory CRM for buyer coordination and developer relationships. Figures are an internal snapshot, not a revenue forecast.
+        Sales console for buyer enquiries and joint-venture conversations. Figures are an internal snapshot, not a revenue forecast.
       </p>
 
       {todayCards.length ? (

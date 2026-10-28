@@ -16,5 +16,5 @@ if (!process.env.NEXTAUTH_SECRET) {
 }
 
 if (!process.env.NEXT_PUBLIC_SITE_URL) {
-  process.env.NEXT_PUBLIC_SITE_URL = "https://matribhumi.me";
+  process.env.NEXT_PUBLIC_SITE_URL = "https://razzcnpl.me";
 }

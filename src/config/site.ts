@@ -2,36 +2,36 @@ import { buyerFeeNote, buyerFeeStatement } from "./businessModel";
 import { legalCompliance as legalComplianceItems, legalNav } from "./legal";
 
 export const siteConfig = {
-  name: "MatriBhumi",
-  legalName: "MatriBhumi",
-  shortName: "MatriBhumi",
-  url: "https://matribhumi.me",
-  domain: "matribhumi.me",
+  name: "RAZZ Construction and Properties",
+  legalName: "RAZZ Construction and Properties Ltd.",
+  shortName: "RAZZ",
+  url: "https://razzcnpl.me",
+  domain: "razzcnpl.me",
   description:
-    "Independent property advisory and transaction coordination in Bangladesh. Explore selected developments, compare options, connect with developers and coordinate your purchase.",
-  tagline: "Find the right property. We coordinate the rest.",
+    "RAZZ Construction and Properties Ltd. is a registered real-estate developer in Bangladesh. Explore our projects, speak with sales, or propose a joint venture.",
+  tagline: "Homes developed and sold by RAZZ.",
   supporting:
-    "Independent property advisory and transaction coordination in Bangladesh. Explore selected developments, compare options, connect with developers and coordinate your purchase.",
+    "RAZZ Construction and Properties Ltd. is a registered real-estate developer in Bangladesh. Explore our projects, speak with sales, or propose a joint venture.",
   positioning:
-    "Independent property advisory and transaction coordination.",
+    "A registered real-estate development company in Bangladesh.",
   districtRelation:
-    "Selected developer projects in Bangladesh, starting with Dhaka and Chattogram neighborhoods as listings are published.",
+    "Residential projects in Bangladesh, including Dhaka and Chattogram.",
   audience:
-    "For buyers looking in Bangladesh — including households already in the country and people living abroad who want independent guidance.",
+    "For buyers of RAZZ homes in Bangladesh, including households already in the country and people living abroad.",
   buyerFee: buyerFeeStatement,
   buyerFeeNote,
-  email: "anwar.chowdhury@matribhumi.me",
-  salesEmail: "anwar.chowdhury@matribhumi.me",
-  pressEmail: "press@matribhumi.me",
-  careersEmail: "careers@matribhumi.me",
+  email: "sales@razzcnpl.me",
+  salesEmail: "sales@razzcnpl.me",
+  pressEmail: "press@razzcnpl.me",
+  careersEmail: "careers@razzcnpl.me",
   departments: [
-    { label: "Information", email: "info@matribhumi.me" },
-    { label: "Advisor", email: "advisor@matribhumi.me" },
-    { label: "Press", email: "press@matribhumi.me" },
-    { label: "Careers", email: "careers@matribhumi.me" },
+    { label: "Information", email: "info@razzcnpl.me" },
+    { label: "Sales", email: "sales@razzcnpl.me" },
+    { label: "Press", email: "press@razzcnpl.me" },
+    { label: "Careers", email: "careers@razzcnpl.me" },
   ],
-  phone: "+1 760-290-9110",
-  phoneHref: "tel:+17602909110",
+  phone: "01896-016470",
+  phoneHref: "tel:+8801896016470",
   brochurePath: "/media/brochures/matribhumi-preview.pdf",
   address: {
     line1: "House 05, Road 04",
@@ -41,19 +41,18 @@ export const siteConfig = {
     postal: "1229",
   },
   social: {
-    instagram: "https://www.instagram.com/matribhumi",
-    linkedin: "https://www.linkedin.com/company/matribhumi",
-    whatsapp: "https://wa.me/17602909110",
+    linkedin: "https://bd.linkedin.com/company/razzcreativepropertieslimited",
+    whatsapp: "https://wa.me/8801896016470",
   },
 } as const;
 
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/properties", label: "Properties" },
-  { href: "/developers", label: "Developers" },
+  { href: "/projects", label: "Projects" },
   { href: "/locations", label: "Locations" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/for-developers", label: "For Developers" },
+  { href: "/how-it-works", label: "Buying" },
+  { href: "/for-developers", label: "Joint Venture" },
   { href: "/about", label: "About" },
   { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
@@ -77,17 +76,16 @@ export const footerNav = {
   ],
   explore: [
     { href: "/properties", label: "Properties" },
-    { href: "/developers", label: "Developers" },
-    { href: "/locations", label: "Locations" },
-    { href: "/how-it-works", label: "How It Works" },
-    { href: "/advise", label: "Talk to an advisor" },
     { href: "/projects", label: "Projects" },
+    { href: "/locations", label: "Locations" },
+    { href: "/how-it-works", label: "Buying" },
+    { href: "/advise", label: "Talk to sales" },
     { href: "/favorites", label: "Saved homes" },
     { href: "/compare", label: "Compare" },
   ],
   company: [
-    { href: "/about", label: "About MatriBhumi" },
-    { href: "/for-developers", label: "For Developers" },
+    { href: "/about", label: "About" },
+    { href: "/for-developers", label: "Joint Venture" },
     { href: "/insights", label: "Insights" },
     { href: "/careers", label: "Careers" },
     { href: "/contact", label: "Contact" },
@@ -97,31 +95,31 @@ export const footerNav = {
 
 export const whatWeDo = [
   {
-    title: "Find a suitable property",
-    body: "Tell us how you will live in the home. We shortlist selected developer properties in Bangladesh as partnerships are published.",
+    title: "Develop",
+    body: "RAZZ Construction and Properties Ltd. plans and builds residential projects in Bangladesh.",
   },
   {
-    title: "Work with developers",
-    body: "MatriBhumi introduces you to the relevant participating developer and coordinates viewings and discussions. Commercial relationships with developers can apply.",
+    title: "Sell",
+    body: "Our sales team walks you through the homes, arranges viewings, and takes the purchase through to a sale agreement.",
   },
   {
-    title: "No buyer fee",
-    body: buyerFeeStatement,
+    title: "Joint ventures",
+    body: "Landowners and other developers can contact RAZZ about developing a site together.",
   },
 ] as const;
 
 export const whoItsFor = [
   {
-    title: "Local property buyers",
-    body: "Households already in Bangladesh who want help comparing developer projects before they buy.",
+    title: "Local buyers",
+    body: "Households in Bangladesh looking for a home in a RAZZ project.",
   },
   {
     title: "Buyers living abroad",
-    body: "People looking for a home to visit, retire into, or live in — with an advisor who coordinates across time zones.",
+    body: "People looking for a home to visit, retire into, or live in, with sales support across time zones.",
   },
   {
     title: "Relocating families",
-    body: "Buyers relocating who need a residential shortlist, viewings, and a clear path to the developer of record.",
+    body: "Families who need a shortlist of RAZZ homes, a viewing, and a clear path to purchase.",
   },
 ] as const;
 
@@ -133,61 +131,61 @@ export const howItWorksSteps = [
   },
   {
     step: "02",
-    title: "We match published listings.",
-    body: "An advisor screens location, developer, type, price, bedrooms, and status. Matching is a staff aid, not an AI valuation or legal opinion.",
+    title: "Sales reviews published homes.",
+    body: "The sales team screens location, project, type, price, bedrooms, and status. Matching is a staff aid, not a valuation or legal opinion.",
   },
   {
     step: "03",
-    title: "An advisor contacts you.",
-    body: "Your MatriBhumi property advisor will review your requirements and contact you.",
+    title: "Sales contacts you.",
+    body: "A member of the RAZZ sales team will review your enquiry and contact you.",
   },
   {
     step: "04",
     title: "We prepare a shortlist.",
-    body: "Staff assemble selected properties with location, estimated price, features, and advisor notes for you to compare.",
+    body: "Sales assemble RAZZ homes with location, price, and features so you can compare them.",
   },
   {
     step: "05",
-    title: "Developer introduction.",
-    body: "When you choose a property, we introduce you to the developer of record and record the date, method, and follow-up.",
+    title: "Choose a project.",
+    body: "When you choose a home, sales records the project, the unit interest, and the next conversation.",
   },
   {
     step: "06",
     title: "Viewings.",
-    body: "You request a viewing. MatriBhumi coordinates with the developer to confirm time and place.",
+    body: "You request a viewing. The sales team confirms the time and place at the project.",
   },
   {
     step: "07",
-    title: "Transaction coordination.",
-    body: "Viewing → property selected → reservation → contract → completion. You purchase from the developer or seller. MatriBhumi is not the seller.",
+    title: "Reserve and contract.",
+    body: "Viewing, home selected, reservation, sale agreement, then completion. You purchase from RAZZ Construction and Properties Ltd.",
   },
   {
     step: "08",
-    title: "Closed.",
-    body: "When the developer’s process completes, the file is marked closed. Any developer compensation is recorded internally, never on public pages.",
+    title: "Handover.",
+    body: "When the sale completes, the file is marked closed. Handover follows the schedule in the sale agreement.",
   },
 ] as const;
 
 export const buyerServices = [
-  { title: "Property advisory", body: "Requirements, budget, and a shortlist of selected developer properties." },
-  { title: "Buying assistance", body: "Questions, documents, and a clear sequence from first enquiry to introduction." },
-  { title: "Viewing coordination", body: "Arrange viewings with the developer and keep the diary across time zones." },
-  { title: "Developer introductions", body: "A qualified introduction to the developer of record for the project you choose." },
-  { title: "Transaction coordination", body: "Follow-up on the developer’s process so the purchase does not stall." },
-  { title: "Support from abroad", body: "Help for buyers living abroad or relocating to Bangladesh, within what local law allows." },
+  { title: "Sales enquiry", body: "Requirements, budget, and a shortlist of RAZZ homes." },
+  { title: "Project information", body: "Questions, documents, and a clear sequence from first enquiry to reservation." },
+  { title: "Viewings", body: "Arrange a visit to the project and keep the diary across time zones." },
+  { title: "Unit selection", body: "Work with sales on the home, floor, and layout you want." },
+  { title: "Sale agreement", body: "Follow the reservation and contract through to completion." },
+  { title: "Support from abroad", body: "Help for buyers living abroad or relocating to Bangladesh." },
 ] as const;
 
 export const developerServices = [
-  { title: "Property marketing", body: "Present selected projects to buyers already looking with MatriBhumi in Bangladesh." },
-  { title: "Qualified buyer referrals", body: "Introductions after we understand budget, timing, and intent." },
-  { title: "Buyer requirement matching", body: "Route enquiries to the project that actually fits." },
-  { title: "Viewing coordination", body: "Schedule and follow up viewings with the buyer and your sales team." },
-  { title: "Lead management", body: "Keep the conversation moving after the first enquiry." },
-  { title: "Buyers living abroad", body: "Reach buyers living abroad, relocators, and local buyers we already advise." },
-  { title: "Transaction coordination", body: "Stay on the process until the buyer is in your contracting workflow." },
-  { title: "Project presentation", body: "Help buyers understand the scheme, unit mix, and next steps." },
-  { title: "Market exposure", body: "A public listing on MatriBhumi.me when a partnership is in place." },
-  { title: "Buyer follow-up", body: "Reminders and answers so qualified interest does not go quiet." },
+  { title: "Land for development", body: "Tell us about a site you own and how you would like it developed with RAZZ." },
+  { title: "Joint development", body: "A landowner or another developer can propose building a project together." },
+  { title: "Project conversation", body: "Share the location, rough size, and what you hope the land becomes." },
+  { title: "Planning the homes", body: "RAZZ reviews whether the site fits a residential project the company can develop." },
+  { title: "One point of contact", body: "The same team stays with the conversation from the first note to a decision." },
+  { title: "Landowners abroad", body: "Owners who live outside Bangladesh can start the discussion in writing." },
+  { title: "A private agreement", body: "If both sides proceed, the joint venture is set out in its own agreement." },
+  { title: "Sales of the homes", body: "Homes in a RAZZ project are offered through the company’s sales team." },
+  { title: "Public projects", body: "Completed and current RAZZ projects are presented on razzcnpl.me." },
+  { title: "Next step", body: "Write to the Dhaka office. We reply to serious land and partnership enquiries." },
 ] as const;
 
 export const districtLife = [
@@ -256,36 +254,36 @@ export const lifestyles = [
 
 export const whyMatriBhumi = [
   {
-    title: "Independent guidance",
-    body: "MatriBhumi is an independent advisor. We are not the developer of the homes we present, except where a listing is marked MatriBhumi-owned.",
+    title: "Our own projects",
+    body: "RAZZ Construction and Properties Ltd. develops the homes it offers and sells them through its sales team.",
   },
   {
-    title: "Curated developer network",
-    body: "We present selected developments from participating developers. Public names appear when a partnership is published.",
+    title: "Registered in Bangladesh",
+    body: "The company is a registered real-estate developer in Bangladesh, with its office in Nikunja-1, Dhaka.",
   },
   {
     title: "Support from abroad",
-    body: "Guidance for buyers looking in Bangladesh, including households living abroad.",
+    body: "Sales support for buyers looking at RAZZ homes, including households living abroad.",
   },
   {
-    title: "One point of coordination",
-    body: "One advisor stays with you from the first brief through introductions, viewings, and follow-up.",
+    title: "One sales contact",
+    body: "One member of the sales team stays with you from the first enquiry through viewing and reservation.",
   },
   {
-    title: "Transparent buyer-fee policy",
+    title: "A direct purchase",
     body: buyerFeeStatement,
   },
   {
-    title: "Property comparison",
-    body: "Compare location, developer, type, price, and how you will use the home before you commit.",
+    title: "Compare homes",
+    body: "Compare location, project, type, price, and how you will use the home before you commit.",
   },
   {
-    title: "Viewing coordination",
-    body: "We arrange viewings with the developer and keep the diary across time zones.",
+    title: "Viewings",
+    body: "Sales arranges a visit to the project and keeps the diary across time zones.",
   },
   {
-    title: "Developer introductions",
-    body: "When a project fits, we introduce you to the developer of record and stay on the correspondence.",
+    title: "Joint ventures",
+    body: "Landowners and other developers can write to RAZZ about developing a site together.",
   },
 ] as const;
 
@@ -300,72 +298,72 @@ export const comingHomePrinciples = [
   },
   {
     title: "Looking after the home while you are away",
-    body: "Ask the developer how building management, neighbours, and upkeep work when the house is empty for part of the year. We help you get those answers.",
+    body: "Ask sales how building management, neighbours, and upkeep work when the house is empty for part of the year.",
   },
   {
     title: "Development quality",
-    body: "Construction standards and the care given to shared spaces belong to the developer of record. We help you inspect what they publish and what a viewing shows.",
+    body: "Construction standards and the care given to shared spaces are part of the RAZZ project. A viewing is the place to see what has been published.",
   },
   {
     title: "Not a financial product",
-    body: "MatriBhumi does not promise rental income, appreciation, or returns. Independent legal and tax advice is yours to seek.",
+    body: "RAZZ Construction and Properties does not promise rental income, appreciation, or returns. Independent legal and tax advice is yours to seek.",
   },
   {
     title: "Title and running costs",
-    body: "Price, size, service charges, and legal title should be reviewed with the developer and your own counsel. We do not provide financial advice.",
+    body: "Price, size, service charges, and legal title should be reviewed with the sales team and your own counsel. We do not provide financial advice.",
   },
 ] as const;
 
 export const diasporaFaq = [
   {
-    question: "Does MatriBhumi charge the buyer a fee?",
+    question: "Does RAZZ Construction and Properties charge the buyer a fee?",
     answer: buyerFeeStatement,
   },
   {
     question: "Who is the seller of a listed property?",
     answer:
-      "The participating developer is the seller. MatriBhumi discovers and curates projects, helps you compare them, introduces qualified buyers to the relevant developer, and coordinates communication, viewings, and follow-up. A listing is MatriBhumi-owned only when it is explicitly marked as such.",
+      "RAZZ Construction and Properties Ltd. is the developer and seller of the homes offered on this website. You purchase from the company under a sale agreement. Sales helps you compare homes, visit the project, and follow the reservation.",
   },
   {
     question: "Can I buy if I hold foreign citizenship?",
     answer:
-      "Ownership rules in Bangladesh depend on your citizenship and residency. MatriBhumi coordinates introductions and helps you follow the developer’s process. Independent legal advice is yours to obtain. We do not claim a real-estate licence in Bangladesh on this site.",
+      "Ownership rules in Bangladesh depend on your citizenship and residency. The sales team explains the company’s process. Independent legal advice is yours to obtain. RAZZ Construction and Properties Ltd. is a registered real-estate company in Bangladesh.",
   },
   {
     question: "How do payments and registration work from overseas?",
     answer:
-      "Payment accounts, milestone schedules, and title registration belong to the developer of record and to the lawyers you appoint. We help you ask the right questions and stay on the correspondence. We do not operate project escrow or complete registration ourselves.",
+      "Payment schedules are set out in the sale agreement with RAZZ Construction and Properties Ltd. Title registration is completed with the lawyers appointed for that sale. Sales stays on the correspondence.",
   },
   {
     question: "Who looks after the home when I am away?",
     answer:
-      "Building management is the developer’s (or the building’s) responsibility. We help you obtain those details before you commit, including security, inspections, and upkeep between visits.",
+      "Building management for a RAZZ project is arranged by the company or the building’s management. Ask sales about security, inspections, and upkeep between visits before you commit.",
   },
   {
     question: "What does joining the waitlist do?",
     answer:
-      "Waitlist members hear first when curated floor plans, viewing slots, or developer updates are released for a project you asked about. It is a coordination list, not a reservation contract.",
+      "Waitlist members hear first when floor plans, viewing slots, or project updates are released for a home you asked about. It is a contact list, not a reservation contract.",
   },
 ] as const;
 
 export const leadership = [
   {
-    name: "Anwar Chowdhury",
-    role: "Managing Director / CEO",
-    image: "/media/leader-ceo.jpg",
-    bio: "Leads MatriBhumi’s independent property advisory and transaction-coordination practice in Bangladesh. The work is matching buyers with participating developers, then coordinating the path until the developer of record takes the sale.",
+    name: "Syed Rawshan Ali",
+    role: "Managing Director",
+    image: "",
+    bio: "Managing Director of RAZZ Construction and Properties Ltd. Leads the company’s residential development and sales in Bangladesh.",
   },
   {
     name: "Farhan Kabir",
-    role: "Partner relations",
+    role: "Projects",
     image: "/media/leader-development.jpg",
-    bio: "Portrait and full biography to follow. Relationships with participating developers, so a buyer’s questions reach the people who can answer them.",
+    bio: "Portrait and full biography to follow. Project delivery for RAZZ developments.",
   },
   {
     name: "Leila Nassar",
-    role: "Buyer advisory",
+    role: "Sales",
     image: "/media/leader-design.jpg",
-    bio: "Portrait and full biography to follow. Requirements, budget, and shortlists — then viewings and follow-up until the transaction is in the developer’s hands.",
+    bio: "Portrait and full biography to follow. Buyer enquiries, shortlists, and viewings for RAZZ homes.",
   },
 ] as const;
 

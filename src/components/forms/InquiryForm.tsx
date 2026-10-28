@@ -80,7 +80,7 @@ export function InquiryForm({
       </label>
       <label className="flex items-start gap-3 text-sm normal-case tracking-normal text-muted">
         <input type="checkbox" name="consent" value="true" required className="mt-1" />
-        I agree to MatriBhumi storing this inquiry to respond to my request.
+        I agree to RAZZ Construction and Properties storing this inquiry to respond to my request.
       </label>
       {state.error ? <p className="text-sm text-red-800">{state.error}</p> : null}
       <Button type="submit" disabled={pending} className="w-full sm:w-auto">

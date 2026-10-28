@@ -38,7 +38,7 @@ export function CookieBanner() {
             Essential only
           </button>
           <button
-            className="h-11 bg-charcoal px-5 text-[11px] uppercase tracking-[0.18em] text-ivory"
+            className="h-11 bg-moss px-5 text-[11px] uppercase tracking-[0.18em] text-ivory"
             onClick={() => {
               localStorage.setItem(KEY, "all");
               setVisible(false);

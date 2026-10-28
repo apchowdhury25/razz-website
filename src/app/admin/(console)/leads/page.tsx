@@ -61,7 +61,7 @@ export default async function AdminLeadsPage({
           ))}
         </select>
         <select name="advisorId" defaultValue={filters.advisorId} className="h-11 border border-charcoal/15 px-3 text-sm">
-          <option value="">Advisor</option>
+          <option value="">Sales</option>
           {staff.map((person) => (
             <option key={person.id} value={person.id}>{person.name}</option>
           ))}
@@ -87,7 +87,7 @@ export default async function AdminLeadsPage({
             <th>Property</th>
             <th>Budget</th>
             <th>Status</th>
-            <th>Advisor</th>
+            <th>Sales</th>
             <th>When</th>
           </tr>
         </thead>

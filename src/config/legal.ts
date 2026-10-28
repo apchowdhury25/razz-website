@@ -13,7 +13,7 @@ export const counselReview = {
   jurisdiction: "Bangladesh",
   lastUpdated: "8 October 2026",
   notice:
-    "This page is operational website copy for MatriBhumi’s Bangladesh property advisory service. It is not legal advice and has not been reviewed or approved by qualified Bangladesh legal counsel. Counsel should review, replace, or amend this language before it is treated as a binding legal document.",
+    "This page is operational website copy for RAZZ Construction and Properties Ltd., a real-estate development company in Bangladesh. It is not legal advice and has not been reviewed or approved by qualified Bangladesh legal counsel. Counsel should review, replace, or amend this language before it is treated as a binding legal document.",
   notLegalAdvice:
     "Nothing on this website is legal, tax, financial, or financing advice. Obtain independent professional advice before completing a property transaction.",
 };
@@ -23,60 +23,60 @@ export type CounselReviewStatus = typeof counselReview.status;
 export const positioning = {
   market: "Bangladesh",
   summary:
-    "MatriBhumi operates as a property advisory and transaction-coordination platform connecting buyers with participating real-estate developers in Bangladesh.",
+    "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh. It develops residential projects and sells them through its sales team.",
   sellerResponsibility:
-    "The developer or seller remains responsible for the property sale.",
+    "RAZZ Construction and Properties Ltd. is the developer and seller of the homes offered on this website.",
   buyerHelp: [
-    "discover properties",
-    "compare properties",
-    "understand available options",
-    "connect with developers",
-    "arrange property viewings",
-    "coordinate communications",
-    "follow up through the transaction process",
+    "explore projects",
+    "compare homes",
+    "speak with sales",
+    "arrange a viewing",
+    "reserve a home",
+    "follow the sale",
+    "prepare for handover",
   ],
   licence:
-    "This website does not claim that MatriBhumi is licensed, registered, authorized, regulated, or legally permitted to perform a particular brokerage, real-estate agency, property consultancy, or intermediary activity in Bangladesh. No licence number, registration, regulatory approval, government affiliation, developer agreement, or legal certification is published here unless independently verified and inserted by the company after counsel review.",
+    "RAZZ Construction and Properties Ltd. is a registered real-estate company in Bangladesh. This website does not publish a licence or registration number.",
 };
 
 export const howWeWork = {
   title: "How we work",
   summary:
-    "MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh and coordinates the buyer’s interaction with the developer.",
+    "RAZZ Construction and Properties Ltd. develops and sells its own residential projects in Bangladesh. The sales team helps buyers choose a home, visit it, and complete the purchase.",
   purchaseAgreement:
-    "The property purchase agreement is between the buyer and the relevant developer/seller.",
+    "The property purchase agreement is between the buyer and RAZZ Construction and Properties Ltd.",
   funds:
-    "MatriBhumi does not receive or hold the buyer’s property purchase funds.",
+    "Purchase payments follow the schedule in the sale agreement with RAZZ Construction and Properties Ltd.",
 };
 
 export const compensationTransparency = {
-  title: "How MatriBhumi is paid",
+  title: "Buying from RAZZ",
   disclosure: buyerFeeDisclosure,
   note: buyerFeeNote,
   points: [
-    "Buyers do not pay MatriBhumi’s core advisory fee.",
-    "Participating developers may compensate MatriBhumi.",
-    "Developer arrangements can differ.",
-    "Buyers may ask MatriBhumi about relevant developer relationships.",
+    "RAZZ Construction and Properties Ltd. is the developer and seller of the homes on this website.",
+    "Buyers do not pay a separate brokerage or consultation fee on this website.",
+    "The purchase price is the price in the sale agreement.",
+    "Landowners and other developers can propose a joint venture. Those terms are not published here.",
   ],
   developerFeeTermPublic:
-    "Where a participating developer compensates MatriBhumi, the contractual description of that compensation is set in a private commercial agreement. Public pages do not publish amounts, percentages, or agreement terms.",
+    "Joint-venture or other commercial terms with a landowner or partner, when any exist, stay in a private agreement. Public pages do not publish amounts or percentages.",
   developerFeeTermInternalLabel: developerFeeLabel(),
 };
 
 export const transactionFlows = {
-  title: "Two separate relationships",
+  title: "The purchase and any joint venture",
   intro:
-    "The buyer’s property purchase is a separate relationship from any commercial agreement between a participating developer and MatriBhumi.",
+    "A home on this website is developed and sold by RAZZ Construction and Properties Ltd. A joint venture with a landowner or another developer, when one exists, is a separate agreement and is not the buyer’s purchase contract.",
   buyerPurchase: {
     title: "Property purchase",
-    steps: ["Buyer", "Property purchase", "Developer/Seller"] as const,
-    note: "The property purchase agreement, purchase price, and payment of that price are between the buyer and the relevant developer or seller.",
+    steps: ["Buyer", "Sale agreement", "RAZZ Construction and Properties"] as const,
+    note: "The sale agreement, purchase price, and payment of that price are between the buyer and RAZZ Construction and Properties Ltd.",
   },
   developerCommercial: {
-    title: "Developer commercial agreement",
-    steps: ["Developer", "Commercial agreement", "MatriBhumi"] as const,
-    note: "Any consultant, referral, marketing, service, or other agreed fee payable by a participating developer is a separate commercial arrangement. It is not a fee paid by the buyer and is not part of the buyer’s property purchase price.",
+    title: "Joint venture",
+    steps: ["Landowner", "Joint venture", "RAZZ Construction and Properties"] as const,
+    note: "A joint venture covers land and development with a landowner or another developer. It is not the buyer’s purchase contract, and its commercial terms are not published here.",
   },
   funds: howWeWork.funds,
 };
@@ -84,9 +84,9 @@ export const transactionFlows = {
 export const propertyDisclaimer = {
   title: "Property information",
   body:
-    "Prices, availability, specifications, unit availability, completion schedules, service charges, taxes, title information and other property details may change. Buyers should confirm important information with the relevant developer/seller and qualified professionals before making a purchase decision. Property information on this website is not a guarantee.",
+    "Prices, availability, specifications, unit availability, completion schedules, service charges, taxes, title information and other property details may change. Buyers should confirm important information with the RAZZ sales team and with qualified professionals before making a purchase decision. Property information on this website is not a guarantee.",
   source:
-    "Property information is provided by or sourced from the relevant developer or seller. MatriBhumi does not represent that published details are complete, current, or error-free.",
+    "Project information is published by RAZZ Construction and Properties Ltd. Confirm important details with the sales team before you buy.",
 };
 
 export const professionalAdvice = {
@@ -98,7 +98,7 @@ export const professionalAdvice = {
 export const noInvestmentPromises = {
   title: "No investment promises",
   body:
-    "MatriBhumi does not promise or imply guaranteed appreciation, guaranteed rental income, guaranteed returns, guaranteed resale value, guaranteed capital gains, guaranteed occupancy, or guaranteed investment performance. Property can lose value. Past or illustrative figures are not a prediction.",
+    "RAZZ Construction and Properties does not promise or imply guaranteed appreciation, guaranteed rental income, guaranteed returns, guaranteed resale value, guaranteed capital gains, guaranteed occupancy, or guaranteed investment performance. Property can lose value. Past or illustrative figures are not a prediction.",
 };
 
 export type BangladeshLegalTopic = {
@@ -113,19 +113,19 @@ export const bangladeshLegalTopics: readonly BangladeshLegalTopic[] = [
     id: "company-status",
     title: "Company status and licensing",
     status: "pending_counsel",
-    body: "Reserved for language supplied or approved by qualified Bangladesh legal counsel describing MatriBhumi’s company status and any licences or registrations that have been independently verified. This website does not invent licence numbers, registrations, or regulatory approvals.",
+    body: "RAZZ Construction and Properties Ltd. is a registered real-estate company in Bangladesh. This website does not publish a licence or registration number. Counsel can add that number when the company chooses to display it.",
   },
   {
     id: "advisory-activity",
-    title: "Property advisory and coordination activity",
+    title: "Development and sales",
     status: "pending_counsel",
-    body: "Reserved for counsel-approved language on how Bangladesh law treats property advisory, introductions, and transaction coordination. Until that review, MatriBhumi describes its public role operationally and does not claim a specific licensed status.",
+    body: "RAZZ Construction and Properties Ltd. develops residential projects in Bangladesh and sells them through its sales team. Landowners and other developers may contact the company about a joint venture. This page does not publish a licence or registration number.",
   },
   {
     id: "ownership-and-title",
     title: "Property ownership and title",
     status: "pending_counsel",
-    body: "Reserved for counsel-approved information on ownership, title, and transfer of Bangladesh real property. Buyers should confirm title with the developer or seller and with independent legal counsel.",
+    body: "Reserved for counsel-approved information on ownership, title, and transfer of Bangladesh real property. Buyers should confirm title with the RAZZ sales team and with independent legal counsel.",
   },
   {
     id: "taxes-and-charges",
@@ -143,7 +143,7 @@ export const bangladeshLegalTopics: readonly BangladeshLegalTopic[] = [
     id: "developer-approvals",
     title: "Developer and project approvals",
     status: "pending_counsel",
-    body: "Reserved for counsel-approved language on developer and project approvals. Approvals, structural certificates, and project registration belong to the relevant developer or seller unless a listing is marked MatriBhumi-owned.",
+    body: "Approvals, structural certificates, and project registration for homes offered on this website belong to RAZZ Construction and Properties Ltd. Counsel-approved wording can be added here.",
   },
   {
     id: "personal-data",
@@ -155,7 +155,7 @@ export const bangladeshLegalTopics: readonly BangladeshLegalTopic[] = [
     id: "property-marketing",
     title: "Property marketing and advertising",
     status: "pending_counsel",
-    body: "Reserved for counsel-approved language on advertising and marketing of Bangladesh property. Listing copy should be confirmed with the relevant developer or seller.",
+    body: "Reserved for counsel-approved language on advertising and marketing of Bangladesh property. Listing copy should be confirmed with the RAZZ sales team.",
   },
 ];
 
@@ -182,14 +182,14 @@ export const legalPages = {
     path: "/terms",
     title: "Terms & Conditions",
     navLabel: "Terms",
-    description: "Terms of use for the MatriBhumi website. Operational copy pending Bangladesh legal counsel review.",
+    description: "Terms of use for the RAZZ Construction and Properties website. Operational copy pending Bangladesh legal counsel review.",
     sections: [
       {
         heading: "About this page",
         paragraphs: [counselParagraph, notAdviceParagraph],
       },
       {
-        heading: "Who MatriBhumi is on this website",
+        heading: "Who RAZZ Construction and Properties is on this website",
         paragraphs: [
           positioning.summary,
           positioning.sellerResponsibility,
@@ -200,16 +200,16 @@ export const legalPages = {
       {
         heading: "Use of this website",
         paragraphs: [
-          "These terms apply to your use of matribhumi.me. By using the site you agree to use it lawfully and not to scrape, misrepresent, or interfere with the service.",
-          "Materials on this website describe selected projects from participating developers in Bangladesh. A listing is MatriBhumi-owned only when it is explicitly marked as such.",
+          "These terms apply to your use of razzcnpl.me. By using the site you agree to use it lawfully and not to scrape, misrepresent, or interfere with the service.",
+          "Materials on this website describe residential projects developed and offered by RAZZ Construction and Properties Ltd. in Bangladesh.",
         ],
       },
       {
-        heading: "No seller, no purchase funds",
+        heading: "The sale",
         paragraphs: [
           howWeWork.purchaseAgreement,
           transactionFlows.funds,
-          "MatriBhumi coordinates discovery, comparison, introductions, viewings, and transaction-related communication. Completing a purchase, paying the purchase price, and registering title are matters between the buyer, the developer or seller, and the professionals the buyer appoints.",
+          "The sales team helps with project information, viewings, and the path to a sale agreement. Registering title is completed with the professionals appointed for that sale.",
         ],
       },
       {
@@ -223,7 +223,7 @@ export const legalPages = {
       {
         heading: "Contact",
         paragraphs: [
-          "Questions about these terms: anwar.chowdhury@matribhumi.me. Office: House 05, Road 04, Nikunja-1, Khilkhet, Dhaka 1229, Bangladesh.",
+          "Questions about these terms: sales@razzcnpl.me. Office: House 05, Road 04, Nikunja-1, Khilkhet, Dhaka 1229, Bangladesh.",
         ],
       },
     ],
@@ -233,7 +233,7 @@ export const legalPages = {
     path: "/privacy",
     title: "Privacy Policy",
     navLabel: "Privacy",
-    description: "How MatriBhumi handles personal information submitted on this website. Operational copy pending Bangladesh legal counsel review.",
+    description: "How RAZZ Construction and Properties handles personal information submitted on this website. Operational copy pending Bangladesh legal counsel review.",
     sections: [
       {
         heading: "About this page",
@@ -242,28 +242,28 @@ export const legalPages = {
       {
         heading: "What this policy covers",
         paragraphs: [
-          "This policy describes operational practice for personal information submitted on matribhumi.me in connection with MatriBhumi’s Bangladesh property advisory service. It is not a complete statement of Bangladesh data-protection law.",
+          "This policy describes operational practice for personal information submitted on razzcnpl.me in connection with RAZZ Construction and Properties Ltd., a real-estate development company in Bangladesh. It is not a complete statement of Bangladesh data-protection law.",
         ],
       },
       {
         heading: "What we collect",
         paragraphs: [
           "When you submit a form we may collect your name, email, phone or WhatsApp number, country of residence, preferred city, property preferences, budget, message, and any file you attach.",
-          "Waitlist requests, brochure downloads, inquiries, viewing requests, advisory briefs, and job applications are stored so a member of the team can respond, coordinate an introduction to a participating developer where relevant, and send materials you asked for.",
+          "Waitlist requests, brochure downloads, inquiries, viewing requests, sales enquiries, and job applications are stored so a member of the team can respond and send materials you asked for.",
           "Server logs may include an IP address used for security and rate limiting.",
         ],
       },
       {
         heading: "How we use information",
         paragraphs: [
-          "We use the information to respond to you, match published Bangladesh listings as a screening aid, coordinate viewings and developer introductions, and keep a record of the enquiry.",
+          "We use the information to respond to you, match published RAZZ homes as a screening aid, coordinate viewings, and keep a record of the enquiry.",
           "We do not sell this information.",
         ],
       },
       {
         heading: "Sharing",
         paragraphs: [
-          "If you ask to be introduced to a participating developer, relevant contact and requirement details may be shared with that developer so they can continue the property discussion. We do not publish internal staff notes or commercial terms on this website.",
+          "Sales enquiries are handled by RAZZ Construction and Properties Ltd. If you propose a joint venture, relevant contact details may be shared with the people inside the company who review land and partnerships. We do not publish internal staff notes or commercial terms on this website.",
         ],
       },
       {
@@ -274,7 +274,7 @@ export const legalPages = {
       },
       {
         heading: "Contact",
-        paragraphs: ["Privacy questions: anwar.chowdhury@matribhumi.me."],
+        paragraphs: ["Privacy questions: sales@razzcnpl.me."],
       },
     ],
   },
@@ -283,7 +283,7 @@ export const legalPages = {
     path: "/cookies",
     title: "Cookie Policy",
     navLabel: "Cookies",
-    description: "Cookie notice for matribhumi.me. Operational copy pending Bangladesh legal counsel review.",
+    description: "Cookie notice for razzcnpl.me. Operational copy pending Bangladesh legal counsel review.",
     sections: [
       {
         heading: "About this page",
@@ -314,7 +314,7 @@ export const legalPages = {
     path: "/disclaimer/property",
     title: "Property Disclaimer",
     navLabel: "Property disclaimer",
-    description: "Property information on MatriBhumi.me may change and is not a guarantee.",
+    description: "Property information on razzcnpl.me may change and is not a guarantee.",
     sections: [
       {
         heading: "About this page",
@@ -327,7 +327,7 @@ export const legalPages = {
       {
         heading: "Who confirms the facts",
         paragraphs: [
-          "Confirm prices, availability, specifications, unit mix, completion schedules, service charges, taxes, and title with the relevant developer or seller and with qualified professionals before you decide to purchase.",
+          "Confirm prices, availability, specifications, unit mix, completion schedules, service charges, taxes, and title with the RAZZ sales team and with qualified professionals before you decide to purchase.",
           howWeWork.purchaseAgreement,
         ],
       },
@@ -341,7 +341,7 @@ export const legalPages = {
     slug: "buyer-fee",
     path: "/disclaimer/buyer-fee",
     title: "Buyer Fee Disclosure",
-    navLabel: "Buyer-fee disclosure",
+    navLabel: "Purchase",
     description: buyerFeeDisclosure,
     sections: [
       {
@@ -349,7 +349,7 @@ export const legalPages = {
         paragraphs: [counselParagraph],
       },
       {
-        heading: "What buyers pay MatriBhumi",
+        heading: "What buyers pay RAZZ Construction and Properties",
         paragraphs: [buyerFeeDisclosure],
       },
       {
@@ -374,27 +374,27 @@ export const legalPages = {
     slug: "developer-disclosure",
     path: "/disclaimer/developers",
     title: "Developer Partner Disclosure",
-    navLabel: "Developer disclosure",
-    description: "MatriBhumi may have commercial relationships with participating developers. Public pages do not publish confidential terms.",
+    navLabel: "Joint venture",
+    description: "Landowners and other developers can contact RAZZ Construction and Properties Ltd. about a joint venture. Public pages do not publish confidential terms.",
     sections: [
       {
         heading: "About this page",
         paragraphs: [counselParagraph],
       },
       {
-        heading: "Participating developers",
+        heading: "The developer",
         paragraphs: [
-          "MatriBhumi presents selected properties from participating real-estate developers in Bangladesh. Public developer names appear only when a partnership is published. This website does not invent developer agreements.",
+          "RAZZ Construction and Properties Ltd. develops and sells the residential projects on this website. It is a registered real-estate company in Bangladesh.",
           positioning.sellerResponsibility,
           howWeWork.purchaseAgreement,
         ],
       },
       {
-        heading: "Commercial relationships",
+        heading: "Joint ventures",
         paragraphs: [
-          "MatriBhumi may receive a consultant, referral, marketing, service, or other agreed fee from participating developers under separate commercial agreements. The appropriate contractual terminology can differ between developer relationships.",
-          "Buyers do not pay MatriBhumi’s core advisory fee. Participating developers may compensate MatriBhumi. Developer arrangements can differ. Buyers may ask MatriBhumi about relevant developer relationships.",
-          "Public pages do not disclose confidential developer compensation, agreement terms, or internal notes.",
+          "A landowner or another developer may propose a joint venture. Any such agreement is private. Public pages do not publish amounts, percentages, or agreement terms.",
+          "Buyers of a home purchase from RAZZ Construction and Properties Ltd. under a sale agreement. A joint venture is not the buyer’s purchase contract.",
+          "Public pages do not disclose confidential commercial terms or internal notes.",
         ],
       },
       {
@@ -413,14 +413,14 @@ export const legalPages = {
     path: "/disclaimer",
     title: "General Disclaimer",
     navLabel: "Disclaimer",
-    description: "General disclaimer for MatriBhumi’s Bangladesh property advisory website. Not legal advice.",
+    description: "General disclaimer for the RAZZ Construction and Properties website. Not legal advice.",
     sections: [
       {
         heading: "About this page",
         paragraphs: [counselParagraph, notAdviceParagraph],
       },
       {
-        heading: "What MatriBhumi does",
+        heading: "What RAZZ Construction and Properties does",
         paragraphs: [
           positioning.summary,
           howWeWork.summary,
@@ -457,15 +457,15 @@ export const legalNav = [
 
 export const legalCompliance = [
   {
-    title: "Developer of record",
-    body: "Approvals, structural certificates, and developer registration belong to the participating developer for each listing. References are published when that developer provides them. MatriBhumi is the advisor and coordinator unless a listing is marked MatriBhumi-owned.",
+    title: "Developer and seller",
+    body: "RAZZ Construction and Properties Ltd. is the developer and seller of the homes offered on this website. Project approvals for those developments are the company’s responsibility.",
   },
   {
-    title: "Buyer fees",
-    body: buyerFeeDisclosure,
+    title: "The purchase",
+    body: "You buy from RAZZ Construction and Properties Ltd. The price is the one written in the sale agreement.",
   },
   {
     title: "Office",
-    body: "MatriBhumi. House 05, Road 04, Nikunja-1, Khilkhet, Dhaka 1229, Bangladesh. This website does not claim a real-estate licence in Bangladesh.",
+    body: "RAZZ Construction and Properties Ltd. House 05, Road 04, Nikunja-1, Khilkhet, Dhaka 1229, Bangladesh. A registered real-estate company in Bangladesh.",
   },
 ] as const;

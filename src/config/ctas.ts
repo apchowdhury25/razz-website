@@ -1,7 +1,7 @@
 export const buyerCtas = {
-  talkToAdvisor: "Talk to an Advisor",
-  talkToAdvisorShort: "Talk to Advisor",
-  talkToMatriBhumiAdvisor: "Talk to a MatriBhumi advisor",
+  talkToAdvisor: "Talk to Sales",
+  talkToAdvisorShort: "Talk to Sales",
+  talkToMatriBhumiAdvisor: "Talk to RAZZ sales",
   findMyProperty: "Explore Properties",
   viewProperty: "View Property",
   requestDetails: "Request Property Details",
@@ -10,7 +10,7 @@ export const buyerCtas = {
 } as const;
 
 export const developerCtas = {
-  partner: "Partner with MatriBhumi",
+  partner: "Propose a joint venture",
 } as const;
 
 export const advisorPaths = {

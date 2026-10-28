@@ -21,7 +21,7 @@ export default async function ReportsPage() {
       <div>
         <h1 className="font-display text-4xl">Internal reports</h1>
         <p className="mt-3 max-w-3xl text-sm text-muted">
-          Operational snapshot of advisory activity. These figures are not a forecast, not guaranteed revenue, and not a valuation of any property or developer relationship.
+          Operational snapshot of sales activity. These figures are not a forecast, not guaranteed revenue, and not a valuation of any property.
         </p>
       </div>
 
@@ -33,7 +33,7 @@ export default async function ReportsPage() {
         <article className="border border-charcoal/10 bg-paper p-5">
           <p className="text-[11px] uppercase tracking-[0.16em] text-earth">Estimated transaction value</p>
           <p className="font-mono mt-2 text-3xl">{formatPrice(reports.estimatedTransactionValue, "USD")}</p>
-          <p className="mt-2 text-sm text-muted">Buyer purchase with the developer or seller, where recorded. Not MatriBhumi income.</p>
+          <p className="mt-2 text-sm text-muted">Buyer purchase with the developer or seller, where recorded. Not RAZZ Construction and Properties income.</p>
         </article>
         <article className="border border-charcoal/10 bg-paper p-5">
           <p className="text-[11px] uppercase tracking-[0.16em] text-earth">Conversion rate</p>

@@ -29,11 +29,11 @@ export const markets = [
     countryAliases: ["Bangladesh"],
     region: "South Asia",
     heroImage: "/media/locations/dhaka.jpg",
-    seoTitle: "Bangladesh property advisor",
+    seoTitle: "Bangladesh real estate developer",
     description:
-      "Independent property guidance in Bangladesh. Explore selected developments, compare options, and coordinate your purchase with a MatriBhumi advisor.",
+      "Residential projects by RAZZ Construction and Properties Ltd. in Bangladesh. Explore the homes and speak with sales.",
     intro:
-      "MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh and coordinates the buyer’s interaction with the developer. The property purchase agreement is between the buyer and the relevant developer/seller.",
+      "RAZZ Construction and Properties Ltd. develops and sells its own residential projects in Bangladesh. The sales team helps you choose a home and complete the purchase with the company.",
     cities: [
       { name: "Dhaka", slug: "dhaka" },
       { name: "Chattogram", slug: "chattogram" },

@@ -28,53 +28,53 @@ const listing = {
 describe("buyer journey copy", () => {
   it("keeps the configurable public fee message exact", () => {
     expect(buyerJourneyFeeMessage).toBe(
-      "MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service. Where applicable, MatriBhumi may receive compensation from participating developers under separate commercial agreements.",
+      "The purchase price of a home is agreed in the sale contract with RAZZ Construction and Properties Ltd. This website does not charge a separate buyer brokerage or consultation fee.",
     );
   });
 
-  it("states advisor follow-up and source disclosure without return promises", () => {
+  it("states sales follow-up and source disclosure without return promises", () => {
     expect(advisorFollowUpMessage).toBe(
-      "Your MatriBhumi property advisor will review your requirements and contact you.",
+      "A member of the RAZZ sales team will review your enquiry and contact you.",
     );
     expect(propertySourceDisclosure).toContain("Prices, availability, specifications, unit availability");
     expect(propertySourceDisclosure).toContain("not a guarantee");
     expect(propertySourceDisclosure.toLowerCase()).not.toMatch(/yield|appreciation|return/);
   });
 
-  it("uses advisor CTAs instead of a buy-now primary action", () => {
-    expect(buyerCtas.talkToAdvisor).toBe("Talk to an Advisor");
+  it("uses sales CTAs instead of a buy-now primary action", () => {
+    expect(buyerCtas.talkToAdvisor).toBe("Talk to Sales");
     expect(buyerCtas.findMyProperty).toBe("Explore Properties");
     expect(buyerCtas.viewProperty).toBe("View Property");
-    expect(buyerCtas.talkToAdvisorShort).toBe("Talk to Advisor");
+    expect(buyerCtas.talkToAdvisorShort).toBe("Talk to Sales");
     expect(buyerCtas.requestDetails).toBe("Request Property Details");
     expect(buyerCtas.arrangeViewing).toBe("Arrange a Viewing");
-    expect(developerCtas.partner).toBe("Partner with MatriBhumi");
+    expect(developerCtas.partner).toBe("Propose a joint venture");
     expect(Object.values(buyerCtas).join(" ")).not.toMatch(/buy now/i);
   });
 
-  it("keeps the marketing headline paired with the canonical fee disclosure", () => {
-    expect(buyerFeeHeadline).toBe("No MatriBhumi brokerage or consultation fee for buyers.");
+  it("keeps the marketing headline paired with the canonical purchase disclosure", () => {
+    expect(buyerFeeHeadline).toBe("Buy directly from the developer.");
     expect(buyerFeeMarketing).toBe(buyerJourneyFeeMessage);
-    expect(buyerFeeMarketing).toContain("core property advisory service");
+    expect(buyerFeeMarketing).toContain("sale contract with RAZZ Construction and Properties Ltd.");
   });
 
-  it("states why buyers choose MatriBhumi in eight trust points", () => {
+  it("states why buyers choose RAZZ Construction and Properties in eight trust points", () => {
     expect(whyMatriBhumi.map((item) => item.title)).toEqual([
-      "Independent guidance",
-      "Curated developer network",
+      "Our own projects",
+      "Registered in Bangladesh",
       "Support from abroad",
-      "One point of coordination",
-      "Transparent buyer-fee policy",
-      "Property comparison",
-      "Viewing coordination",
-      "Developer introductions",
+      "One sales contact",
+      "A direct purchase",
+      "Compare homes",
+      "Viewings",
+      "Joint ventures",
     ]);
   });
 
   it("describes an eight-step buyer journey", () => {
     expect(howItWorksSteps).toHaveLength(8);
     expect(howItWorksSteps[2]?.body).toBe(advisorFollowUpMessage);
-    expect(howItWorksSteps[6]?.body).toContain("MatriBhumi is not the seller");
+    expect(howItWorksSteps[6]?.body).toContain("You purchase from RAZZ Construction and Properties Ltd.");
   });
 });
 

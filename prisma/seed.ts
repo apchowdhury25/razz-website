@@ -56,32 +56,33 @@ async function main() {
 
   const developer = await prisma.developer.create({
     data: {
-      name: "Unpublished partner",
-      slug: "unpublished-partner",
-      published: false,
+      name: "RAZZ Construction and Properties Ltd.",
+      slug: "razz-construction-and-properties",
+      published: true,
       verified: false,
-      featured: false,
-      status: "PROSPECT",
+      featured: true,
+      status: "ACTIVE",
       country: "Bangladesh",
       cities: ["Dhaka", "Chattogram", "Bashundhara"],
       description:
-        "Internal placeholder for curated listings. Named developer details are unpublished until a partnership is confirmed. MatriBhumi is the advisor, not the developer of record.",
-      publicDescription: "",
-      logoUrl: "/brand/logo-mark.png",
+        "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh. It develops and sells the residential projects on this website.",
+      publicDescription:
+        "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh. It develops and sells the residential projects on this website.",
+      logoUrl: "/brand/logo-mark.svg",
       internalNotes:
-        "Placeholder developer row for listing foreign keys. Do not publish until a real partnership is confirmed. No commercial terms are recorded.",
+        "Company record for public listings. No licence number is stored here.",
     },
   });
 
   await prisma.developerPartnership.create({
     data: {
       developerId: developer.id,
-      relationshipStatus: "PROSPECT",
+      relationshipStatus: "ACTIVE",
       markets: ["Bangladesh"],
       active: true,
-      publicVisibility: false,
+      publicVisibility: true,
       internalNotes:
-        "Prospect relationship for the unpublished placeholder. No agreement reference or compensation terms.",
+        "The company develops and sells its own projects. Joint-venture terms, if any, are not stored on the public site.",
     },
   });
 
@@ -172,7 +173,7 @@ async function main() {
         slug: "matribhumi-heights",
         tagline: "A vertical neighborhood above a planted plaza.",
         description:
-          "Heights Tower is a sample residential tower listing in Bashundhara, Dhaka — organised around a public podium, shared rooms, and apartments a short way from malls, golf, and district parks. Demonstration data only.",
+          "Heights Tower is a residential project by RAZZ Construction and Properties in Bashundhara, Dhaka — organised around a public podium, shared rooms, and apartments a short way from malls, golf, and district parks.",
         architecture:
           "Limestone and bronze-tinted glass, deep shading, and a planted crown. International design standards meeting local heritage.",
         lifestyle: "Urban living with gardens in the sky and Bashundhara’s malls, golf, and amusement parks on the same map.",
@@ -199,7 +200,7 @@ async function main() {
         slug: "matribhumi-riverside",
         tagline: "Homes that turn toward the water.",
         description:
-          "A sample waterfront district of terraced apartments, boardwalks, and rooms for gathering at the river's edge. Demonstration data only.",
+          "A waterfront project by RAZZ Construction and Properties: terraced apartments, boardwalks, and rooms for gathering at the river's edge.",
         architecture: "Timber balconies, pale stone, and a public walk that never privatises the shore.",
         lifestyle: "Morning walks, evening light on water, everyday shops along the path.",
         locationNote: "Buriganga edge, Dhaka — demonstration listing",
@@ -225,7 +226,7 @@ async function main() {
         slug: "the-grove-residences",
         tagline: "Courtyard villas among existing trees.",
         description:
-          "A sample villa community in Chattogram, planned around retained forest patches and shared gardens. Demonstration data only.",
+          "A villa community by RAZZ Construction and Properties in Chattogram, planned around retained forest patches and shared gardens.",
         architecture: "Rammed earth, timber, and metal roofs that sit low in the canopy.",
         lifestyle: "Nature living with room for extended family and quiet work.",
         locationNote: "Hill edge, Chattogram — demonstration listing",
@@ -251,7 +252,7 @@ async function main() {
         slug: "bhumi-gardens",
         tagline: "A family neighborhood around a central park.",
         description:
-          "Sample townhouses and low apartments organised around play, walking, and everyday errands. Demonstration data only.",
+          "Townhouses and low apartments by RAZZ Construction and Properties, organised around play, walking, and everyday errands.",
         architecture: "Pale brick, timber, and streets sized for people first.",
         lifestyle: "Family communities with a park you can see from the kitchen.",
         locationNote: "Uttara edge, Dhaka — demonstration listing",
@@ -277,7 +278,7 @@ async function main() {
         slug: "matribhumi-bashundhara",
         tagline: "A home next to the mall, the fairway, and the park.",
         description:
-          "A sample mixed-use community within Dhaka’s master-planned Bashundhara district: residences, a planted street, and walking distance to shopping, golf, and family leisure. Demonstration data only. MatriBhumi is an independent advisor, not Bashundhara Group.",
+          "A mixed-use community by RAZZ Construction and Properties within Dhaka’s Bashundhara district: residences, a planted street, and walking distance to shopping, golf, and family leisure. The company is not Bashundhara Group.",
         architecture: "Mid-rise stone and glass, podiums with shade, and a civic ground floor that opens to the district.",
         lifestyle:
           "For expats visiting, retirees staying, and Dhaka families who want modern amenities without a long drive: malls, golf, amusement parks, and a proper home.",
@@ -362,7 +363,7 @@ async function main() {
     name: "Heights Residences",
     slug: "heights-residences",
     description:
-      "Sample one- to three-bedroom apartments in Heights Tower, Bashundhara — deep balconies, podium gardens, and walking distance to malls, golf, and district parks. Demonstration listing only.",
+      "One- to three-bedroom apartments by RAZZ Construction and Properties in Heights Tower, Bashundhara — deep balconies, podium gardens, and walking distance to malls, golf, and district parks.",
     type: "APARTMENT",
     status: "UNDER_CONSTRUCTION",
     completionDate: new Date("2027-11-01"),
@@ -408,7 +409,7 @@ async function main() {
     name: "Riverside Terraces",
     slug: "riverside-terraces",
     description:
-      "Sample apartments stepping down to a public boardwalk. Every home has a river-facing outdoor room. Demonstration listing only.",
+      "Apartments by RAZZ Construction and Properties stepping down to a public boardwalk. Every home has a river-facing outdoor room.",
     type: "APARTMENT",
     status: "LAUNCHED",
     completionDate: new Date("2026-08-01"),
@@ -448,7 +449,7 @@ async function main() {
     name: "Grove Courtyard Villas",
     slug: "grove-courtyard-villas",
     description:
-      "Sample four-bedroom courtyard villas with private gardens and a shared forest edge. Demonstration listing only.",
+      "Four-bedroom courtyard villas by RAZZ Construction and Properties, with private gardens and a shared forest edge.",
     type: "VILLA",
     status: "READY",
     completionDate: new Date("2025-03-01"),
@@ -487,7 +488,7 @@ async function main() {
     name: "Bhumi Park Townhomes",
     slug: "bhumi-park-townhomes",
     description:
-      "Sample two- and three-bedroom townhomes facing a central park. Demonstration listing only.",
+      "Two- and three-bedroom townhomes by RAZZ Construction and Properties, facing a central park.",
     type: "TOWNHOUSE",
     status: "LAUNCHED",
     completionDate: new Date("2027-04-01"),
@@ -524,7 +525,7 @@ async function main() {
   await addProperty({
     name: "Heights Penthouses",
     slug: "heights-penthouses",
-    description: "Sample upper residences with planted terraces. Demonstration penthouses in Heights Tower.",
+    description: "Upper residences with planted terraces in Heights Tower, a RAZZ Construction and Properties project.",
     type: "PENTHOUSE",
     status: "UNDER_CONSTRUCTION",
     completionDate: new Date("2027-11-01"),
@@ -556,7 +557,7 @@ async function main() {
   await addProperty({
     name: "Grove Forest Houses",
     slug: "grove-forest-houses",
-    description: "Sample quiet houses at the tree line. Demonstration homes for longer winter stays.",
+    description: "Quiet houses at the tree line, developed by RAZZ Construction and Properties for longer winter stays.",
     type: "VILLA",
     status: "READY",
     completionDate: new Date("2025-03-01"),
@@ -588,7 +589,7 @@ async function main() {
     name: "Bashundhara District Residences",
     slug: "bashundhara-district-residences",
     description:
-      "Sample one- to four-bedroom homes in Bashundhara. Demonstration listing only. A participating-developer project within the district — not a Bashundhara Group project.",
+      "One- to four-bedroom homes by RAZZ Construction and Properties in Bashundhara. This is not a Bashundhara Group project.",
     type: "MIXED_USE",
     status: "LAUNCHED",
     completionDate: new Date("2027-06-01"),
@@ -631,7 +632,7 @@ async function main() {
   const riversideHomes = await addProperty({
     name: "Canal Lofts",
     slug: "canal-lofts",
-    description: "Sample compact lofts along the canal edge at Riverside Walk. Demonstration listing only.",
+    description: "Compact lofts along the canal edge at Riverside Walk, a RAZZ Construction and Properties project.",
     type: "APARTMENT",
     status: "LAUNCHED",
     completionDate: new Date("2026-08-01"),
@@ -666,7 +667,7 @@ async function main() {
   const gardensFlats = await addProperty({
     name: "Parkside Apartments",
     slug: "parkside-apartments",
-    description: "Sample low apartments facing the central park at Bhumi Gardens. Demonstration listing only.",
+    description: "Low apartments facing the central park at Bhumi Gardens, a RAZZ Construction and Properties project.",
     type: "APARTMENT",
     status: "LAUNCHED",
     completionDate: new Date("2027-04-01"),
@@ -719,14 +720,14 @@ async function main() {
     {
       title: "How to read a street before you buy",
       slug: "planning-streets-people-use",
-      excerpt: "Shade, seating, and a reason to linger — questions buyers can take to a participating developer.",
+      excerpt: "Shade, seating, and a reason to linger — questions to ask the RAZZ sales team.",
       category: "ARCHITECTURE" as const,
       coverImage: "/media/about-studio.jpg",
       body: `## A street is a room
 
 Buyers comparing developer projects in Bangladesh can treat the space between buildings as seriously as the buildings themselves. Ask how sidewalks are sized, where shade falls, and whether ground floors stay open to daily life.
 
-MatriBhumi does not design or construct these streets. Advisors help you inspect what a developer publishes and what a viewing shows.
+RAZZ Construction and Properties does not design or construct these streets. Advisors help you inspect what a developer publishes and what a viewing shows.
 
 ### Questions worth asking
 
@@ -746,7 +747,7 @@ These are planning questions, not marketing lines or a guarantee of quality.`,
 
 In a monsoon city, water is not a problem to hide. Ask the developer about permeable courts, planted roofs, and cisterns sized for dry weeks.
 
-No certification is claimed. MatriBhumi does not design drainage systems. The aim is to help buyers inspect wet-day livability before they commit.`,
+No certification is claimed. RAZZ Construction and Properties does not design drainage systems. The aim is to help buyers inspect wet-day livability before they commit.`,
     },
     {
       title: "A handover is a relationship",
@@ -756,7 +757,7 @@ No certification is claimed. MatriBhumi does not design drainage systems. The ai
       coverImage: "/media/about-lobby.jpg",
       body: `## After the photograph
 
-A home is not finished at the photoshoot. Snagging, building manuals, and the people residents can actually call belong to the developer or building manager. MatriBhumi helps you obtain those details.`,
+A home is not finished at the photoshoot. Snagging, building manuals, and the people residents can actually call belong to the developer or building manager. RAZZ Construction and Properties helps you obtain those details.`,
     },
     {
       title: "Reading a location without reading the future",
@@ -766,7 +767,7 @@ A home is not finished at the photoshoot. Snagging, building manuals, and the pe
       coverImage: "/media/location-aerial.jpg",
       body: `## Place, not prediction
 
-MatriBhumi discusses transport, schools, and daily amenities because they shape how a home is used. We do not forecast prices, rents, or returns.`,
+RAZZ Construction and Properties discusses transport, schools, and daily amenities because they shape how a home is used. We do not forecast prices, rents, or returns.`,
     },
     {
       title: "Kitchen windows and the park",
@@ -776,12 +777,12 @@ MatriBhumi discusses transport, schools, and daily amenities because they shape 
       coverImage: "/media/lifestyle-family.jpg",
       body: `## See the green from the sink
 
-When you view a family-oriented layout, ask whether kitchens face a park or court so ordinary work still looks onto trees and play. Layout decisions belong to the developer of record.`,
+When you view a family-oriented layout, ask whether kitchens face a park or court so ordinary work still looks onto trees and play. Layout decisions are part of the RAZZ project.`,
     },
     {
       title: "Update: asking about podium gardens",
       slug: "heights-podium-gardens",
-      excerpt: "A sample project note on shared outdoor rooms. Demonstration article only.",
+      excerpt: "A project note on shared outdoor rooms.",
       category: "PROJECT_UPDATES" as const,
       coverImage: "/media/about-construction.jpg",
       body: `## Planting a plaza in the air
@@ -796,7 +797,7 @@ Shared podium gardens are an architectural idea some developers publish: shade a
       coverImage: "/media/sustain-courtyard.jpg",
       body: `## Quiet materials
 
-Ask which surfaces can be maintained in public: limewash, timber that can be oiled, stone that can be repaired. Material specifications belong to the developer of record.`,
+Ask which surfaces can be maintained in public: limewash, timber that can be oiled, stone that can be repaired. Material specifications are part of the RAZZ project.`,
     },
     {
       title: "What a clubhouse is for",
@@ -816,7 +817,7 @@ A clubhouse should work on a Tuesday afternoon: shade, a table, a kitchen someon
       coverImage: "/media/project-central.jpg",
       body: `## One plot, several days
 
-Some mixed-use schemes keep the ground floor public, the middle for work, and the top as home. This is a way of looking at a plan, not a completed MatriBhumi building.`,
+Some mixed-use schemes keep the ground floor public, the middle for work, and the top as home. This is a way of looking at a plan, not a completed RAZZ Construction and Properties building.`,
     },
     {
       title: "A note on talking about money",
@@ -826,7 +827,7 @@ Some mixed-use schemes keep the ground floor public, the middle for work, and th
       coverImage: "/media/about-model.jpg",
       body: `## No forecasts
 
-If a number cannot be stood beside in a quiet room, it does not belong on a MatriBhumi page. MatriBhumi does not promise rental income, appreciation, or returns.`,
+If a number cannot be stood beside in a quiet room, it does not belong on a RAZZ Construction and Properties page. RAZZ Construction and Properties does not promise rental income, appreciation, or returns.`,
     },
   ];
 
@@ -846,33 +847,33 @@ If a number cannot be stood beside in a quiet room, it does not belong on a Matr
   await prisma.job.createMany({
     data: [
       {
-        title: "Property Advisor",
+        title: "Sales Executive",
         slug: "property-advisor",
-        department: "Advisory",
+        department: "Sales",
         location: "Dhaka",
         type: "Full-time",
         description:
-          "Help buyers compare selected developer properties in Bangladesh and coordinate introductions and viewings.",
-        requirements: "Clarity, patience, and comfort saying MatriBhumi does not forecast returns.",
+          "Help buyers compare RAZZ homes in Bangladesh and arrange viewings and reservations.",
+        requirements: "Clarity, patience, and comfort saying RAZZ Construction and Properties does not forecast returns.",
         demo: true,
       },
       {
         title: "Partnership Coordinator",
         slug: "partnership-coordinator",
-        department: "Developer relations",
+        department: "Projects",
         location: "Dhaka",
         type: "Full-time",
-        description: "Support relationships with participating developers so buyer questions reach the people who can answer them.",
+        description: "Support project delivery so buyer questions reach the people who can answer them.",
         requirements: "Organised correspondence and care with confidential commercial terms.",
         demo: true,
       },
       {
         title: "Buyer Support Associate",
         slug: "buyer-support-associate",
-        department: "Advisory",
+        department: "Sales",
         location: "Dhaka",
         type: "Full-time",
-        description: "Keep follow-up moving after the first enquiry: viewings, documents the developer requests, and next steps.",
+        description: "Keep follow-up moving after the first enquiry: viewings, documents the sale needs, and next steps.",
         requirements: "Patience, clarity, and comfort with operations.",
         demo: true,
       },
@@ -882,14 +883,14 @@ If a number cannot be stood beside in a quiet room, it does not belong on a Matr
         department: "Communications",
         location: "Dhaka",
         type: "Full-time",
-        description: "Write in public the way we advise: carefully, without invented claims, licences, or forecasts.",
+        description: "Write in public carefully, without invented claims, licence numbers, or forecasts.",
         requirements: "Writing samples. No press-release theatre.",
         demo: true,
       },
     ],
   });
 
-  console.log("MatriBhumi database seeded.");
+  console.log("RAZZ Construction and Properties database seeded.");
 }
 
 main()

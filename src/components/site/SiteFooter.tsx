@@ -9,45 +9,45 @@ const mapsHref = `https://maps.google.com/?q=${encodeURIComponent(addressLine)}`
 
 export function SiteFooter() {
   return (
-    <footer className="bg-charcoal text-ivory">
-      <div className="border-b border-ivory/10 px-4 py-14 sm:px-6 md:px-12 md:py-16">
+    <footer className="border-t border-charcoal/10 bg-paper text-charcoal">
+      <div className="border-b border-charcoal/10 px-4 py-14 sm:px-6 md:px-12 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.28em] text-sand">Independent advisory</p>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-earth">Real estate development</p>
             <h2 className="font-display mt-4 max-w-xl text-4xl leading-tight md:text-5xl">
-              Find the right property. We coordinate the rest.
+              Homes developed and sold by RAZZ.
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-7 text-ivory/70">{siteConfig.supporting}</p>
+            <p className="mt-4 max-w-lg text-sm leading-7 text-muted">{siteConfig.supporting}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <BrochureButton className="w-full sm:w-auto" />
           </div>
         </div>
         <div className="mt-12">
-          <LegalCompliance tone="dark" />
+          <LegalCompliance />
         </div>
       </div>
-      <div className="grid gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr_1fr_1fr] md:gap-12 md:px-12 md:py-16">
-        <div>
-          <Logo variant="dark" />
-          <p className="mt-6 max-w-sm text-sm leading-7 text-ivory/70">{siteConfig.positioning}</p>
-          <address className="mt-6 text-sm not-italic leading-7 text-ivory/80">
-            <a href={mapsHref} target="_blank" rel="noreferrer" className="hover:text-ivory">
+      <div className="grid gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 md:px-12 lg:grid-cols-3 xl:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)_minmax(0,0.8fr)_minmax(0,0.8fr)_minmax(0,0.9fr)] md:gap-12 md:py-16">
+        <div className="min-w-0">
+          <Logo variant="light" />
+          <p className="mt-6 max-w-sm text-sm leading-7 text-muted">{siteConfig.positioning}</p>
+          <address className="mt-6 text-sm not-italic leading-7 text-charcoal/80">
+            <a href={mapsHref} target="_blank" rel="noreferrer" className="hover:text-moss">
               {siteConfig.address.line1}, {siteConfig.address.line2}
               <br />
               {siteConfig.address.city} {siteConfig.address.postal}, {siteConfig.address.country}
             </a>
             <br />
-            <a href={siteConfig.phoneHref} className="mt-2 inline-block text-sand hover:text-ivory">
+            <a href={siteConfig.phoneHref} className="mt-2 inline-block text-moss hover:text-ink">
               {siteConfig.phone}
             </a>
             <br />
-            <a href={`mailto:${siteConfig.email}`} className="mt-1 inline-block hover:text-ivory">
+            <a href={`mailto:${siteConfig.email}`} className="mt-1 inline-block break-all hover:text-moss">
               {siteConfig.email}
             </a>
           </address>
-          <a href={siteConfig.url} className="mt-4 inline-block text-sm text-sand">
-            www.matribhumi.me
+          <a href={siteConfig.url} className="mt-4 inline-block text-sm text-moss">
+            www.{siteConfig.domain}
           </a>
           <Socials />
         </div>
@@ -56,7 +56,7 @@ export function SiteFooter() {
         <FooterCol title="Company" items={footerNav.company} />
         <FooterCol title="Legal" items={footerNav.legal} />
       </div>
-      <div className="border-t border-ivory/10 px-4 py-6 text-xs leading-5 text-ivory/50 sm:px-6 md:px-12">
+      <div className="border-t border-charcoal/10 px-4 py-6 text-xs leading-5 text-muted sm:px-6 md:px-12">
         <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
       </div>
     </footer>
@@ -65,7 +65,6 @@ export function SiteFooter() {
 
 function Socials() {
   const channels = [
-    { name: "Instagram", href: siteConfig.social.instagram, icon: <InstagramIcon /> },
     { name: "LinkedIn", href: siteConfig.social.linkedin, icon: <LinkedInIcon /> },
     { name: "WhatsApp", href: siteConfig.social.whatsapp, icon: <WhatsAppIcon /> },
   ];
@@ -78,23 +77,13 @@ function Socials() {
             target="_blank"
             rel="noreferrer"
             aria-label={channel.name}
-            className="grid h-11 w-11 place-items-center border border-ivory/20 text-ivory/80 transition hover:border-ivory hover:text-ivory"
+            className="grid h-11 w-11 place-items-center border border-charcoal/15 text-charcoal/70 transition hover:border-moss hover:text-moss"
           >
             {channel.icon}
           </a>
         </li>
       ))}
     </ul>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
-      <circle cx="12" cy="12" r="3.5" />
-      <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
-    </svg>
   );
 }
 
@@ -122,12 +111,12 @@ function FooterCol({
   items: readonly { href: string; label: string }[];
 }) {
   return (
-    <div>
-      <p className="text-[11px] uppercase tracking-[0.24em] text-sand">{title}</p>
-      <ul className="mt-4 space-y-2 text-sm text-ivory/75">
+    <div className="min-w-0">
+      <p className="text-[11px] uppercase tracking-[0.24em] text-earth">{title}</p>
+      <ul className="mt-4 space-y-2 text-sm text-muted">
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} className="hover:text-ivory">
+            <Link href={item.href} className="hover:text-charcoal">
               {item.label}
             </Link>
           </li>

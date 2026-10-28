@@ -10,9 +10,9 @@ import { publicDeveloperName } from "@/lib/developer";
 
 export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
-  title: "Talk to a property advisor",
+  title: "Talk to sales",
   description:
-    "Share your property requirements with a MatriBhumi advisor. We shortlist selected developer homes in Bangladesh and coordinate introductions and viewings.",
+    "Share what you are looking for with RAZZ sales. We shortlist homes in our Bangladesh projects and arrange viewings.",
   path: "/advise",
   image: "/media/about-lobby.jpg",
 });
@@ -30,18 +30,18 @@ export default async function AdvisePage() {
     <PublicShell transparentHeader>
       <PageHero
         image="/media/about-lobby.jpg"
-        eyebrow="Buyer journey"
-        title="Talk to a property advisor."
-        description="Tell us how you will use the home. A MatriBhumi advisor reviews your requirements, shortlists selected developer properties, and coordinates the next steps. MatriBhumi is not the seller."
+        eyebrow="Sales"
+        title="Talk to sales."
+        description="Tell us how you will use the home. RAZZ sales reviews your requirements, shortlists homes in our projects, and arranges the next step. You buy from RAZZ Construction and Properties Ltd."
       />
       <section className="grid gap-12 px-4 py-14 sm:px-6 md:px-12 md:py-20 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="text-[11px] uppercase tracking-[0.2em] text-earth">What happens next</p>
           <ol className="mt-6 space-y-4 text-sm leading-7 text-muted">
             <li>1. You share requirements. We do not ask for passport scans or bank statements at this stage.</li>
-            <li>2. An advisor matches your brief to published listings. Matching is a screening aid, not a financial or legal opinion.</li>
-            <li>3. We contact you, then shortlist, introduce you to the developer if you choose, and coordinate viewings.</li>
-            <li>4. You complete any purchase with the developer or seller.</li>
+            <li>2. Sales matches your brief to published RAZZ homes. Matching is a screening aid, not a financial or legal opinion.</li>
+            <li>3. We contact you, then shortlist homes and arrange a viewing.</li>
+            <li>4. You complete the purchase with RAZZ Construction and Properties Ltd.</li>
           </ol>
           <BuyerFeeNotice className="mt-8" />
           <Button href="/properties" variant="outline" className="mt-8">

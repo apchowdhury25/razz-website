@@ -1,16 +1,16 @@
-# MatriBhumi
+# RAZZ Construction and Properties
 
-Official website for **MatriBhumi**.
+Official website for **RAZZ Construction and Properties**.
 
-Canonical site: **[https://matribhumi.me](https://matribhumi.me)**
+Canonical site: **[https://razzcnpl.me](https://razzcnpl.me)**
 
-MatriBhumi is **independent property advisory and transaction coordination** in Bangladesh. It helps buyers discover and compare selected properties from participating developers, then coordinates introductions, viewings, and transaction-related communication. MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service. Where applicable, MatriBhumi may receive compensation from participating developers under separate commercial agreements. The property purchase agreement is between the buyer and the relevant developer/seller.
+RAZZ Construction and Properties Ltd. is a **registered real-estate development company** in Bangladesh. It develops residential projects and sells them through its sales team. Landowners and other developers can propose a joint venture. The purchase price is agreed in the sale contract. This website does not publish a licence or registration number.
 
-Public navigation: Home, Properties, Developers, Locations, How It Works, For Developers, About, Insights, Contact, with a Bangladesh location bar for Bangladesh, Dhaka, Chattogram, and Bashundhara. Legal pages live in the footer and in `src/config/legal.ts`.
+Public navigation: Home, Properties, Projects, Locations, Buying, Joint Venture, About, Insights, Contact, with a Bangladesh location bar for Dhaka and Chattogram. Legal pages live in the footer and in `src/config/legal.ts`.
 
-This repository is the public marketing site, property discovery, inquiries, viewings, and a staff advisory CRM (leads, pipeline, follow-ups, developer relationships, and internal reports).
+This repository is the public marketing site, property discovery, sales enquiries, viewings, and a staff CRM (leads, pipeline, follow-ups, and internal reports).
 
-Projects, people, prices, and locations shipped in the seed are **placeholder listing content**. Named partner developers are unpublished until a real partnership is stored. MatriBhumi does not guarantee returns, appreciation, rental income, or any investment outcome. See `docs/BUSINESS-MODEL-TRANSITION.md`.
+Projects, people, prices, and locations shipped in the seed are **placeholder listing content** for the website. RAZZ Construction and Properties does not guarantee returns, appreciation, rental income, or any investment outcome. `docs/BUSINESS-MODEL-TRANSITION.md` records an earlier advisory repositioning. The public site is a developer site again.
 
 ## Architecture
 
@@ -24,7 +24,7 @@ public/brand       Logo, favicon, Open Graph — replace files without code chan
 public/media       Demonstration photography and plans
 ```
 
-Company name and URLs live in `src/config/site.ts`. Do not scatter `matribhumi.me` through the codebase.
+Company name and URLs live in `src/config/site.ts`. Do not scatter `razzcnpl.me` through the codebase.
 
 ## Technology stack
 
@@ -66,7 +66,7 @@ See `.env.example`. Important keys:
 | --- | --- |
 | `DATABASE_URL` | SQLite `file:./dev.db` locally, PostgreSQL in production |
 | `SESSION_SECRET` / `NEXTAUTH_SECRET` | 32+ character session secret |
-| `NEXT_PUBLIC_SITE_URL` | `https://matribhumi.me` in production |
+| `NEXT_PUBLIC_SITE_URL` | `https://razzcnpl.me` in production |
 | `NEXT_PUBLIC_MAPBOX_TOKEN` | Optional Mapbox |
 | `NEXT_PUBLIC_ANALYTICS_ID` | Optional GA/GTM measurement ID |
 | `S3_*` | Optional object storage |
@@ -121,7 +121,7 @@ npm start
 
 ## Deployment
 
-### Hostinger (matribhumi.me)
+### Hostinger (razzcnpl.me)
 
 Deploy as a **Node.js web app** from GitHub. Do not use **Advanced → Git** (that only copies files and will not build Next.js).
 
@@ -130,16 +130,16 @@ Full checklist: **[HOSTINGER.md](./HOSTINGER.md)**
 1. Business or Cloud hosting plan.
 2. hPanel → **Websites → Add Website → Node.js web app → Import Git repository**.
 3. Repository `apchowdhury25/matribhumi-me`, branch `main`, Node **22**, build script `build`, output `.next`.
-4. Environment: `NEXT_PUBLIC_SITE_URL=https://matribhumi.me`, a 32+ character `SESSION_SECRET`, and a SQLite `DATABASE_URL` **outside** `hbuilds` so deploys do not wipe data.
-5. Deploy, then install SSL for `matribhumi.me` and `www`.
+4. Environment: `NEXT_PUBLIC_SITE_URL=https://razzcnpl.me`, a 32+ character `SESSION_SECRET`, and a SQLite `DATABASE_URL` **outside** `hbuilds` so deploys do not wipe data.
+5. Deploy, then install SSL for `razzcnpl.me` and `www`.
 
 ### Other targets
 
-**Vercel** — import the repo, set env vars, attach Postgres (or keep SQLite only for preview demos). `postinstall` runs `prisma generate`. Production `NEXT_PUBLIC_SITE_URL` must be `https://matribhumi.me`. `www.matribhumi.me` redirects to the apex domain.
+**Vercel** — import the repo, set env vars, attach Postgres (or keep SQLite only for preview demos). `postinstall` runs `prisma generate`. Production `NEXT_PUBLIC_SITE_URL` must be `https://razzcnpl.me`. `www.razzcnpl.me` redirects to the apex domain.
 
 **Docker** — `docker compose up --build` (app + Postgres).
 
-**AWS** — build the `Dockerfile` (Next.js standalone output). Point `DATABASE_URL` at RDS/Aurora PostgreSQL. Put media on S3 via the `S3_*` variables. Terminate TLS at the load balancer; set `NEXT_PUBLIC_SITE_URL=https://matribhumi.me`.
+**AWS** — build the `Dockerfile` (Next.js standalone output). Point `DATABASE_URL` at RDS/Aurora PostgreSQL. Put media on S3 via the `S3_*` variables. Terminate TLS at the load balancer; set `NEXT_PUBLIC_SITE_URL=https://razzcnpl.me`.
 
 ## Images and storage
 
@@ -159,4 +159,4 @@ Set `NEXT_PUBLIC_ANALYTICS_ID` to a GA4 or GTM ID. Events (`page_view`, `propert
 
 ## Domain
 
-Production origin is **https://matribhumi.me**. Canonical URLs, sitemap, robots, Open Graph, JSON-LD, and documentation all use that host. `www` is redirected to the apex domain.
+Production origin is **https://razzcnpl.me**. Canonical URLs, sitemap, robots, Open Graph, JSON-LD, and documentation all use that host. `www` is redirected to the apex domain.

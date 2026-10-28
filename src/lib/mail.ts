@@ -23,25 +23,25 @@ export function brochureDownloadUrl() {
 export function brochureEmail(fullName: string) {
   const firstName = firstNameFrom(fullName);
   const downloadUrl = brochureDownloadUrl();
-  const subject = "Your MatriBhumi property brochure";
+  const subject = "Your RAZZ Construction and Properties property brochure";
   const text = `Dear ${firstName},
 
-Thank you for your interest in MatriBhumi. Enclosed is a brochure of selected projects from participating developers in Bangladesh — including Dhaka, Chattogram, and Bashundhara.
+Thank you for your interest in RAZZ Construction and Properties. Enclosed is a brochure of residential projects we develop in Bangladesh — including Dhaka, Chattogram, and Bashundhara.
 
 ${downloadUrl}
 
-MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh and coordinates the buyer’s interaction with the developer. ${buyerFeeDisclosure} The participating developer is the seller.
+RAZZ Construction and Properties Ltd. develops and sells its own residential projects in Bangladesh. ${buyerFeeDisclosure} The company is the developer and seller.
 
 Because you have downloaded the brochure, we will keep you on the list for floor plans and viewing slots as they are released.
 
-If you have specific layout, budget, or location requirements, reply to this email. The advisory team is available across time zones.
+If you have specific layout, budget, or location requirements, reply to this email. The sales team is available across time zones.
 
 Welcome back to the idea of home.
 
 Warm regards,
-The MatriBhumi Team
+The RAZZ Construction and Properties Team
 ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.postal}, ${siteConfig.address.country}
-www.matribhumi.me`;
+www.${siteConfig.domain}`;
 
   const safeName = escapeHtml(firstName);
   const safeUrl = escapeHtml(downloadUrl);
@@ -53,14 +53,14 @@ www.matribhumi.me`;
         <td align="center">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fbf8f2;padding:40px 36px;">
             <tr>
-              <td style="font-family:Georgia,serif;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#8a7355;">MatriBhumi</td>
+              <td style="font-family:Georgia,serif;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#8a7355;">RAZZ Construction and Properties</td>
             </tr>
             <tr>
               <td style="padding-top:28px;font-family:Georgia,serif;font-size:28px;line-height:1.25;color:#1a1916;">Dear ${safeName},</td>
             </tr>
             <tr>
               <td style="padding-top:20px;font-family:Georgia,serif;font-size:16px;line-height:1.7;color:#2c2a26;">
-                Thank you for your interest in MatriBhumi. Enclosed is a brochure of selected projects from participating developers in Bangladesh — including Dhaka, Chattogram, and Bashundhara.
+                Thank you for your interest in RAZZ Construction and Properties. Enclosed is a brochure of residential projects we develop in Bangladesh — including Dhaka, Chattogram, and Bashundhara.
               </td>
             </tr>
             <tr>
@@ -70,7 +70,7 @@ www.matribhumi.me`;
             </tr>
             <tr>
               <td style="padding-top:28px;font-family:Georgia,serif;font-size:16px;line-height:1.7;color:#2c2a26;">
-                MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh and coordinates the buyer’s interaction with the developer. ${escapeHtml(buyerFeeDisclosure)} The participating developer is the seller.
+                RAZZ Construction and Properties Ltd. develops and sells its own residential projects in Bangladesh. ${escapeHtml(buyerFeeDisclosure)} The company is the developer and seller.
               </td>
             </tr>
             <tr>
@@ -80,7 +80,7 @@ www.matribhumi.me`;
             </tr>
             <tr>
               <td style="padding-top:18px;font-family:Georgia,serif;font-size:16px;line-height:1.7;color:#2c2a26;">
-                If you have specific layout, budget, or location requirements, reply to this email. The advisory team is available across time zones.
+                If you have specific layout, budget, or location requirements, reply to this email. The sales team is available across time zones.
               </td>
             </tr>
             <tr>
@@ -89,9 +89,9 @@ www.matribhumi.me`;
             <tr>
               <td style="padding-top:28px;font-family:Georgia,serif;font-size:16px;line-height:1.7;color:#1a1916;">
                 Warm regards,<br />
-                The MatriBhumi Team<br />
+                The RAZZ Construction and Properties Team<br />
                 ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.postal}, ${siteConfig.address.country}<br />
-                <a href="${siteConfig.url}" style="color:#8a7355;text-decoration:none;">www.matribhumi.me</a>
+                <a href="${siteConfig.url}" style="color:#8a7355;text-decoration:none;">www.${siteConfig.domain}</a>
               </td>
             </tr>
           </table>
@@ -113,32 +113,32 @@ export function advisorRequestEmail(input: {
   currency: string;
 }) {
   const firstName = firstNameFrom(input.name);
-  const subject = "We received your MatriBhumi property requirements";
+  const subject = "We received your RAZZ Construction and Properties property requirements";
   const text = `Dear ${firstName},
 
-Thank you for sharing your requirements with MatriBhumi.
+Thank you for sharing your requirements with RAZZ Construction and Properties.
 
-A property advisor will review what you sent — ${input.propertyType.toLowerCase().replace(/_/g, " ")} in ${input.preferredCity}, ${input.preferredMarket}, around ${input.budget} ${input.currency} — and contact you. This is a human review, not an automated valuation or legal opinion.
+A member of the sales team will review what you sent — ${input.propertyType.toLowerCase().replace(/_/g, " ")} in ${input.preferredCity}, ${input.preferredMarket}, around ${input.budget} ${input.currency} — and contact you. This is a human review, not an automated valuation or legal opinion.
 
 ${buyerFeeDisclosure} ${howWeWork.purchaseAgreement}
 
 Warm regards,
-The MatriBhumi Team
+The RAZZ Construction and Properties Team
 ${siteConfig.url}`;
   return { subject, text };
 }
 
 export function viewingRequestEmail(input: { name: string; propertyName?: string }) {
   const firstName = firstNameFrom(input.name);
-  const subject = "Your MatriBhumi viewing request";
+  const subject = "Your RAZZ Construction and Properties viewing request";
   const text = `Dear ${firstName},
 
-We have received your viewing request${input.propertyName ? ` for ${input.propertyName}` : ""}. A MatriBhumi advisor will coordinate with the developer and confirm availability. Preferred times are requests, not confirmed appointments.
+We have received your viewing request${input.propertyName ? ` for ${input.propertyName}` : ""}. RAZZ sales will confirm availability. Preferred times are requests, not confirmed appointments.
 
-The purchase, if you proceed, is completed with the developer or seller.
+The purchase, if you proceed, is completed with RAZZ Construction and Properties Ltd.
 
 Warm regards,
-The MatriBhumi Team
+The RAZZ Construction and Properties Team
 ${siteConfig.url}`;
   return { subject, text };
 }

@@ -8,13 +8,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-charcoal text-ivory hover:bg-ink",
+          "bg-moss text-ivory hover:bg-ink",
         invert:
-          "bg-ivory text-charcoal hover:bg-stone",
+          "bg-paper text-charcoal hover:bg-stone",
         outline:
-          "border border-charcoal/20 text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-ivory",
+          "border border-charcoal/15 text-charcoal hover:border-moss hover:bg-moss hover:text-ivory",
         ghost:
-          "text-ivory/90 hover:text-ivory",
+          "text-charcoal/80 hover:text-moss",
         moss: "bg-moss text-ivory hover:bg-moss/90",
         bronze: "bg-bronze text-charcoal hover:bg-sand",
       },

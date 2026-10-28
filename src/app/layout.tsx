@@ -33,7 +33,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#1A1916",
+  themeColor: "#f4fafb",
 };
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "MatriBhumi",
+    "RAZZ Construction and Properties",
     "Bangladesh property",
     "Dhaka property",
     "Bangladesh real estate",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     "flats in Dhaka",
     "residential property Bangladesh",
     "commercial property Bangladesh",
-    "property consultant Bangladesh",
-    "property advisor Bangladesh",
+    "real estate developer Bangladesh",
+    "RAZZ sales",
     "buy apartment in Bangladesh",
     "new development Bangladesh",
     "Chattogram property",
@@ -72,19 +72,17 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [{ url: "/brand/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/brand/og-default.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: siteConfig.url },
   icons: {
     icon: "/brand/favicon.svg",
-    apple: "/brand/favicon.png",
+    apple: "/brand/favicon.svg",
   },
 };
 

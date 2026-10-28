@@ -15,7 +15,7 @@ export function HowWeWork({ tone = "light" }: { tone?: "light" | "mist" | "dark"
         {howWeWork.title}
       </p>
       <h2 className="font-display mt-3 text-[1.85rem] leading-[1.15] sm:text-4xl md:text-5xl">
-        Property advisory and transaction coordination.
+        We develop the homes we sell.
       </h2>
       <p className={cn("mt-6 max-w-3xl text-lg leading-8", dark ? "text-ivory/80" : "text-muted")}>
         {howWeWork.summary}

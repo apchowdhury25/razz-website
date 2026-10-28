@@ -54,7 +54,7 @@ export default async function AdminDealDetailPage({ params }: { params: Promise<
       <form action={upsertDeal} className="grid gap-4">
         <h1 className="font-display text-4xl">{deal.lead.name}</h1>
         <p className="text-sm text-muted">
-          {deal.lead.email} · pipeline from buyer lead through completion. The buyer pays the developer or seller. MatriBhumi does not receive purchase funds.
+          {deal.lead.email} · pipeline from buyer lead through completion. The buyer pays the developer or seller. RAZZ Construction and Properties does not receive purchase funds.
         </p>
         <input type="hidden" name="id" value={deal.id} />
         <input type="hidden" name="leadId" value={deal.leadId} />
@@ -83,7 +83,7 @@ export default async function AdminDealDetailPage({ params }: { params: Promise<
           ))}
         </select>
         <select name="assignedAdvisorId" defaultValue={deal.assignedAdvisorId ?? ""} className="h-11 border border-charcoal/15 bg-paper px-3">
-          <option value="">Advisor</option>
+          <option value="">Sales</option>
           {staff.map((person) => (
             <option key={person.id} value={person.id}>{person.name}</option>
           ))}
@@ -127,7 +127,7 @@ export default async function AdminDealDetailPage({ params }: { params: Promise<
       <section>
         <h2 className="font-display text-2xl">Transaction pipeline</h2>
         <p className="mt-2 text-sm text-muted">
-          New lead → Contacted → Qualified → Shortlisted → Developer introduced → Viewing → Property selected → Reservation → Contract → Completion → Closed. Lost / withdrawn is a terminal stage. The buyer purchases from the developer or seller. MatriBhumi is not the seller.
+          New lead → Contacted → Qualified → Shortlisted → Developer introduced → Viewing → Property selected → Reservation → Contract → Completion → Closed. Lost / withdrawn is a terminal stage. The buyer purchases from RAZZ Construction and Properties Ltd.
         </p>
         <ol className="mt-4 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.14em]">
           {pipelineColumns.map((column) => (
@@ -201,7 +201,7 @@ export default async function AdminDealDetailPage({ params }: { params: Promise<
         <form action={upsertDealCompensation} className="grid gap-3 border border-charcoal/10 bg-paper p-5">
           <h2 className="font-display text-2xl">Expected {developerFeeLabel()}</h2>
           <p className="text-sm text-muted">
-            Amount MatriBhumi expects from the developer after a successful transaction. Separate from the buyer&apos;s purchase price. Admin only.
+            Amount RAZZ Construction and Properties expects from the developer after a successful transaction. Separate from the buyer&apos;s purchase price. Admin only.
           </p>
           <input type="hidden" name="dealId" value={deal.id} />
           <select name="compensationType" defaultValue={compensation?.compensationType ?? "PERCENTAGE"} className="h-11 border border-charcoal/15 px-3 text-sm">
@@ -231,7 +231,7 @@ export default async function AdminDealDetailPage({ params }: { params: Promise<
       ) : (
         <p className="text-sm text-muted">Developer compensation for this deal is visible to administrators only.</p>
       )}
-      {deal.assignedAdvisor ? <p className="text-sm text-muted">Advisor: {deal.assignedAdvisor.name}. Updated {formatDate(deal.updatedAt)}.</p> : null}
+      {deal.assignedAdvisor ? <p className="text-sm text-muted">Sales: {deal.assignedAdvisor.name}. Updated {formatDate(deal.updatedAt)}.</p> : null}
     </div>
   );
 }

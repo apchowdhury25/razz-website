@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
   title: "Careers",
-  description: "Work with MatriBhumi on independent property advice, partner relations, and transaction coordination.",
+  description: "Work with RAZZ Construction and Properties on residential development, projects, and sales in Bangladesh.",
   path: "/careers",
   image: "/media/about-studio.jpg",
 });
@@ -24,12 +24,12 @@ export default async function CareersPage() {
         image="/media/about-studio.jpg"
         eyebrow="Careers"
         title="Help people find a home they can return to."
-        description="We advise buyers on Bangladesh property and coordinate with participating developers. Open roles in the Dhaka office are listed below."
+        description="RAZZ Construction and Properties Ltd. develops and sells residential projects in Bangladesh. Open roles in the Dhaka office are listed below."
       />
       <section className="grid gap-10 px-4 py-14 sm:px-6 md:px-12 md:py-20 lg:grid-cols-3">
         <article>
           <h2 className="font-display text-3xl">Culture</h2>
-          <p className="mt-4 leading-7 text-muted">A small advisory team that prefers a well-chosen shortlist to a loud launch. We argue about requirements, viewings, and how a family who lives most of the year in another country is introduced to the developer of record.</p>
+          <p className="mt-4 leading-7 text-muted">A development and sales team in Dhaka. We spend our time on the projects, the homes, and the families who want to buy them — including people who live most of the year in another country.</p>
         </article>
         <article>
           <h2 className="font-display text-3xl">Benefits</h2>

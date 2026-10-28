@@ -77,24 +77,24 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
       />
       <section className="relative min-h-[70dvh] overflow-hidden">
         <img src={property.heroImage} alt={property.name} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-charcoal/20" />
-        <div className="relative flex min-h-[70dvh] items-end px-4 pb-12 pt-28 sm:px-6 md:px-12 md:pb-16 md:pt-32">
-          <div className="max-w-4xl text-ivory">
-            <p className="text-[11px] uppercase tracking-[0.24em] text-sand">
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/90 to-ivory/30" />
+        <div className="relative flex min-h-[70dvh] items-end px-4 pb-12 pt-32 sm:px-6 md:px-12 md:pb-16 md:pt-40">
+          <div className="max-w-4xl text-charcoal">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-earth">
               {property.location.city}, {property.location.country} · {statusLabel(property.status)}
             </p>
             <h1 className="font-display mt-4 text-[2.1rem] leading-[1.05] sm:text-5xl md:text-7xl">{property.name}</h1>
             {developerName ? (
-              <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-ivory/70">
+              <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-muted">
                 Developer: {developerName}
                 {verified ? " · Verified" : ""}
               </p>
             ) : null}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <Button href="/advise" variant="invert" className="w-full sm:w-auto">
+              <Button href="/advise" className="w-full sm:w-auto">
                 {buyerCtas.talkToAdvisor}
               </Button>
-              <Button href="#inquire" variant="outline" className="w-full border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal sm:w-auto">
+              <Button href="#inquire" variant="outline" className="w-full sm:w-auto">
                 {buyerCtas.requestDetails}
               </Button>
               <Button href="#viewing" variant="ghost" className="w-full sm:w-auto">
@@ -173,7 +173,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               </>
             ) : (
               <p className="mt-3 text-sm leading-7 text-muted">
-                This listing is presented through MatriBhumi. The developer of record is confirmed when a published partnership is in place.
+                This home is developed and sold by RAZZ Construction and Properties Ltd.
               </p>
             )}
             <BuyerFeeNotice className="mt-6" />
@@ -253,10 +253,10 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      <section className="grid gap-10 bg-charcoal px-4 py-14 text-ivory sm:px-6 md:px-12 md:py-20 lg:grid-cols-2">
+      <section className="grid gap-10 bg-stone px-4 py-14 text-charcoal sm:px-6 md:px-12 md:py-20 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-4xl">Location</h2>
-          <p className="mt-4 text-ivory/70">{property.development.locationNote}</p>
+          <p className="mt-4 text-muted">{property.development.locationNote}</p>
           <div className="mt-6 bg-ivory">
             <PropertyMap latitude={property.latitude} longitude={property.longitude} name={property.name} />
           </div>
@@ -266,8 +266,8 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
           <div className="mt-6 grid gap-6">
             {Object.entries(nearbyGroups).map(([category, places]) => (
               <div key={category}>
-                <p className="text-[11px] uppercase tracking-[0.2em] text-sand">{category}</p>
-                <ul className="mt-2 space-y-1 text-sm text-ivory/80">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-earth">{category}</p>
+                <ul className="mt-2 space-y-1 text-sm text-muted">
                   {places.map((place) => (
                     <li key={place.id}>{place.name} · {place.distance}</li>
                   ))}
@@ -281,7 +281,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
       <section className="grid gap-12 px-4 py-14 sm:px-6 md:px-12 md:py-20 lg:grid-cols-2">
         <div id="inquire">
           <h2 className="font-display text-4xl">{buyerCtas.requestDetails}</h2>
-          <p className="mt-3 text-sm text-muted">Tell us what you need. An advisor will follow up and, where it fits, introduce you to the developer. MatriBhumi is not the seller.</p>
+          <p className="mt-3 text-sm text-muted">Tell us what you need. Sales will follow up about this RAZZ home. You purchase from RAZZ Construction and Properties Ltd.</p>
           <div className="mt-8">
             <InquiryForm propertyId={property.id} />
           </div>

@@ -255,7 +255,7 @@ export default async function AdminDeveloperDetailPage({ params }: { params: Pro
           <input name="dueAt" type="date" required className="h-11 border border-charcoal/15 px-3 text-sm" />
           <input name="task" required placeholder="Task" className="h-11 border border-charcoal/15 px-3 text-sm" />
           <select name="assignedAdvisorId" className="h-11 border border-charcoal/15 px-3 text-sm">
-            <option value="">Advisor</option>
+            <option value="">Sales</option>
             {staff.map((person) => (
               <option key={person.id} value={person.id}>{person.name}</option>
             ))}

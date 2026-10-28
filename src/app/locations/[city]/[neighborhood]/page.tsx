@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PublicShell } from "@/components/site/PublicShell";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/site/SectionHeader";
-import { LocationBreadcrumb } from "@/components/site/LocationBreadcrumb";
+import { LocationBreadcrumbOnLight } from "@/components/site/LocationBreadcrumb";
 import { PropertyCard } from "@/components/property/PropertyCard";
 import { PropertyMap } from "@/components/maps/PropertyMap";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -24,8 +24,8 @@ export async function generateMetadata({
   const record = parent ? getNeighborhood(parent.slug, neighborhoodSlug) : null;
   if (!parent || !record) notFound();
   return createMetadata({
-    title: `${record.name} Properties | MatriBhumi`,
-    description: `${record.description} Independent property advisory for ${parent.name}, Bangladesh.`,
+    title: `${record.name} Properties | RAZZ Construction and Properties`,
+    description: `${record.description} Residential projects by RAZZ Construction and Properties in ${parent.name}, Bangladesh.`,
     path: neighborhoodPath(parent.slug, record.slug),
     image: record.heroImage,
   });
@@ -60,9 +60,9 @@ export default async function NeighborhoodPage({
           alt={neighborhood.name}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-charcoal/20" />
-        <div className="relative flex min-h-[70vh] flex-col justify-end px-4 pb-14 pt-28 sm:px-6 md:px-12 md:pb-20">
-          <LocationBreadcrumb
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/90 to-ivory/30" />
+        <div className="relative flex min-h-[70vh] flex-col justify-end px-4 pb-14 pt-32 sm:px-6 md:px-12 md:pb-20 md:pt-40">
+          <LocationBreadcrumbOnLight
             items={[
               { name: "Home", href: "/" },
               { name: "Locations", href: "/locations" },
@@ -70,8 +70,8 @@ export default async function NeighborhoodPage({
               { name: neighborhood.name },
             ]}
           />
-          <h1 className="font-display mt-6 text-4xl text-ivory sm:text-6xl md:text-7xl">{neighborhood.name}</h1>
-          <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-sand">
+          <h1 className="font-display mt-6 text-4xl text-charcoal sm:text-6xl md:text-7xl">{neighborhood.name}</h1>
+          <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-earth">
             {city.name}, Bangladesh
           </p>
         </div>
@@ -95,7 +95,7 @@ export default async function NeighborhoodPage({
         <SectionHeader
           eyebrow="Listings"
           title={`Properties in ${neighborhood.name}`}
-          description="Published MatriBhumi listings for this neighborhood. MatriBhumi does not invent properties or prices."
+          description="Published RAZZ Construction and Properties listings for this neighborhood. RAZZ Construction and Properties does not invent properties or prices."
         />
         {propertyData.items.length ? (
           <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -107,7 +107,7 @@ export default async function NeighborhoodPage({
           <div className="mt-10 max-w-2xl">
             <p className="text-lg text-charcoal">No properties available in this neighborhood yet.</p>
             <p className="mt-3 text-sm leading-6 text-muted">
-              {neighborhood.opportunities} Talk to an advisor if you would like us to watch this neighborhood.
+              {neighborhood.opportunities} Talk to sales if you would like us to watch this neighborhood.
             </p>
             <Button href={`/locations/${city.slug}`} variant="outline" className="mt-8">
               Explore other neighborhoods in {city.name}

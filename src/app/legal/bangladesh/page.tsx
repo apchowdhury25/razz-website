@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Bangladesh legal information",
   description:
-    "Editable Bangladesh legal-information area for MatriBhumi. Placeholders for qualified Bangladesh legal counsel. Not legal advice.",
+    "Editable Bangladesh legal-information area for RAZZ Construction and Properties. Placeholders for qualified Bangladesh legal counsel. Not legal advice.",
   path: "/legal/bangladesh",
 });
 

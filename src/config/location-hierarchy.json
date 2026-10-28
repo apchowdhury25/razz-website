@@ -13,14 +13,14 @@
       "heroImage": "/media/locations/dhaka.jpg",
       "latitude": 23.8103,
       "longitude": 90.4125,
-      "description": "Bangladesh’s capital is a river metropolis of work, family life, and a growing stock of apartments in planned districts. MatriBhumi helps buyers compare selected developer homes across Dhaka’s neighborhoods.",
+      "description": "Bangladesh’s capital is a river metropolis of work, family life, and a growing stock of apartments in planned districts. RAZZ Construction and Properties develops residential projects across Dhaka’s neighborhoods.",
       "overview": "Buyers typically look at diplomatic and commercial cores such as Gulshan, Baridhara, and Banani; master-planned east Dhaka including Bashundhara R/A; established lakeside Dhanmondi; and emerging east-city areas such as Purbachal and Aftab Nagar.",
       "lifestyle": "Neighborhood character ranges from embassy-lined streets and lakes to wide new roads, malls, and family housing. Confirm schools, commute, and building quality with the developer and independent professionals.",
       "connectivity": "Hazrat Shahjalal International Airport, major east–west roads, and planned transit corridors serve different parts of the city at different travel times.",
-      "opportunities": "Selected participating-developer apartments, penthouses, and mixed-use homes as listings are published. MatriBhumi is the advisor; the developer remains the seller.",
+      "opportunities": "Apartments, penthouses, and mixed-use homes developed by RAZZ Construction and Properties Ltd.",
       "cta": "Explore Dhaka",
-      "seoTitle": "Dhaka Properties | MatriBhumi",
-      "seoDescription": "Explore Dhaka properties by neighborhood — Gulshan, Banani, Baridhara, Bashundhara R/A, Dhanmondi, Purbachal, and more. Independent property advisory in Bangladesh.",
+      "seoTitle": "Dhaka Properties | RAZZ Construction and Properties",
+      "seoDescription": "Explore Dhaka properties by neighborhood — Gulshan, Banani, Baridhara, Bashundhara R/A, Dhanmondi, Purbachal, and more. Residential developments by RAZZ Construction and Properties.",
       "neighborhoods": [
         {
           "slug": "gulshan",
@@ -31,10 +31,10 @@
           "latitude": 23.7806,
           "longitude": 90.4193,
           "description": "Dhaka’s diplomatic and commercial core, known for lakes, embassies, and premium apartment buildings.",
-          "overview": "Gulshan is a low- to mid-density district of lakes, tree-lined roads, and high-value apartments. Buyers often look here for larger units, concierge buildings, and proximity to offices and international schools. MatriBhumi coordinates introductions to participating developers with published listings in the area.",
+          "overview": "Gulshan is a low- to mid-density district of lakes, tree-lined roads, and high-value apartments. Buyers often look here for larger units, concierge buildings, and proximity to offices and international schools. Ask RAZZ sales which of the company’s homes are offered in the area.",
           "lifestyle": "Restaurants, retail, and embassy life sit close to residential streets. Building quality and service charges vary widely — confirm both with the developer.",
           "connectivity": "Central north Dhaka, with access toward Banani, Baridhara, and the airport road.",
-          "opportunities": "Luxury apartments and penthouses from participating developers, as listings are published."
+          "opportunities": "Luxury apartments and penthouses developed by RAZZ Construction and Properties."
         },
         {
           "slug": "baridhara",
@@ -48,7 +48,7 @@
           "overview": "Baridhara is valued for calmer streets, diplomatic presence, and larger residential plots. Apartment stock is selective. Confirm title, building approvals, and service arrangements with the developer and independent counsel.",
           "lifestyle": "Residential, green, and more private than neighboring commercial strips.",
           "connectivity": "Next to Gulshan and Baridhara DOHS, with access to the airport corridor.",
-          "opportunities": "Selective luxury apartments as participating-developer listings are published."
+          "opportunities": "Selective luxury apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "banani",
@@ -59,10 +59,10 @@
           "latitude": 23.794,
           "longitude": 90.4066,
           "description": "A mixed residential and commercial neighborhood between Gulshan and the airport road, with cafes, offices, and contemporary apartments.",
-          "overview": "Banani combines walkable commercial streets with mid- to high-end apartment buildings. Unit sizes and building standards differ block by block. MatriBhumi helps buyers compare published participating-developer options rather than treating the whole neighborhood as one product.",
+          "overview": "Banani combines walkable commercial streets with mid- to high-end apartment buildings. Unit sizes and building standards differ block by block. Compare the RAZZ homes published for this neighborhood rather than treating the whole area as one product.",
           "lifestyle": "Cafes, gyms, and offices sit close to residential roads. Noise and traffic vary by street.",
           "connectivity": "Between Gulshan, Mohakhali, and the airport road.",
-          "opportunities": "Contemporary apartments from participating developers as listings are published."
+          "opportunities": "Contemporary apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "bashundhara",
@@ -73,10 +73,10 @@
           "latitude": 23.8199,
           "longitude": 90.4526,
           "description": "A master-planned residential area in east Dhaka with wide roads, malls, and a growing stock of new apartment buildings.",
-          "overview": "Bashundhara Residential Area is a large planned district with shopping, leisure, and family housing. New towers continue to be added. MatriBhumi is an independent advisor and is not Bashundhara Group. Listings here are from participating developers only.",
+          "overview": "Bashundhara Residential Area is a large planned district with shopping, leisure, and family housing. New towers continue to be added. RAZZ Construction and Properties Ltd. develops homes in this district. The company is not Bashundhara Group.",
           "lifestyle": "Everyday errands, malls, and family amenities are close to residential blocks. Street character differs by block.",
           "connectivity": "East Dhaka, toward the airport and Purbachal corridors.",
-          "opportunities": "New apartments and mixed-use homes from participating developers as listings are published."
+          "opportunities": "New apartments and mixed-use homes developed by RAZZ Construction and Properties."
         },
         {
           "slug": "baridhara-dohs",
@@ -90,7 +90,7 @@
           "overview": "Baridhara DOHS is a gated planned society beside Baridhara. Access rules, building by-laws, and service arrangements are specific to the society and the developer. Confirm both before a purchase.",
           "lifestyle": "Residential and relatively quiet compared with commercial Gulshan.",
           "connectivity": "Adjacent to Baridhara and the airport road.",
-          "opportunities": "Selective apartments from participating developers as listings are published."
+          "opportunities": "Selective apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "dhanmondi",
@@ -104,7 +104,7 @@
           "overview": "Dhanmondi is one of Dhaka’s earlier planned residential areas. Lake, schools, and cultural venues sit close to mixed-age apartment stock. Building quality and remaining life of older structures need independent inspection.",
           "lifestyle": "Lake walks, cafes, and a denser urban grain than the diplomatic north.",
           "connectivity": "Central-south Dhaka, with access toward the old city and the north.",
-          "opportunities": "Apartments from participating developers as listings are published."
+          "opportunities": "Apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "niketan",
@@ -118,7 +118,7 @@
           "overview": "Niketan is a small planned residential area used by households who want to stay close to Gulshan without living on the busiest commercial roads. Inventory is limited.",
           "lifestyle": "Primarily residential, with Gulshan amenities a short drive away.",
           "connectivity": "Between Gulshan, Tejgaon, and Mohakhali.",
-          "opportunities": "Mid-rise apartments from participating developers as listings are published."
+          "opportunities": "Mid-rise apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "purbachal",
@@ -132,7 +132,7 @@
           "overview": "Purbachal New Town is a long-horizon planned extension east of the city. Infrastructure, occupancy, and completion of individual buildings vary. Treat published timelines as developer statements to verify, not as guarantees.",
           "lifestyle": "Newer, more open grain than inner Dhaka, with amenities still filling in.",
           "connectivity": "East of Bashundhara, toward the 300-feet corridor.",
-          "opportunities": "Off-plan and new apartments from participating developers as listings are published."
+          "opportunities": "Off-plan and new apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "aftab-nagar",
@@ -146,7 +146,7 @@
           "overview": "Aftab Nagar has become a practical apartment neighborhood for households who want newer buildings east of the older city core. Street quality and building standards differ by block.",
           "lifestyle": "Residential mid-rises with local markets nearby.",
           "connectivity": "East Dhaka, toward Rampura, Banasree, and the airport-side roads.",
-          "opportunities": "Mid-rise apartments from participating developers as listings are published."
+          "opportunities": "Mid-rise apartments developed by RAZZ Construction and Properties."
         }
       ]
     },
@@ -158,13 +158,13 @@
       "latitude": 22.3569,
       "longitude": 91.7832,
       "description": "Bangladesh’s port city sits between hills and harbour. Buyers often look at hill residential areas such as Khulshi and established inner neighborhoods including Nasirabad and Panchlaish.",
-      "overview": "Chattogram’s premium apartment market concentrates on the hills and planned housing societies, with mixed commercial-residential streets closer to the city core. MatriBhumi helps buyers compare selected developer homes and coordinate the purchase with the developer.",
+      "overview": "Chattogram’s premium apartment market concentrates on the hills and planned housing societies, with mixed commercial-residential streets closer to the city core. RAZZ Construction and Properties develops homes here and sells them through its sales team.",
       "lifestyle": "Hill views, harbour light, and a slower grain than Dhaka. Confirm slope, access, and building engineering with qualified professionals.",
       "connectivity": "Shah Amanat International Airport, the port, and hill roads serve different neighborhoods at different travel times.",
-      "opportunities": "Selected participating-developer apartments as listings are published. MatriBhumi is the advisor; the developer remains the seller.",
+      "opportunities": "Apartments developed by RAZZ Construction and Properties Ltd.",
       "cta": "Explore Chattogram",
-      "seoTitle": "Chattogram Properties | MatriBhumi",
-      "seoDescription": "Explore Chattogram properties by neighborhood — Khulshi, Nasirabad, Panchlaish, O.R. Nizam Road, and more. Independent property advisory in Bangladesh.",
+      "seoTitle": "Chattogram Properties | RAZZ Construction and Properties",
+      "seoDescription": "Explore Chattogram properties by neighborhood — Khulshi, Nasirabad, Panchlaish, O.R. Nizam Road, and more. Residential developments by RAZZ Construction and Properties.",
       "neighborhoods": [
         {
           "slug": "khulshi",
@@ -178,7 +178,7 @@
           "overview": "Khulshi sits on the hills above the city core. Buyers look here for elevation, privacy, and newer apartment buildings. Slope, access roads, and structural design matter — confirm them with the developer and independent engineers.",
           "lifestyle": "Residential, green, and more elevated than the harbour districts.",
           "connectivity": "Hill roads toward Nasirabad, Panchlaish, and the city centre.",
-          "opportunities": "Hillside apartments from participating developers as listings are published."
+          "opportunities": "Hillside apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "north-khulshi",
@@ -192,7 +192,7 @@
           "overview": "North Khulshi is used by households who want Khulshi’s elevation with a slightly calmer street pattern. Inventory is selective.",
           "lifestyle": "Primarily residential hillside living.",
           "connectivity": "North of central Khulshi, toward Nasirabad.",
-          "opportunities": "Apartments from participating developers as listings are published."
+          "opportunities": "Apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "south-khulshi",
@@ -206,7 +206,7 @@
           "overview": "South Khulshi and the VIP Housing Society are known for planned residential plots and apartment buildings on the hills. Society rules and access can differ from open-city streets. Confirm them before a purchase.",
           "lifestyle": "Residential, planned, and elevated.",
           "connectivity": "Southern Khulshi, toward the city bowl.",
-          "opportunities": "Society apartments from participating developers as listings are published."
+          "opportunities": "Society apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "or-nizam-road",
@@ -220,7 +220,7 @@
           "overview": "O.R. Nizam Road is a well-known city spine. Apartments here trade proximity to services against traffic and street noise. Inspect orientation, parking, and building quality in person.",
           "lifestyle": "Urban and mixed-use, with shops and clinics along the road.",
           "connectivity": "Central Chattogram, linking several residential pockets.",
-          "opportunities": "Apartments from participating developers as listings are published."
+          "opportunities": "Apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "nasirabad",
@@ -234,7 +234,7 @@
           "overview": "Nasirabad Housing Society is a known address for family apartments in Chattogram. Building age and quality vary. Confirm society rules, parking, and remaining building life.",
           "lifestyle": "Planned residential streets with local services nearby.",
           "connectivity": "Between Khulshi, Panchlaish, and central Chattogram.",
-          "opportunities": "Society apartments from participating developers as listings are published."
+          "opportunities": "Society apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "panchlaish",
@@ -248,7 +248,7 @@
           "overview": "Panchlaish sits near hospitals, offices, and inner-city roads. It suits buyers who want a central address rather than a hill plot. Traffic and density are part of the neighborhood.",
           "lifestyle": "Urban, mixed, and close to daily services.",
           "connectivity": "Central Chattogram, toward Nasirabad and Mehedibag.",
-          "opportunities": "Apartments from participating developers as listings are published."
+          "opportunities": "Apartments developed by RAZZ Construction and Properties."
         },
         {
           "slug": "mehedibag",
@@ -262,7 +262,7 @@
           "overview": "Mehedibag is a compact residential area used by households who want to stay close to the city bowl. Streets are denser than the hill neighborhoods.",
           "lifestyle": "Inner-city residential with nearby commercial streets.",
           "connectivity": "Near GEC Circle and central Chattogram roads.",
-          "opportunities": "Apartments from participating developers as listings are published."
+          "opportunities": "Apartments developed by RAZZ Construction and Properties."
         }
       ]
     }

@@ -10,9 +10,9 @@ import { BuyerFeeNotice } from "@/components/site/BuyerFeeNotice";
 
 export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
-  title: "Developers",
+  title: "The developer",
   description:
-    "Selected developers whose properties are presented through MatriBhumi. Profiles appear when a participating partner is published.",
+    "RAZZ Construction and Properties Ltd. develops and sells the homes on this website.",
   path: "/developers",
   image: "/media/about-model.jpg",
 });
@@ -24,9 +24,9 @@ export default async function DevelopersPage() {
     <PublicShell transparentHeader>
       <PageHero
         image="/media/about-model.jpg"
-        eyebrow="Developers"
-        title="Selected developers."
-        description="MatriBhumi lists properties from participating developers. Public names and profiles appear only when a partnership is confirmed and the developer record is published."
+        eyebrow="Developer"
+        title="RAZZ Construction and Properties."
+        description="RAZZ Construction and Properties Ltd. is the developer of the homes on this website. Project profiles appear as they are published."
       />
       <section className="px-4 py-16 sm:px-6 md:px-12 md:py-20">
         {developers.length ? (
@@ -41,7 +41,7 @@ export default async function DevelopersPage() {
                   className="border border-charcoal/10 bg-paper p-8 hover:border-charcoal/30"
                 >
                   <p className="text-[11px] uppercase tracking-[0.2em] text-earth">
-                    {developer.verified ? "Verified developer" : "Selected developer"}
+                    Developer
                   </p>
                   <h2 className="font-display mt-3 text-3xl">{name}</h2>
                   <p className="mt-3 text-sm text-muted">
@@ -55,8 +55,8 @@ export default async function DevelopersPage() {
           <div className="max-w-2xl">
             <h2 className="font-display text-4xl">No published developer profiles yet.</h2>
             <p className="mt-4 leading-7 text-muted">
-              Named developer pages will appear here when participating partners are published. Browse selected
-              developments in the meantime, or speak with an advisor.
+              The company profile will appear here when it is published. Browse the
+              developments in the meantime, or speak with sales.
             </p>
             <BuyerFeeNotice className="mt-6" />
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -65,7 +65,7 @@ export default async function DevelopersPage() {
                 {buyerCtas.talkToAdvisor}
               </Button>
               <Button href="/for-developers" variant="outline">
-                For developers
+                Joint venture
               </Button>
             </div>
           </div>

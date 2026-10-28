@@ -26,7 +26,7 @@ export default async function AdminDealsPage() {
       <div>
         <h1 className="font-display text-4xl">Deals</h1>
         <p className="mt-3 max-w-2xl text-sm text-muted">
-          Track buyer introductions through to completion. Buyer purchase funds stay with the developer or seller. MatriBhumi compensation is recorded separately by an administrator.
+          Track buyer introductions through to completion. Buyer purchase funds stay with the developer or seller. RAZZ Construction and Properties compensation is recorded separately by an administrator.
         </p>
         <table className="mt-8 w-full text-left text-sm">
           <thead className="text-[11px] uppercase tracking-[0.16em] text-earth">
@@ -73,7 +73,7 @@ export default async function AdminDealsPage() {
           ))}
         </select>
         <select name="assignedAdvisorId" className="h-11 border border-charcoal/15 px-3 text-sm">
-          <option value="">Advisor</option>
+          <option value="">Sales</option>
           {staff.map((person) => (
             <option key={person.id} value={person.id}>{person.name}</option>
           ))}

@@ -1,6 +1,6 @@
 export const media = {
   hero: {
-    plaza: { src: "/media/hero-plaza.jpg", alt: "Landscaped plaza at the base of a contemporary MatriBhumi development" },
+    plaza: { src: "/media/hero-plaza.jpg", alt: "Landscaped plaza at the base of a contemporary RAZZ Construction and Properties development" },
     waterfront: { src: "/media/hero-waterfront.jpg", alt: "Waterfront residences along a calm river at dusk" },
     nature: { src: "/media/hero-nature.jpg", alt: "Low-rise homes set among trees and gardens" },
     urban: { src: "/media/hero-urban.jpg", alt: "Urban residential tower at twilight" },

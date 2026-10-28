@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-charcoal: #161513;
-  --color-ink: #2a2824;
-  --color-ivory: #f6f1e8;
-  --color-sand: #d4c4aa;
-  --color-earth: #7d6a4f;
-  --color-moss: #3f5344;
-  --color-bronze: #9a8154;
-  --color-stone: #ebe4d6;
-  --color-mist: #f4efe6;
-  --color-paper: #fbf8f2;
-  --color-muted: #6a645e;
+  --color-charcoal: #173447;
+  --color-ink: #24566c;
+  --color-ivory: #f4fafb;
+  --color-sand: #3d7388;
+  --color-earth: #2f6f84;
+  --color-moss: #1c7c90;
+  --color-bronze: #7eb8c8;
+  --color-stone: #e5f1f4;
+  --color-mist: #f7fbfc;
+  --color-paper: #ffffff;
+  --color-muted: #5a7380;
   --color-hairline: color-mix(in oklab, var(--color-charcoal) 10%, transparent);
   --font-display: var(--font-display), "Iowan Old Style", Georgia, serif;
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
-  --shadow-lift: 0 28px 64px -32px rgb(22 21 19 / 0.38);
-  --shadow-card: 0 1px 0 rgb(22 21 19 / 0.06), 0 18px 40px -28px rgb(22 21 19 / 0.18);
+  --shadow-lift: 0 24px 50px -32px rgb(23 52 71 / 0.22);
+  --shadow-card: 0 1px 0 rgb(23 52 71 / 0.04), 0 16px 36px -28px rgb(23 52 71 / 0.16);
 }
 
 html {

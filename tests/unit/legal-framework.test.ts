@@ -22,7 +22,7 @@ import {
 import { footerNav } from "@/config/site";
 
 const BUYER_FEE =
-  "MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service. Where applicable, MatriBhumi may receive compensation from participating developers under separate commercial agreements.";
+  "The purchase price of a home is agreed in the sale contract with RAZZ Construction and Properties Ltd. This website does not charge a separate buyer brokerage or consultation fee.";
 
 describe("canonical buyer-fee disclosure", () => {
   it("uses the same configurable sentence across public copy", () => {
@@ -37,31 +37,33 @@ describe("canonical buyer-fee disclosure", () => {
     expect(BUYER_FEE.toLowerCase()).not.toContain("%");
     expect(buyerFeeHeadline.toLowerCase()).not.toMatch(/commission-free|financially independent/);
     expect(compensationTransparency.points).toEqual([
-      "Buyers do not pay MatriBhumi’s core advisory fee.",
-      "Participating developers may compensate MatriBhumi.",
-      "Developer arrangements can differ.",
-      "Buyers may ask MatriBhumi about relevant developer relationships.",
+      "RAZZ Construction and Properties Ltd. is the developer and seller of the homes on this website.",
+      "Buyers do not pay a separate brokerage or consultation fee on this website.",
+      "The purchase price is the price in the sale agreement.",
+      "Landowners and other developers can propose a joint venture. Those terms are not published here.",
     ]);
   });
 });
 
 describe("how we work and transaction flows", () => {
-  it("states the Bangladesh advisory role and purchase agreement", () => {
+  it("states the Bangladesh developer role and purchase agreement", () => {
     expect(howWeWork.summary).toBe(
-      "MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh and coordinates the buyer’s interaction with the developer.",
+      "RAZZ Construction and Properties Ltd. develops and sells its own residential projects in Bangladesh. The sales team helps buyers choose a home, visit it, and complete the purchase.",
     );
     expect(howWeWork.purchaseAgreement).toBe(
-      "The property purchase agreement is between the buyer and the relevant developer/seller.",
+      "The property purchase agreement is between the buyer and RAZZ Construction and Properties Ltd.",
     );
+    expect(positioning.summary).toContain("registered real-estate development company");
     expect(positioning.summary).toContain("Bangladesh");
-    expect(positioning.licence).toContain("does not claim");
+    expect(positioning.licence).toContain("registered real-estate company");
+    expect(positioning.licence).toContain("does not publish a licence or registration number");
   });
 
-  it("keeps the buyer purchase separate from developer compensation", () => {
-    expect(transactionFlows.buyerPurchase.steps).toEqual(["Buyer", "Property purchase", "Developer/Seller"]);
-    expect(transactionFlows.developerCommercial.steps).toEqual(["Developer", "Commercial agreement", "MatriBhumi"]);
-    expect(transactionFlows.funds).toContain("does not receive or hold the buyer’s property purchase funds");
-    expect(transactionFlows.developerCommercial.note).toContain("not a fee paid by the buyer");
+  it("keeps a joint venture separate from the buyer’s purchase", () => {
+    expect(transactionFlows.buyerPurchase.steps).toEqual(["Buyer", "Sale agreement", "RAZZ Construction and Properties"]);
+    expect(transactionFlows.developerCommercial.steps).toEqual(["Landowner", "Joint venture", "RAZZ Construction and Properties"]);
+    expect(transactionFlows.funds).toContain("sale agreement with RAZZ Construction and Properties Ltd.");
+    expect(transactionFlows.developerCommercial.note).toContain("not the buyer’s purchase contract");
   });
 });
 
@@ -117,6 +119,6 @@ describe("Bangladesh legal pages", () => {
     const blob = JSON.stringify({ legalPages, bangladeshLegalTopics, positioning, counselReview });
     expect(blob).not.toMatch(/UAE|United Arab Emirates|Malaysia|Malaysian/i);
     expect(blob).not.toMatch(/RAJUK|licence no\.|license no\.|registration no\./i);
-    expect(positioning.licence).toContain("No licence number");
+    expect(positioning.licence).toContain("does not publish a licence or registration number");
   });
 });

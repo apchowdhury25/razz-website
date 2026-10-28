@@ -57,39 +57,34 @@ export default async function HomePage() {
       <section className="relative min-h-[100dvh] overflow-hidden">
         <img
           src="/media/hero-landing.jpg"
-          alt="A dusk waterfront residential tower with MatriBhumi at the entrance"
+          alt="A bright waterfront residential tower with RAZZ at the entrance"
           className="absolute inset-0 h-full w-full object-cover object-[62%_center] ken-burns"
         />
-        <div className="absolute inset-0 bg-charcoal/55" />
-        <div className="relative flex min-h-[100dvh] flex-col justify-end px-4 pb-16 pt-32 sm:px-6 md:px-16 md:pb-28 md:pt-40">
-          <p className="text-[11px] uppercase tracking-[0.32em] text-sand">Independent property advisory</p>
-          <h1 className="font-display mt-5 max-w-4xl text-[2.2rem] leading-[1.05] text-ivory sm:text-5xl md:mt-6 md:text-7xl lg:text-8xl md:leading-[0.94]">
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/88 to-ivory/25" />
+        <div className="relative flex min-h-[100dvh] flex-col justify-end px-4 pb-16 pt-36 sm:px-6 md:px-16 md:pb-28 md:pt-44">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-earth">Real estate development</p>
+          <h1 className="font-display mt-5 max-w-4xl text-[2.2rem] leading-[1.05] text-charcoal sm:text-5xl md:mt-6 md:text-7xl lg:text-8xl md:leading-[0.94]">
             {siteConfig.tagline}
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-7 text-ivory/82 sm:mt-7 sm:text-lg sm:leading-8">
+          <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:mt-7 sm:text-lg sm:leading-8">
             {siteConfig.supporting}
           </p>
           <div className="mt-9 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
-            <Button href="/advise" variant="invert" size="lg" className="w-full sm:w-auto">
+            <Button href="/advise" size="lg" className="w-full sm:w-auto">
               {buyerCtas.talkToAdvisor}
             </Button>
-            <Button
-              href="/properties"
-              variant="outline"
-              size="lg"
-              className="w-full border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal sm:w-auto"
-            >
+            <Button href="/properties" variant="outline" size="lg" className="w-full sm:w-auto">
               {buyerCtas.findMyProperty}
             </Button>
           </div>
-          <CountrySelector tone="on-dark" label="Choose a Bangladesh city" className="mt-10" />
+          <CountrySelector label="Choose a Bangladesh city" className="mt-10" />
         </div>
       </section>
 
       <section className="px-4 py-20 sm:px-6 md:px-12 md:py-28">
         <SectionHeader
-          eyebrow="What MatriBhumi does"
-          title="Independent property advisory and transaction coordination."
+          eyebrow="What RAZZ Construction and Properties does"
+          title="We develop and sell our own homes."
           description={howWeWork.summary}
         />
         <div className="mt-14 grid gap-8 md:grid-cols-3">
@@ -107,7 +102,7 @@ export default async function HomePage() {
         <SectionHeader
           eyebrow="Bangladesh"
           title="Explore Properties by City"
-          description="Start with a city, then open a neighborhood. MatriBhumi helps buyers find and evaluate properties from participating developers in Bangladesh."
+          description="Start with a city, then open a neighborhood. These are residential projects by RAZZ Construction and Properties Ltd."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {locationCities.map((city) => (
@@ -118,9 +113,9 @@ export default async function HomePage() {
 
       <section className="px-4 py-20 sm:px-6 md:px-12 md:py-28">
         <SectionHeader
-          eyebrow="Selected developments"
-          title="Properties from participating developers."
-          description="These homes are offered by participating developers. MatriBhumi is the advisor and coordinator, not the seller, unless a listing is marked MatriBhumi-owned."
+          eyebrow="Our developments"
+          title="Homes from RAZZ."
+          description="These homes are developed and offered by RAZZ Construction and Properties Ltd. Speak with sales about availability, price, and a viewing."
         />
         {featuredProperties.length ? (
           <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -136,12 +131,11 @@ export default async function HomePage() {
         </Button>
       </section>
 
-      <section className="bg-charcoal px-4 py-20 text-ivory sm:px-6 md:px-12 md:py-28">
+      <section className="bg-stone px-4 py-20 text-charcoal sm:px-6 md:px-12 md:py-28">
         <SectionHeader
-          eyebrow="Developers"
-          title="A curated developer network."
-          description="Public developer profiles appear when a participating partner is published. We do not invent relationships."
-          light
+          eyebrow="The company"
+          title="Developed by RAZZ Construction and Properties."
+          description="RAZZ Construction and Properties Ltd. is the developer of the homes on this website."
         />
         {featuredDevelopers.length ? (
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -152,13 +146,13 @@ export default async function HomePage() {
                 <Link
                   key={developer.id}
                   href={`/developers/${developer.slug}`}
-                  className="border border-ivory/15 p-8 hover:border-ivory/40"
+                  className="border border-charcoal/10 bg-paper p-8 hover:border-moss"
                 >
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-sand">
-                    {developer.verified ? "Verified developer" : "Selected developer"}
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-earth">
+                    Developer
                   </p>
                   <h3 className="font-display mt-3 text-3xl">{name}</h3>
-                  <p className="mt-3 text-sm text-ivory/70">
+                  <p className="mt-3 text-sm text-muted">
                     {developer._count.properties} listed properties
                   </p>
                 </Link>
@@ -166,13 +160,13 @@ export default async function HomePage() {
             })}
           </div>
         ) : (
-          <p className="mt-10 max-w-2xl text-ivory/70">
-            Featured developer profiles will appear here when participating partners are published. Until then, browse
-            selected developments or talk to an advisor.
+          <p className="mt-10 max-w-2xl text-muted">
+            Project profiles appear here as RAZZ developments are published. Until then, browse
+            the homes or talk to sales.
           </p>
         )}
-        <Button href="/developers" variant="outline" className="mt-12 border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal">
-          All developers
+        <Button href="/projects" variant="outline" className="mt-12">
+          Our projects
         </Button>
       </section>
 
@@ -180,9 +174,9 @@ export default async function HomePage() {
 
       <section className="px-4 py-20 sm:px-6 md:px-12 md:py-28">
         <SectionHeader
-          eyebrow="How MatriBhumi works"
-          title="From first conversation to a developer purchase."
-          description={`${howWeWork.purchaseAgreement} MatriBhumi coordinates the process.`}
+          eyebrow="Buying a RAZZ home"
+          title="From first conversation to your sale agreement."
+          description={`${howWeWork.purchaseAgreement} The sales team stays with you through the viewing and the reservation.`}
         />
         <HowItWorksSteps />
         <Button href="/how-it-works" variant="outline" className="mt-12">
@@ -193,7 +187,7 @@ export default async function HomePage() {
       <section className="bg-mist px-4 py-20 sm:px-6 md:px-12 md:py-28">
         <SectionHeader
           eyebrow="Trust"
-          title="Why buyers choose MatriBhumi"
+          title="Why buyers choose RAZZ Construction and Properties"
           description={siteConfig.audience}
         />
         <div className="mt-14 grid gap-px bg-charcoal/10 md:grid-cols-2 lg:grid-cols-4">
@@ -211,16 +205,15 @@ export default async function HomePage() {
       <HowWeArePaid />
       <TransactionFlows tone="mist" />
 
-      <section className="bg-charcoal px-4 py-20 text-ivory sm:px-6 md:px-12 md:py-28">
+      <section className="bg-paper px-4 py-20 text-charcoal sm:px-6 md:px-12 md:py-28">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <SectionHeader
-            eyebrow="For developers"
-            title="Are you a property developer?"
-            description="Reach qualified buyers looking at selected Bangladesh developments."
-            light
+            eyebrow="Joint venture"
+            title="Have land, or a project to build together?"
+            description="Landowners and other developers can contact RAZZ Construction and Properties about a joint venture."
           />
           <div className="lg:justify-self-end">
-            <Button href="/for-developers" variant="invert" size="lg">
+            <Button href="/for-developers" size="lg">
               {developerCtas.partner}
             </Button>
           </div>
@@ -277,22 +270,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-charcoal px-4 py-20 text-ivory sm:px-6 md:px-12 md:py-28">
+      <section className="bg-stone px-4 py-20 text-charcoal sm:px-6 md:px-12 md:py-28">
         <SectionHeader
           eyebrow="Start a conversation"
-          title="Talk to an advisor."
-          description="Tell us the market, the kind of home, and how you will use it. There is no buyer fee for this conversation."
-          light
+          title="Talk to sales."
+          description="Tell us the city, the kind of home, and how you will use it. Sales will follow up on RAZZ projects."
         />
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <Button href="/advise" variant="invert">
+          <Button href="/advise">
             {buyerCtas.talkToAdvisor}
           </Button>
-          <Button href="/properties" variant="outline" className="border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal">
+          <Button href="/properties" variant="outline">
             {buyerCtas.findMyProperty}
           </Button>
         </div>
-        <DualCta tone="dark" className="mt-4" />
+        <DualCta className="mt-4" />
       </section>
     </PublicShell>
   );

@@ -130,7 +130,7 @@ function CaptureForm({ kind, projectName }: { kind: Kind; projectName?: string }
           Your brochure is on its way.
         </h2>
         <p className="mt-4 text-sm leading-7 text-muted">
-          A note titled “Your MatriBhumi property brochure” is on its way to your inbox, with the selected-project list and next steps.
+          A note titled “Your RAZZ Construction and Properties property brochure” is on its way to your inbox, with the selected-project list and next steps.
         </p>
         <a
           href={siteConfig.brochurePath}
@@ -201,7 +201,7 @@ function CaptureForm({ kind, projectName }: { kind: Kind; projectName?: string }
       ) : null}
       <label className="flex items-start gap-3 text-sm normal-case tracking-normal text-muted">
         <input type="checkbox" name="consent" value="true" required className="mt-1" />
-        I agree to MatriBhumi storing these details to send the brochure and respond about selected developer projects.
+        I agree to RAZZ Construction and Properties storing these details to send the brochure and respond about selected developer projects.
       </label>
       {state.error ? <p className="text-sm text-red-800">{state.error}</p> : null}
       <Button type="submit" disabled={pending} className="w-full sm:w-auto">

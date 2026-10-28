@@ -7,9 +7,9 @@ import { developerCtas } from "@/config/ctas";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "For developers",
+  title: "Joint venture",
   description:
-    "Reach qualified buyers looking at selected Bangladesh developments. MatriBhumi offers property marketing, buyer referrals, viewing coordination and transaction coordination. Sales are not guaranteed.",
+    "Landowners and other developers can contact RAZZ Construction and Properties Ltd. about a joint venture on a site in Bangladesh.",
   path: "/for-developers",
   image: "/media/about-lobby.jpg",
 });
@@ -19,19 +19,19 @@ export default function ForDevelopersPage() {
     <PublicShell transparentHeader>
       <PageHero
         image="/media/about-lobby.jpg"
-        eyebrow="For developers"
-        title="Are you a property developer?"
-        description="Reach qualified buyers looking at selected Bangladesh developments."
+        eyebrow="Joint venture"
+        title="Develop with RAZZ."
+        description="Own land, or want to build a project with us? Contact RAZZ Construction and Properties Ltd. about a joint venture."
       >
-        <Button href="/contact" variant="invert">
+        <Button href="/contact">
           {developerCtas.partner}
         </Button>
       </PageHero>
       <section className="px-4 py-16 sm:px-6 md:px-12 md:py-24">
         <SectionHeader
-          eyebrow="How we work with developers"
-          title="Marketing, matching, and coordination."
-          description="MatriBhumi is an independent advisory platform. We present selected projects to buyers we already advise and coordinate introductions and viewings. We do not promise guaranteed sales."
+          eyebrow="Land and partnerships"
+          title="A joint venture starts with the site."
+          description="RAZZ Construction and Properties Ltd. is the developer. Share a site or a proposal and the team will tell you whether it can become a RAZZ project. A joint venture is a private agreement. We do not promise a return."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {developerServices.map((item) => (
@@ -44,18 +44,18 @@ export default function ForDevelopersPage() {
       </section>
       <section className="bg-mist px-4 py-16 sm:px-6 md:px-12 md:py-24">
         <SectionHeader
-          title="What we do not claim"
-          description="MatriBhumi does not guarantee sales volumes, sell financial products, or publish commission percentages. Compensation, where applicable, is set in a separate commercial agreement."
+          title="What a joint venture is"
+          description="A joint venture is an agreement to develop land together. It is not a promise of sales volume, and it is not a financial product. Commercial terms stay in the agreement and are not published here."
         />
         <p className="mt-8 max-w-3xl text-sm leading-7 text-muted">{siteConfig.buyerFeeNote}</p>
       </section>
-      <section className="bg-charcoal px-4 py-16 text-ivory sm:px-6 md:px-12 md:py-24">
-        <h2 className="font-display text-4xl md:text-5xl">Partner with MatriBhumi</h2>
-        <p className="mt-5 max-w-2xl text-ivory/75">
-          Write to us about a project you would like presented to qualified buyers. Named developer profiles are
-          published only after a partnership is confirmed.
+      <section className="bg-stone px-4 py-16 text-charcoal sm:px-6 md:px-12 md:py-24">
+        <h2 className="font-display text-4xl md:text-5xl">Propose a joint venture</h2>
+        <p className="mt-5 max-w-2xl text-muted">
+          Write to the Dhaka office about land or a development you would like to build with RAZZ Construction and
+          Properties Ltd. Tell us the location and what you have in mind.
         </p>
-        <Button href="/contact" variant="invert" className="mt-10">
+        <Button href="/contact" className="mt-10">
           {developerCtas.partner}
         </Button>
       </section>

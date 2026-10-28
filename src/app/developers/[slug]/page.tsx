@@ -43,26 +43,26 @@ export default async function DeveloperDetailPage({ params }: { params: Promise<
           { name, path: `/developers/${developer.slug}` },
         ])}
       />
-      <section className="bg-charcoal px-4 pb-16 pt-32 text-ivory sm:px-6 md:px-12 md:pb-24 md:pt-40">
-        <p className="text-[11px] uppercase tracking-[0.24em] text-sand">
+      <section className="bg-mist px-4 pb-16 pt-36 text-charcoal sm:px-6 md:px-12 md:pb-24 md:pt-44">
+        <p className="text-[11px] uppercase tracking-[0.24em] text-earth">
           {developer.verified ? "Verified developer" : "Selected developer"}
         </p>
         <h1 className="font-display mt-4 text-4xl sm:text-6xl md:text-7xl">{name}</h1>
-        <p className="mt-6 max-w-2xl text-ivory/75">{developer.publicDescription || developer.description}</p>
+        <p className="mt-6 max-w-2xl text-muted">{developer.publicDescription || developer.description}</p>
         {markets.length ? (
-          <p className="mt-4 text-sm text-ivory/70">Markets: {markets.join(", ")}</p>
+          <p className="mt-4 text-sm text-muted">Markets: {markets.join(", ")}</p>
         ) : (
-          <p className="mt-4 text-sm text-ivory/70">Market: {developer.country}</p>
+          <p className="mt-4 text-sm text-muted">Market: {developer.country}</p>
         )}
         {developer.website ? (
-          <a href={developer.website} className="mt-6 inline-block text-sand hover:text-ivory" rel="noreferrer" target="_blank">
+          <a href={developer.website} className="mt-6 inline-block text-moss hover:text-ink" rel="noreferrer" target="_blank">
             Developer website
           </a>
         ) : null}
-        <BuyerFeeNotice className="mt-8" tone="sand" />
+        <BuyerFeeNotice className="mt-8" />
       </section>
       <section className="px-4 py-16 sm:px-6 md:px-12 md:py-20">
-        <h2 className="font-display text-4xl">Properties listed through MatriBhumi</h2>
+        <h2 className="font-display text-4xl">Properties listed through RAZZ Construction and Properties</h2>
         {developer.properties.length ? (
           <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {developer.properties.map((property) => (
@@ -89,7 +89,7 @@ export default async function DeveloperDetailPage({ params }: { params: Promise<
         <div className="mt-12 max-w-xl">
           <h2 className="font-display text-3xl">Request information</h2>
           <p className="mt-3 text-sm text-muted">
-            Ask a MatriBhumi advisor about this developer&apos;s published listings. We do not publish commercial partnership terms here.
+            Ask RAZZ sales about the published homes in this project. Joint-venture terms, when any exist, are not published here.
           </p>
           <div className="mt-6">
             <InquiryForm inquiryType="SALES" />

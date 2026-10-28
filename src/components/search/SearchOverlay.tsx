@@ -211,7 +211,7 @@ export function SearchOverlay() {
           <div
             role="dialog"
             aria-modal="true"
-            aria-label="Search MatriBhumi"
+            aria-label="Search RAZZ Construction and Properties"
             className="mx-auto mt-[12vh] w-[min(40rem,calc(100%-1.5rem))] border border-stone bg-ivory text-charcoal shadow-lift"
             onMouseDown={(event) => event.stopPropagation()}
           >

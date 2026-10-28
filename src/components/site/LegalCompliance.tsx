@@ -11,7 +11,7 @@ export function LegalCompliance({ tone = "light" }: { tone?: "light" | "dark" })
       <h2 className="font-display mt-3 text-3xl md:text-4xl">Compliance, stated as it stands.</h2>
       <dl className="mt-8 grid gap-8 md:grid-cols-3">
         {legalCompliance.map((item) => (
-          <div key={item.title} className={cn("border-t pt-5", dark ? "border-ivory/15" : "border-charcoal/10")}>
+          <div key={item.title} className={cn("min-w-0 border-t pt-5", dark ? "border-ivory/15" : "border-charcoal/10")}>
             <dt className="font-display text-2xl">{item.title}</dt>
             <dd className={cn("mt-3 text-sm leading-7", dark ? "text-ivory/70" : "text-muted")}>{item.body}</dd>
           </div>

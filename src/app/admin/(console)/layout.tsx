@@ -15,21 +15,21 @@ export default async function ConsoleLayout({ children }: { children: React.Reac
 
   return (
     <div className="flex min-h-screen bg-ivory">
-      <aside className="hidden w-64 shrink-0 flex-col bg-charcoal text-ivory md:flex">
+      <aside className="hidden w-64 shrink-0 flex-col border-r border-charcoal/10 bg-paper text-charcoal md:flex">
         <div className="px-6 py-6">
-          <Logo variant="dark" />
-          <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-sand">Advisory console</p>
-          <p className="mt-2 text-xs text-ivory/60">{user.name} · {user.role}</p>
+          <Logo variant="light" className="h-12 max-w-full" />
+          <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-earth">Sales console</p>
+          <p className="mt-2 text-xs text-muted">{user.name} · {user.role}</p>
         </div>
         <nav className="flex-1 px-3" aria-label="Admin">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="block px-3 py-2 text-sm text-ivory/80 hover:bg-ivory/10 hover:text-ivory">
+            <Link key={link.href} href={link.href} className="block px-3 py-2 text-sm text-muted hover:bg-mist hover:text-charcoal">
               {link.label}
             </Link>
           ))}
         </nav>
         <form action={logoutAction} className="p-6">
-          <button className="text-[11px] uppercase tracking-[0.18em] text-sand">Sign out</button>
+          <button className="text-[11px] uppercase tracking-[0.18em] text-earth">Sign out</button>
         </form>
       </aside>
       <div className="flex-1">

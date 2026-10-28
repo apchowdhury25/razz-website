@@ -27,21 +27,19 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
     };
   }, [open]);
 
-  const inverted = transparent && !scrolled && !open;
-
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        inverted ? "bg-transparent text-ivory" : "bg-ivory text-charcoal shadow-[0_1px_0_rgb(22_21_19/0.08)]",
+        "fixed inset-x-0 top-0 z-50 overflow-x-clip bg-ivory text-charcoal shadow-[0_1px_0_rgb(23_52_71/0.08)] transition-all duration-500",
+        transparent && !scrolled && !open && "bg-ivory",
       )}
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <div className="flex items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-5 md:px-10 md:py-3">
+      <div className="flex w-full min-w-0 items-center justify-between gap-2 px-4 py-2 sm:gap-4 sm:px-5 md:px-10">
         <Link href="/" aria-label={siteConfig.name} className="min-w-0 shrink">
-          <Logo variant={inverted ? "dark" : "light"} className="max-h-7 max-w-[132px] sm:max-w-none" />
+          <Logo variant="light" className="h-12 w-auto sm:h-14" />
         </Link>
-        <nav className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-1 xl:flex 2xl:gap-x-6">
+        <nav className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-3 gap-y-1 2xl:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -56,8 +54,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <Link
             href="/advise"
             className={cn(
-              "hidden h-10 items-center px-3 text-[10px] uppercase tracking-[0.16em] xl:inline-flex",
-              inverted ? "bg-ivory text-charcoal" : "bg-charcoal text-ivory",
+              "hidden h-10 items-center px-3 text-[10px] uppercase tracking-[0.16em] 2xl:inline-flex",
+              "bg-moss text-ivory",
             )}
           >
             {buyerCtas.talkToAdvisor}
@@ -65,7 +63,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <SearchOverlay />
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center xl:hidden"
+            className="grid h-11 w-11 place-items-center 2xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -76,8 +74,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       </div>
       <div
         className={cn(
-          "hidden items-center gap-8 px-4 pb-2 sm:px-5 md:px-10 xl:flex",
-          inverted ? "text-ivory/80" : "text-earth",
+          "hidden items-center gap-8 px-4 pb-2 sm:px-5 md:px-10 2xl:flex",
+          "text-earth",
         )}
       >
         {countryNav.map((item) => (
@@ -91,7 +89,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
         ))}
       </div>
       {open ? (
-        <div className="fixed inset-x-0 bottom-0 top-[calc(3.25rem+env(safe-area-inset-top))] overflow-y-auto border-t border-charcoal/10 bg-ivory px-6 py-8 text-charcoal xl:hidden">
+        <div className="fixed inset-x-0 bottom-0 top-[calc(4.75rem+env(safe-area-inset-top))] overflow-y-auto border-t border-charcoal/10 bg-ivory px-6 py-8 text-charcoal 2xl:hidden">
           <nav className="grid gap-1 pb-8">
             <Link
               href="/advise"

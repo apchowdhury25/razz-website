@@ -12,7 +12,7 @@ export function PublicShell({
 }) {
   return (
     <LeadCaptureProvider>
-      <div className="pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:pb-0">
+      <div className="overflow-x-clip pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:pb-0">
         <SiteHeader transparent={transparentHeader} />
         <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
         <SiteFooter />

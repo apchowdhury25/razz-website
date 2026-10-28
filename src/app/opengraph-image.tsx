@@ -15,23 +15,23 @@ export default function OgImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#1A1916",
-          color: "#F7F3EB",
+          background: "#F4FAFB",
+          color: "#173447",
           padding: 72,
         }}
       >
-        <div style={{ fontSize: 22, letterSpacing: 8, textTransform: "uppercase", color: "#D8C9B0" }}>
+        <div style={{ fontSize: 22, letterSpacing: 6, textTransform: "uppercase", color: "#1C7C90" }}>
           {siteConfig.name}
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 72, lineHeight: 1.05, fontFamily: "Georgia" }}>
+          <div style={{ fontSize: 68, lineHeight: 1.05, fontFamily: "Georgia" }}>
             {siteConfig.tagline}
           </div>
-          <div style={{ marginTop: 24, fontSize: 28, color: "#D8C9B0", maxWidth: 800 }}>
+          <div style={{ marginTop: 24, fontSize: 28, color: "#5A7380", maxWidth: 860 }}>
             {siteConfig.description}
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "#A4895A" }}>{siteConfig.domain}</div>
+        <div style={{ fontSize: 22, color: "#1C7C90" }}>{siteConfig.legalName}</div>
       </div>
     ),
     { ...size },

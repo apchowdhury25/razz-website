@@ -25,29 +25,29 @@ export const businessModel = {
 
 export type BusinessModel = typeof businessModel;
 
-/** Canonical public buyer-fee disclosure. Edit here to change site-wide wording. */
+/** Canonical public purchase disclosure. Edit here to change site-wide wording. */
 export const buyerFeeDisclosure =
-  "MatriBhumi does not charge buyers a property brokerage or consultation fee for its core property advisory service. Where applicable, MatriBhumi may receive compensation from participating developers under separate commercial agreements.";
+  "The purchase price of a home is agreed in the sale contract with RAZZ Construction and Properties Ltd. This website does not charge a separate buyer brokerage or consultation fee.";
 
 export const buyerFeeStatement = businessModel.buyerPaysMatriBhumi
-  ? `Buyers pay MatriBhumi a fee of ${businessModel.buyerFee} ${businessModel.buyerFeeCurrency}.`
+  ? `Buyers pay RAZZ Construction and Properties a fee of ${businessModel.buyerFee} ${businessModel.buyerFeeCurrency}.`
   : buyerFeeDisclosure;
 
 export const buyerFeeNote =
-  "Developer commercial arrangements can differ. The property purchase agreement is between the buyer and the relevant developer/seller. MatriBhumi does not receive or hold the buyer’s property purchase funds. Buyers may ask MatriBhumi about relevant developer relationships.";
+  "Published prices can change. The binding price is the one in the sale agreement. Independent legal advice is yours to obtain. Joint-venture terms with a landowner, when any exist, are not published on this website.";
 
 export const buyerJourneyFeeMessage = buyerFeeStatement;
 
-/** Marketing headline. Pair it with buyerFeeDisclosure; do not claim independence from developers. */
-export const buyerFeeHeadline = "No MatriBhumi brokerage or consultation fee for buyers.";
+/** Marketing headline. Pair it with buyerFeeDisclosure. */
+export const buyerFeeHeadline = "Buy directly from the developer.";
 
 export const buyerFeeMarketing = buyerFeeDisclosure;
 
 export const advisorFollowUpMessage =
-  "Your MatriBhumi property advisor will review your requirements and contact you.";
+  "A member of the RAZZ sales team will review your enquiry and contact you.";
 
 export const propertySourceDisclosure =
-  "Prices, availability, specifications, unit availability, completion schedules, service charges, taxes, title information and other property details may change. Buyers should confirm important information with the relevant developer/seller and qualified professionals before making a purchase decision. Property information on this website is not a guarantee.";
+  "Prices, availability, specifications, unit availability, completion schedules, service charges, taxes, title information and other property details may change. Buyers should confirm important information with the RAZZ sales team and with qualified professionals before making a purchase decision. Property information on this website is not a guarantee.";
 
 export function buyerPaysNothing() {
   return !businessModel.buyerPaysMatriBhumi && businessModel.buyerFee === 0;

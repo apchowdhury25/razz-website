@@ -24,7 +24,7 @@ services:
     environment:
       DATABASE_URL: postgresql://matribhumi:matribhumi@db:5432/matribhumi?schema=public
       SESSION_SECRET: ${SESSION_SECRET:-matribhumi-dev-session-secret-change-me-32}
-      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://matribhumi.me}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://razzcnpl.me}
       NEXT_PUBLIC_MAPBOX_TOKEN: ${NEXT_PUBLIC_MAPBOX_TOKEN:-}
     depends_on:
       db:

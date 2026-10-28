@@ -25,11 +25,11 @@ describe("demo inventory visibility", () => {
 });
 
 describe("Bangladesh public positioning", () => {
-  it("states the advisory role, buyer-fee policy, and Bangladesh market", () => {
+  it("states the developer role, purchase policy, and Bangladesh market", () => {
     expect(positioning.summary).toContain("Bangladesh");
-    expect(howWeWork.summary).toContain("participating developers in Bangladesh");
-    expect(howWeWork.summary).toContain("coordinates the buyer’s interaction with the developer");
-    expect(buyerFeeDisclosure).toContain("does not charge buyers a property brokerage or consultation fee");
+    expect(howWeWork.summary).toContain("develops and sells its own residential projects in Bangladesh");
+    expect(buyerFeeDisclosure).toContain("sale contract with RAZZ Construction and Properties Ltd.");
     expect(siteConfig.description.toLowerCase()).toContain("bangladesh");
+    expect(siteConfig.description.toLowerCase()).not.toContain("advisory");
   });
 });

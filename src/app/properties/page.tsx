@@ -45,7 +45,7 @@ export default async function PropertiesPage({
         image="/media/hero-urban.jpg"
         eyebrow="Properties"
         title="Find the right property."
-        description="Browse selected developer properties. Prices are indicative until an agreement is signed with the developer or seller."
+        description="Browse homes developed by RAZZ Construction and Properties Ltd. Prices are indicative until a sale agreement is signed."
       />
       <section className="px-4 py-10 sm:px-6 md:px-12 md:py-12">
         <form className="grid gap-3 border border-charcoal/10 bg-paper p-4 md:grid-cols-4 lg:grid-cols-6">
@@ -91,7 +91,7 @@ export default async function PropertiesPage({
             <option value="newest">Newest</option>
           </select>
           <input type="hidden" name="view" value={view} />
-          <button className="h-12 bg-charcoal text-[11px] uppercase tracking-[0.18em] text-ivory">Apply</button>
+          <button className="h-12 bg-moss text-[11px] uppercase tracking-[0.18em] text-ivory">Apply</button>
         </form>
 
         <div className="mt-8 flex items-center justify-between">
@@ -122,7 +122,7 @@ export default async function PropertiesPage({
               <a
                 key={page}
                 href={`?${new URLSearchParams({ ...Object.fromEntries(qs), page: String(page) }).toString()}`}
-                className={`grid h-10 w-10 place-items-center ${page === data.page ? "bg-charcoal text-ivory" : "border border-charcoal/15"}`}
+                className={`grid h-10 w-10 place-items-center ${page === data.page ? "bg-moss text-ivory" : "border border-charcoal/15"}`}
               >
                 {page}
               </a>

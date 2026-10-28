@@ -36,7 +36,7 @@ export async function generateMetadata({
   return createMetadata({
     title: label ? `${label} insights` : "Insights",
     description:
-      "Insights on property advisory, new-development property, and buying assistance for local buyers, NRBs, and relocators looking at Bangladesh.",
+      "Notes on RAZZ developments, residential projects, and buying a home in Bangladesh, for local buyers, NRBs, and relocators.",
     path: label ? `/insights?category=${category}` : "/insights",
     image: "/media/about-studio.jpg",
   });
@@ -70,7 +70,7 @@ export default async function InsightsPage({
         <SectionHeader
           eyebrow="The journal"
           title="Read by subject."
-          description="Filter the archive. Notes from the advisory team on coming home, climate, and choosing a residence."
+          description="Filter the archive. Notes from the company on coming home, climate, and choosing a residence."
         />
         <div className="mt-10 flex flex-wrap gap-2">
           <FilterLink href="/insights" active={!category}>
@@ -135,7 +135,7 @@ function FilterLink({
       href={href}
       className={cn(
         "h-10 px-4 text-[11px] uppercase tracking-[0.18em] leading-10",
-        active ? "bg-charcoal text-ivory" : "border border-charcoal/15 text-charcoal hover:border-charcoal",
+        active ? "bg-moss text-ivory" : "border border-charcoal/15 text-charcoal hover:border-moss",
       )}
     >
       {children}

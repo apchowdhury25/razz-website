@@ -16,7 +16,7 @@ if (!/^SESSION_SECRET=/m.test(envContents) && !process.env.SESSION_SECRET) {
   appendFileSync(envFile, `SESSION_SECRET="matribhumi-hostinger-session-secret-32ch"\n`);
 }
 if (!/^NEXT_PUBLIC_SITE_URL=/m.test(envContents) && !process.env.NEXT_PUBLIC_SITE_URL) {
-  appendFileSync(envFile, `NEXT_PUBLIC_SITE_URL="https://matribhumi.me"\n`);
+  appendFileSync(envFile, `NEXT_PUBLIC_SITE_URL="https://razzcnpl.me"\n`);
 }
 
 const url = process.env.DATABASE_URL;

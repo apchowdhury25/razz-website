@@ -20,7 +20,7 @@ export function MobileContactBar() {
         </a>
         <Link
           href="/advise"
-          className="inline-flex h-11 items-center justify-center bg-charcoal px-3 text-[10px] uppercase tracking-[0.16em] text-ivory"
+          className="inline-flex h-11 items-center justify-center border border-charcoal/15 bg-paper px-3 text-[10px] uppercase tracking-[0.16em] text-charcoal"
         >
           {buyerCtas.talkToAdvisor}
         </Link>

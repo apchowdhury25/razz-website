@@ -15,7 +15,7 @@ import { BuyerFeeNotice } from "@/components/site/BuyerFeeNotice";
 export const metadata = createMetadata({
   title: "How it works",
   description:
-    "How MatriBhumi’s Bangladesh property advisory and transaction coordination works: requirements, shortlist, developer introduction, viewings, and a purchase completed with the developer.",
+    "How buying a home from RAZZ Construction and Properties Ltd. works: requirements, a shortlist of our projects, a viewing, and a sale agreement with the company.",
   path: "/how-it-works",
   image: "/media/about-studio.jpg",
 });
@@ -25,8 +25,8 @@ export default function HowItWorksPage() {
     <PublicShell transparentHeader>
       <PageHero
         image="/media/about-studio.jpg"
-        eyebrow="How it works"
-        title="Property buying assistance, step by step."
+        eyebrow="Buying"
+        title="How to buy a RAZZ home."
         description={`${howWeWork.summary} ${howWeWork.purchaseAgreement}`}
       />
       <HowWeWork />
@@ -34,8 +34,7 @@ export default function HowItWorksPage() {
         <HowItWorksSteps />
         <BuyerFeeNotice className="mt-10 max-w-3xl" />
         <p className="mt-4 max-w-3xl text-sm leading-7 text-muted">
-          The legal transaction structure belongs to the developer or seller and to the lawyers you appoint. MatriBhumi
-          coordinates the process and does not replace those parties. Matching scores used internally are screening aids, not financial or legal advice.
+          The sale agreement is with RAZZ Construction and Properties Ltd. Lawyers you appoint still advise you on title and registration. Matching scores used internally are screening aids, not financial or legal advice.
         </p>
         <ProfessionalAdviceNotice className="mt-4 max-w-3xl" />
       </section>
