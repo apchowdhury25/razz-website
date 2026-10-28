@@ -53,6 +53,7 @@ const CONFIDENTIAL_KEY_FRAGMENTS = [
   "commercialTerms",
   "confidential",
   "feeAmount",
+  "price",
 ];
 
 export function stripConfidential<T>(value: T): T {

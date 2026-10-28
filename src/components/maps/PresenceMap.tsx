@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { formatPrice, statusLabel } from "@/lib/format";
+import { statusLabel } from "@/lib/format";
 import { DualCta } from "@/components/site/LeadCapture";
 
 export type MapPin = {
@@ -13,8 +13,6 @@ export type MapPin = {
   heroImage: string;
   locationNote: string;
   status: string;
-  startingPrice: { toString(): string } | number;
-  currency: string;
   location: { city: string; country: string };
 };
 
@@ -77,7 +75,7 @@ export function PresenceMap({ pins }: { pins: MapPin[] }) {
             <h3 className="font-display mt-2 text-3xl">{current.name}</h3>
             <p className="mt-3 text-sm leading-6 text-muted">{current.locationNote}</p>
             <p className="mt-4 text-sm">
-              {statusLabel(current.status)} · from {formatPrice(current.startingPrice, current.currency)}
+              {statusLabel(current.status)}
             </p>
             <DualCta projectName={current.name} className="mt-6" />
           </div>

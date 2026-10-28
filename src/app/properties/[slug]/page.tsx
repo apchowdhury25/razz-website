@@ -11,7 +11,7 @@ import { CompareToggle } from "@/components/property/CompareToggle";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getProperty } from "@/lib/data";
 import { createMetadata, propertyJsonLd, breadcrumbJsonLd } from "@/lib/seo";
-import { formatArea, formatBedrooms, formatDate, formatPrice, statusLabel } from "@/lib/format";
+import { formatArea, formatBedrooms, formatDate, statusLabel } from "@/lib/format";
 import { isVerifiedDeveloper, ownershipLabel, publicDeveloperName } from "@/lib/developer";
 import { buyerCtas } from "@/config/ctas";
 import { propertySourceDisclosure } from "@/config/businessModel";
@@ -62,8 +62,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
           description: property.description,
           slug: property.slug,
           image: property.heroImage,
-          price: Number(property.startingPrice.toString()),
-          currency: property.currency,
           city: property.location.city,
           country: property.location.country,
         })}
@@ -131,7 +129,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
             <Fact label="Location" value={`${property.location.city}, ${property.location.country}`} />
             <Fact label="Type" value={statusLabel(property.type)} />
             <Fact label="Availability" value={`${statusLabel(property.status)}${availableUnits ? ` · ${availableUnits} units listed available` : ""}`} />
-            <Fact label="Price" value={`From ${formatPrice(property.startingPrice, property.currency)}`} />
             <Fact label="Completion" value={property.completionDate ? formatDate(property.completionDate, { month: "short", year: "numeric" }) : "—"} />
             <Fact label="Units" value={property.totalUnits ? String(property.totalUnits) : String(property.units.length)} />
             <Fact label="Development" value={property.development.name} />
@@ -140,7 +137,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
         <aside className="border border-charcoal/10 bg-paper p-6">
           <p className="text-[11px] uppercase tracking-[0.2em] text-earth">Features</p>
           <ul className="mt-4 space-y-3 text-sm">
-            <li>From {formatPrice(property.startingPrice, property.currency)}</li>
             <li>{formatBedrooms(property.bedroomsMin, property.bedroomsMax)}</li>
             <li>{property.bathroomsMin}–{property.bathroomsMax} bathrooms</li>
             <li>{formatArea(property.areaMin, property.areaUnit)} – {formatArea(property.areaMax, property.areaUnit)}</li>
@@ -229,7 +225,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead className="text-[11px] uppercase tracking-[0.16em] text-earth">
               <tr>
-                {["Unit", "Type", "Bedrooms", "Area", "Price", "Status", ""].map((h) => (
+                {["Unit", "Type", "Bedrooms", "Area", "Status", ""].map((h) => (
                   <th key={h} className="border-b border-charcoal/10 py-3 pr-4">{h}</th>
                 ))}
               </tr>
@@ -241,7 +237,6 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
                   <td className="border-b border-charcoal/10 py-3 pr-4">{unit.type}</td>
                   <td className="border-b border-charcoal/10 py-3 pr-4">{unit.bedrooms}</td>
                   <td className="border-b border-charcoal/10 py-3 pr-4">{formatArea(unit.area)}</td>
-                  <td className="border-b border-charcoal/10 py-3 pr-4">{formatPrice(unit.price, property.currency)}</td>
                   <td className="border-b border-charcoal/10 py-3 pr-4">{statusLabel(unit.status)}</td>
                   <td className="border-b border-charcoal/10 py-3 pr-4">
                     <a href="#inquire" className="text-[11px] uppercase tracking-[0.16em] text-earth">{buyerCtas.requestDetails}</a>

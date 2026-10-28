@@ -6,7 +6,7 @@ import { useCompare } from "@/components/providers/CompareProvider";
 import { Button } from "@/components/ui/button";
 import { buyerCtas } from "@/config/ctas";
 import { BuyerFeeNotice } from "@/components/site/BuyerFeeNotice";
-import { formatBedrooms, formatPrice, statusLabel } from "@/lib/format";
+import { formatBedrooms, statusLabel } from "@/lib/format";
 import type { PropertyCardData } from "@/components/property/PropertyCard";
 
 export default function ComparePage() {
@@ -66,7 +66,6 @@ export default function ComparePage() {
                   ["Location", (p: PropertyCardData) => `${p.location.city}, ${p.location.country}`],
                   ["Type", (p: PropertyCardData) => statusLabel(p.type)],
                   ["Status", (p: PropertyCardData) => statusLabel(p.status)],
-                  ["Price", (p: PropertyCardData) => formatPrice(p.startingPrice, p.currency)],
                   ["Bedrooms", (p: PropertyCardData) => formatBedrooms(p.bedroomsMin, p.bedroomsMax)],
                   ["Area", (p: PropertyCardData) => `${p.areaMin.toLocaleString()} ${p.areaUnit}`],
                 ].map(([label, fn]) => (

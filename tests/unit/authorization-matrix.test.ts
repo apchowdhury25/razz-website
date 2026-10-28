@@ -42,6 +42,9 @@ describe("PUBLIC / EDITOR / SALES / ADMIN access matrix", () => {
       expectedAmount: 12000,
       paymentStatus: "EXPECTED",
       confidential: true,
+      startingPrice: 180000,
+      currency: "USD",
+      units: [{ name: "A-1", price: 180000, status: "AVAILABLE" }],
     });
     expect(leaked.developer.name).toBe("Example Homes");
     expect(leaked.developer.publicDescription).toBe("Homes in Dhaka");
@@ -62,6 +65,10 @@ describe("PUBLIC / EDITOR / SALES / ADMIN access matrix", () => {
     expect(leaked).not.toHaveProperty("expectedAmount");
     expect(leaked).not.toHaveProperty("paymentStatus");
     expect(leaked).not.toHaveProperty("confidential");
+    expect(leaked).not.toHaveProperty("startingPrice");
+    expect(leaked.currency).toBe("USD");
+    expect(leaked.units[0]).not.toHaveProperty("price");
+    expect(leaked.units[0]?.name).toBe("A-1");
   });
 
   it("selects only public developer columns", () => {
@@ -77,6 +84,8 @@ describe("PUBLIC / EDITOR / SALES / ADMIN access matrix", () => {
     expect(containsConfidentialKey("staffNotes")).toBe(true);
     expect(containsConfidentialKey("estimatedValue")).toBe(true);
     expect(containsConfidentialKey("agreementReference")).toBe(true);
+    expect(containsConfidentialKey("startingPrice")).toBe(true);
+    expect(containsConfidentialKey("price")).toBe(true);
     expect(containsConfidentialKey("description")).toBe(false);
     expect(containsConfidentialKey("publicDescription")).toBe(false);
   });

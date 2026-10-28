@@ -53,7 +53,7 @@ export function organizationJsonLd() {
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.url,
-    logo: absoluteUrl("/brand/logo-mark.svg"),
+    logo: absoluteUrl("/brand/logo-razz.png"),
     email: siteConfig.email,
     telephone: siteConfig.phone,
     address: {
@@ -101,7 +101,7 @@ export function articleJsonLd(article: {
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
-      logo: { "@type": "ImageObject", url: absoluteUrl("/brand/logo-mark.svg") },
+      logo: { "@type": "ImageObject", url: absoluteUrl("/brand/logo-razz.png") },
     },
     mainEntityOfPage: absoluteUrl(`/insights/${article.slug}`),
   };
@@ -112,8 +112,6 @@ export function propertyJsonLd(property: {
   description: string;
   slug: string;
   image: string;
-  price: number;
-  currency: string;
   city: string;
   country: string;
 }) {
@@ -124,12 +122,6 @@ export function propertyJsonLd(property: {
     description: property.description,
     url: absoluteUrl(`/properties/${property.slug}`),
     image: absoluteUrl(property.image),
-    offers: {
-      "@type": "Offer",
-      price: property.price,
-      priceCurrency: property.currency,
-      availability: "https://schema.org/InStock",
-    },
     address: {
       "@type": "PostalAddress",
       addressLocality: property.city,

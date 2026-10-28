@@ -8,16 +8,18 @@ type LogoProps = {
 };
 
 export function Logo({ variant = "light", className }: LogoProps) {
-  const src =
-    variant === "mark" ? "/brand/logo-mark.svg" : `/brand/logo-${variant}.svg`;
   const isMark = variant === "mark";
   return (
     <img
-      src={src}
+      src="/brand/logo-razz.png"
       alt={siteConfig.name}
-      width={isMark ? 64 : 268}
-      height={64}
-      className={cn("h-14 w-auto select-none sm:h-16", isMark && "h-9 w-9 sm:h-10 sm:w-10", className)}
+      width={1600}
+      height={558}
+      className={cn(
+        "h-24 w-auto max-w-full select-none sm:h-28",
+        isMark && "h-12 w-auto sm:h-14",
+        className,
+      )}
     />
   );
 }

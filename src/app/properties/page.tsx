@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
   title: "Properties",
   description:
-    "Browse selected developer properties in Bangladesh. Filter by city, developer, type and price.",
+    "Browse selected developer properties in Bangladesh. Filter by city, developer, and type.",
   path: "/properties",
   image: "/media/hero-urban.jpg",
 });
@@ -45,7 +45,7 @@ export default async function PropertiesPage({
         image="/media/hero-urban.jpg"
         eyebrow="Properties"
         title="Find the right property."
-        description="Browse homes developed by RAZZ Construction and Properties Ltd. Prices are indicative until a sale agreement is signed."
+        description="Browse homes developed by RAZZ Construction and Properties Ltd. Ask sales for the current price."
       />
       <section className="px-4 py-10 sm:px-6 md:px-12 md:py-12">
         <form className="grid gap-3 border border-charcoal/10 bg-paper p-4 md:grid-cols-4 lg:grid-cols-6">
@@ -78,16 +78,12 @@ export default async function PropertiesPage({
             <option value="">All listings</option>
             <option value="true">Featured properties</option>
           </select>
-          <input name="minPrice" defaultValue={filters.minPrice ?? ""} placeholder="Min price" className="h-11 border border-charcoal/15 bg-ivory px-3 text-sm" />
-          <input name="maxPrice" defaultValue={filters.maxPrice ?? ""} placeholder="Max price" className="h-11 border border-charcoal/15 bg-ivory px-3 text-sm" />
           <select name="amenity" defaultValue={filters.amenity ?? ""} className="h-11 border border-charcoal/15 bg-ivory px-3 text-sm">
             <option value="">Amenities</option>
             {data.amenities.map((a) => <option key={a.id} value={a.slug}>{a.name}</option>)}
           </select>
           <select name="sort" defaultValue={filters.sort ?? ""} className="h-11 border border-charcoal/15 bg-ivory px-3 text-sm">
             <option value="">Featured</option>
-            <option value="price-asc">Price ↑</option>
-            <option value="price-desc">Price ↓</option>
             <option value="newest">Newest</option>
           </select>
           <input type="hidden" name="view" value={view} />

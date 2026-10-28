@@ -7,7 +7,7 @@ import { PropertyMap } from "@/components/maps/PropertyMap";
 import { getDevelopment } from "@/lib/data";
 import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
-import { formatPrice, statusLabel } from "@/lib/format";
+import { statusLabel } from "@/lib/format";
 import { ownershipLabel } from "@/lib/developer";
 import { DemoInventoryNotice } from "@/components/site/DemoInventoryNotice";
 import { publicLocationHref } from "@/config/locations";
@@ -82,10 +82,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <div>
             <dt className="text-[11px] uppercase tracking-[0.16em] text-earth">Status</dt>
             <dd className="mt-1">{statusLabel(project.status)} · {project.completion}</dd>
-          </div>
-          <div>
-            <dt className="text-[11px] uppercase tracking-[0.16em] text-earth">From</dt>
-            <dd className="mt-1">{formatPrice(project.startingPrice, project.currency)}</dd>
           </div>
         </dl>
       </section>

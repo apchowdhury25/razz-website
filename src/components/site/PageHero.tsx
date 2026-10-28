@@ -39,7 +39,7 @@ export function PageHero({
         </div>
       </div>
       <div className="pointer-events-none absolute right-6 top-28 hidden opacity-40 md:block">
-        <Logo variant="mark" className="h-10 w-10 text-ivory" />
+        <Logo variant="mark" className="h-16 w-auto" />
       </div>
     </section>
   );

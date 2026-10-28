@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { DualCta } from "@/components/site/LeadCapture";
 import { getDevelopments } from "@/lib/data";
 import { createMetadata } from "@/lib/seo";
-import { formatPrice, statusLabel } from "@/lib/format";
+import { statusLabel } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
 export const metadata = createMetadata({
@@ -59,7 +59,7 @@ export default async function ProjectsPage({
                 </h2>
                 <p className="mt-3 text-muted">{project.tagline}</p>
                 <p className="mt-4 text-sm text-muted">
-                  {statusLabel(project.status)} · {project.completion} · from {formatPrice(project.startingPrice, project.currency)}
+                  {statusLabel(project.status)} · {project.completion}
                 </p>
                 <DualCta projectName={project.name} className="mt-6" />
               </div>

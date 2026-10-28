@@ -68,7 +68,7 @@ async function main() {
         "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh. It develops and sells the residential projects on this website.",
       publicDescription:
         "RAZZ Construction and Properties Ltd. is a registered real-estate development company in Bangladesh. It develops and sells the residential projects on this website.",
-      logoUrl: "/brand/logo-mark.svg",
+      logoUrl: "/brand/logo-razz.png",
       internalNotes:
         "Company record for public listings. No licence number is stored here.",
     },

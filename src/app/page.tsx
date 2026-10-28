@@ -115,7 +115,7 @@ export default async function HomePage() {
         <SectionHeader
           eyebrow="Our developments"
           title="Homes from RAZZ."
-          description="These homes are developed and offered by RAZZ Construction and Properties Ltd. Speak with sales about availability, price, and a viewing."
+          description="These homes are developed and offered by RAZZ Construction and Properties Ltd. Speak with sales about availability and a viewing."
         />
         {featuredProperties.length ? (
           <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -238,8 +238,6 @@ export default async function HomePage() {
               heroImage: pin.heroImage,
               locationNote: pin.locationNote,
               status: pin.status,
-              startingPrice: Number(pin.startingPrice.toString()),
-              currency: pin.currency,
               location: pin.location,
             }))}
           />

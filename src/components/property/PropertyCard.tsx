@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatBedrooms, formatPrice, statusLabel } from "@/lib/format";
+import { formatBedrooms, statusLabel } from "@/lib/format";
 import { FavoriteButton } from "@/components/property/FavoriteButton";
 import { CompareToggle } from "@/components/property/CompareToggle";
 import { Button } from "@/components/ui/button";
@@ -90,11 +90,7 @@ export function PropertyCard({
         </p>
       </div>
       <div className="mt-7">
-        <p className="text-[10px] uppercase tracking-[0.18em] text-muted">Starting from</p>
-        <p className="mt-1 text-lg text-charcoal">
-          {formatPrice(property.startingPrice, property.currency)}
-        </p>
-        <div className="mt-5 flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <Button href={href} className="w-full">
             {buyerCtas.viewProperty}
           </Button>
